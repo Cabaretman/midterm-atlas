@@ -3,6 +3,10 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {DEFAULTS,aggregate,forecastRace,nationalInputs,simulate,validatePoll,validateScenario} from '../dist/model.mjs';
 const data=JSON.parse(readFileSync(new URL('../dist/data.json',import.meta.url))),config=()=>structuredClone(DEFAULTS);
+test('cached simulation preserves every published-model trial outcome for all offices',()=>{
+ const fixture=JSON.parse(readFileSync(new URL('./fixtures/model-v1.json',import.meta.url)));
+ for(const c of fixture.cases){const {races,...actual}=simulate(c.races,c.scenario,c.options);assert.deepEqual({...actual,probabilities:races.map(r=>[r.probability,r.thirdProbability])},c.expected,c.office);}
+});
 test('input universe has 506 unique contests and valid sourced polls',()=>{
  assert.equal(data.races.length,506);assert.equal(new Set(data.races.map(r=>r.id)).size,506);
  for(const [office,n] of [['senate',35],['house',435],['governor',36]])assert.equal(data.races.filter(r=>r.office===office).length,n);

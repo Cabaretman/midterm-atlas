@@ -10,6 +10,7 @@
     "dev": "node scripts/serve.mjs",
     "test": "node --test tests/model.test.mjs",
     "test:browser": "playwright test",
+    "profile": "node scripts/profile-browser.mjs",
     "prepare:data": "python scripts/prepare-data.py && node scripts/prepare-map.mjs"
   },
   "keywords": [],
@@ -19,6 +20,7 @@
     "@playwright/test": "^1.64.1",
     "d3-geo": "^3.1.1",
     "topojson-client": "^3.1.0",
+    "topojson-simplify": "^3.0.3",
     "us-atlas": "^3.0.1"
   }
 }

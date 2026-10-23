@@ -11,7 +11,17 @@ npm ci
 npm run dev
 ```
 
-Open http://127.0.0.1:4173. The actual application lives in `dist/`; there is no bundling step. All map geometry and forecast code are local. Google Fonts is optional; system font fallbacks work offline.
+Open http://127.0.0.1:4173. The actual application lives in `dist/`; there is no bundling step. All map geometry, forecast code and fonts are local. The interface uses system fonts, without a font CDN or runtime UI dependencies.
+
+## Interface and performance
+
+The interface uses a quiet, light workspace layout, system typography, thin separators and muted party colors. A sidebar becomes compact navigation on phones. All forecasts and controls are retained.
+
+Simulations run in a module Web Worker, so calculations do not block input handling. Repeated calculations reuse Float64 seeded draws with exactly the original random-number order and arithmetic. A queue holds at most one active and one latest request; superseded results never overwrite the latest scenario. A synchronous fallback remains available if Workers cannot load.
+
+The SVG map and live slider nodes stay mounted during updates, preserving drag/keyboard focus. Table rows are reused and shown in batches of 50, with a Show more control; all races remain searchable and are always included in simulations and CSV exports. Shared map arcs are simplified at build time for display, preserving borders and all states. The map payload fell from about 147 KB to 100 KB.
+
+Run `npm run profile` while the local server is running for a reproducible House interaction check at 4× CPU throttling. It reports input-to-frame times, forecast-to-frame times, long tasks, DOM count and worker use. Frame timings use requestAnimationFrame callbacks, not physical screen-paint measurement. Results depend on hardware and browser load. Local checks measured repeated House simulation calculations around 30 ms versus roughly 350 ms in the first version; this is a local measurement, not a cross-device speed guarantee. Regression fixtures verify that the optimized simulation produces exactly the published version's outcomes for all 506 contests, including independent and third-candidate handling.
 
 ## Features
 

@@ -47,16 +47,31 @@ export function forecastRace(race,data,scenario,national=nationalInputs(data,sce
 }
 function rng(seed){let a=seed>>>0;return()=>{a+=0x6D2B79F5;let t=a;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return((t^t>>>14)>>>0)/4294967296;};}
 function normal(random){return Math.sqrt(-2*Math.log(Math.max(1e-12,random())))*Math.cos(2*Math.PI*random());}
+// Reuse the exact seeded draws across slider changes. Float64 preserves the
+// original trial arithmetic; topology changes (including third candidates) rekey.
+const drawCache=new Map();
+function simulationDraws(races,runs,seed){
+  const key=JSON.stringify([seed,runs,races.map(r=>[r.state,Boolean(r.thirdShare)])]);
+  if(drawCache.has(key))return drawCache.get(key);
+  const states=[...new Set(races.map(r=>r.state))],stateIndex=new Map(states.map((s,i)=>[s,i+1]));
+  let stride=1+states.length;
+  const localIndex=races.map(r=>{const index=stride++;if(r.thirdShare)stride++;return index;});
+  const values=new Float64Array(runs*stride),random=rng(seed);
+  for(let i=0;i<values.length;i++)values[i]=normal(random);
+  const result={values,stride,localIndex,stateOffsets:races.map(r=>stateIndex.get(r.state))};
+  if(drawCache.size>=4)drawCache.delete(drawCache.keys().next().value);
+  drawCache.set(key,result);return result;
+}
 export function simulate(races,scenario,{runs=4000,seed=20261103,office='senate',holdovers={D:34,R:31}}={}){
-  const random=rng(seed),states=[...new Set(races.map(r=>r.state))],wins=new Uint32Array(races.length),iWins=new Uint32Array(races.length),counts=[],otherCounts=[];
+  const {values,stride,localIndex,stateOffsets}=simulationDraws(races,runs,seed),wins=new Uint32Array(races.length),iWins=new Uint32Array(races.length),counts=[],otherCounts=[];
   const threshold=office==='senate'?51:office==='house'?218:null;
   let control=0,rcontrol=0,ties=0;
   for(let k=0;k<runs;k++){
-    const common=normal(random)*scenario.nationalSigma,st=new Map(states.map(s=>[s,normal(random)*scenario.stateSigma]));
+    const offset=k*stride,common=values[offset]*scenario.nationalSigma;
     let d=holdovers.D,r=holdovers.R,other=0;
     for(let i=0;i<races.length;i++){
-      const race=races[i],m=race.margin+common+st.get(race.state)+normal(random)*race.localSigma;
-      const third=race.thirdShare?clamp(race.thirdShare+normal(random)*3,0,100):0;
+      const race=races[i],m=race.margin+common+values[offset+stateOffsets[i]]*scenario.stateSigma+values[offset+localIndex[i]]*race.localSigma;
+      const third=race.thirdShare?clamp(race.thirdShare+values[offset+localIndex[i]+1]*3,0,100):0;
       if(third>Math.max((100-third+m)/2,(100-third-m)/2)){iWins[i]++;other++;}
       else if(m>0){wins[i]++;if(race.independent&&scenario.neCaucus!=='D')other++;else d++;}else r++;
     }
