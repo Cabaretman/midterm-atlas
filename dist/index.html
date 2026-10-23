@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10151e"><meta name="description" content="Explore the 2026 midterms with a transparent polling and fundamentals model, correlated simulations, and your own election scenarios."><title>Midterm Atlas — 2026 election laboratory</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<header class="topbar"><a class="brand" href="#" aria-label="Midterm Atlas home"><span class="brandmark">m<span>·</span>a</span><span>MIDTERM <strong>ATLAS</strong></span><span class="year">2026</span></a><nav aria-label="Site"><button class="navlink active" data-page="forecast">Forecast</button><button class="navlink" data-page="method">Methodology</button><button class="navlink" data-page="sources">Data & sources</button></nav><span class="labtag"><i></i> ELECTION LABORATORY</span></header>
+<main id="app"><div class="loading">Preparing the election laboratory…</div></main>
+<div id="toast" role="status" aria-live="polite"></div>
+<dialog id="scenario-dialog"><form method="dialog"><div class="section-head"><h2>Your scenarios</h2><button class="icon-button" aria-label="Close">×</button></div></form><div id="scenario-list"></div><div class="dialog-actions"><button id="export-scenario" class="button">Export JSON</button><button id="import-scenario" class="button">Import JSON</button></div></dialog>
+<input type="file" id="file-input" accept=".json,application/json" hidden>
+<footer><span class="footer-brand">MIDTERM ATLAS <span>2026</span></span><span>Transparent inputs. Testable assumptions. Your scenario.</span><span>Experimental model · probabilities are not guarantees.</span></footer>
+<script type="module" src="app.mjs"></script>
+</body></html>

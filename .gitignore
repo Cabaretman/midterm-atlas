@@ -1,0 +1,7 @@
+node_modules/
+test-results/
+playwright-report/
+.sites-runtime/
+.sites-checkout/
+*.tgz
+*.log

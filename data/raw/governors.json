@@ -1,0 +1,368 @@
+[
+  {
+    "state": "AL",
+    "name": "Alabama",
+    "incumbent": "Kay Ivey",
+    "party": "R",
+    "seeking": false,
+    "dem": "Doug Jones",
+    "rep": "Tommy Tuberville",
+    "source": "https://www.nga.org/governors/elections/"
+  },
+  {
+    "state": "AK",
+    "name": "Alaska",
+    "incumbent": "Mike Dunleavy",
+    "party": "R",
+    "seeking": false,
+    "dem": "Jonathan Kreiss-Tomkins",
+    "rep": "Multiple Republicans",
+    "source": "https://www.nga.org/governors/elections/",
+    "note": "Significant third-party or multiple same-party candidates; two-party approximation requires care."
+  },
+  {
+    "state": "AZ",
+    "name": "Arizona",
+    "incumbent": "Katie Hobbs",
+    "party": "D",
+    "seeking": true,
+    "dem": "Katie Hobbs",
+    "rep": "Andy Biggs",
+    "source": "https://www.nga.org/governors/elections/"
+  },
+  {
+    "state": "AR",
+    "name": "Arkansas",
+    "incumbent": "Sarah Huckabee Sanders",
+    "party": "R",
+    "seeking": true,
+    "dem": "Fredrick Love",
+    "rep": "Sarah Huckabee Sanders",
+    "source": "https://www.nga.org/governors/elections/"
+  },
+  {
+    "state": "CA",
+    "name": "California",
+    "incumbent": "Gavin Newsom",
+    "party": "D",
+    "seeking": false,
+    "dem": "Xavier Becerra",
+    "rep": "Steve Hilton",
+    "source": "https://www.nga.org/governors/elections/"
+  },
+  {
+    "state": "CO",
+    "name": "Colorado",
+    "incumbent": "Jared Polis",
+    "party": "D",
+    "seeking": false,
+    "dem": "Phil Weiser",
+    "rep": "Victor Marx",
+    "source": "https://www.nga.org/governors/elections/"
+  },
+  {
+    "state": "CT",
+    "name": "Connecticut",
+    "incumbent": "Ned Lamont",
+    "party": "D",
+    "seeking": true,
+    "dem": "Ned Lamont",
+    "rep": "Ryan Fazio",
+    "source": "https://www.nga.org/governors/elections/"
+  },
+  {
+    "state": "FL",
+    "name": "Florida",
+    "incumbent": "Ron DeSantis",
+    "party": "R",
+    "seeking": false,
+    "dem": "David Jolly",
+    "rep": "Byron Donalds",
+    "source": "https://www.nga.org/governors/elections/"
+  },
+  {
+    "state": "GA",
+    "name": "Georgia",
+    "incumbent": "Brian Kemp",
+    "party": "R",
+    "seeking": false,
+    "dem": "Keisha Lance Bottoms",
+    "rep": "Rick Jackson",
+    "source": "https://www.nga.org/governors/elections/"
+  },
+  {
+    "state": "HI",
+    "name": "Hawaii",
+    "incumbent": "Josh Green",
+    "party": "D",
+    "seeking": true,
+    "dem": "Josh Green",
+    "rep": "Gary Cordery",
+    "source": "https://www.nga.org/governors/elections/"
+  },
+  {
+    "state": "ID",
+    "name": "Idaho",
+    "incumbent": "Brad Little",
+    "party": "R",
+    "seeking": true,
+    "dem": "Terri Pickens",
+    "rep": "Brad Little",
+    "source": "https://www.nga.org/governors/elections/"
+  },
+  {
+    "state": "IL",
+    "name": "Illinois",
+    "incumbent": "JB Pritzker",
+    "party": "D",
+    "seeking": true,
+    "dem": "JB Pritzker",
+    "rep": "Darren Bailey",
+    "source": "https://www.nga.org/governors/elections/"
+  },
+  {
+    "state": "IA",
+    "name": "Iowa",
+    "incumbent": "Kim Reynolds",
+    "party": "R",
+    "seeking": false,
+    "dem": "Rob Sand",
+    "rep": "Zach Lahn",
+    "source": "https://www.nga.org/governors/elections/"
+  },
+  {
+    "state": "KS",
+    "name": "Kansas",
+    "incumbent": "Laura Kelly",
+    "party": "D",
+    "seeking": false,
+    "dem": "Cindy Holscher",
+    "rep": "Ty Masterson",
+    "source": "https://www.nga.org/governors/elections/"
+  },
+  {
+    "state": "ME",
+    "name": "Maine",
+    "incumbent": "Janet Mills",
+    "party": "D",
+    "seeking": false,
+    "dem": "Hannah Pingree",
+    "rep": "Bobby Charles",
+    "source": "https://www.nga.org/governors/elections/",
+    "note": "Significant third-party or multiple same-party candidates; two-party approximation requires care."
+  },
+  {
+    "state": "MD",
+    "name": "Maryland",
+    "incumbent": "Wes Moore",
+    "party": "D",
+    "seeking": true,
+    "dem": "Wes Moore",
+    "rep": "Dan Cox",
+    "source": "https://www.nga.org/governors/elections/"
+  },
+  {
+    "state": "MA",
+    "name": "Massachusetts",
+    "incumbent": "Maura Healey",
+    "party": "D",
+    "seeking": true,
+    "dem": "Maura Healey",
+    "rep": "Michael Minogue",
+    "source": "https://www.nga.org/governors/elections/"
+  },
+  {
+    "state": "MI",
+    "name": "Michigan",
+    "incumbent": "Gretchen Whitmer",
+    "party": "D",
+    "seeking": false,
+    "dem": "Jocelyn Benson",
+    "rep": "John James",
+    "source": "https://www.nga.org/governors/elections/"
+  },
+  {
+    "state": "MN",
+    "name": "Minnesota",
+    "incumbent": "Tim Walz",
+    "party": "D",
+    "seeking": false,
+    "dem": "Amy Klobuchar",
+    "rep": "Lisa Demuth",
+    "source": "https://www.nga.org/governors/elections/"
+  },
+  {
+    "state": "NE",
+    "name": "Nebraska",
+    "incumbent": "Jim Pillen",
+    "party": "R",
+    "seeking": true,
+    "dem": "Lynne Walz",
+    "rep": "Jim Pillen",
+    "source": "https://www.nga.org/governors/elections/"
+  },
+  {
+    "state": "NV",
+    "name": "Nevada",
+    "incumbent": "Joe Lombardo",
+    "party": "R",
+    "seeking": true,
+    "dem": "Aaron Ford",
+    "rep": "Joe Lombardo",
+    "source": "https://www.nga.org/governors/elections/"
+  },
+  {
+    "state": "NH",
+    "name": "New Hampshire",
+    "incumbent": "Kelly Ayotte",
+    "party": "R",
+    "seeking": true,
+    "dem": "Cinde Warmington",
+    "rep": "Kelly Ayotte",
+    "source": "https://www.nga.org/governors/elections/"
+  },
+  {
+    "state": "NM",
+    "name": "New Mexico",
+    "incumbent": "Michelle Lujan Grisham",
+    "party": "D",
+    "seeking": false,
+    "dem": "Deb Haaland",
+    "rep": "Greggory Hull",
+    "source": "https://www.nga.org/governors/elections/"
+  },
+  {
+    "state": "NY",
+    "name": "New York",
+    "incumbent": "Kathy Hochul",
+    "party": "D",
+    "seeking": true,
+    "dem": "Kathy Hochul",
+    "rep": "Bruce Blakeman",
+    "source": "https://www.nga.org/governors/elections/"
+  },
+  {
+    "state": "OH",
+    "name": "Ohio",
+    "incumbent": "Mike DeWine",
+    "party": "R",
+    "seeking": false,
+    "dem": "Amy Acton",
+    "rep": "Vivek Ramaswamy",
+    "source": "https://www.nga.org/governors/elections/"
+  },
+  {
+    "state": "OK",
+    "name": "Oklahoma",
+    "incumbent": "Kevin Stitt",
+    "party": "R",
+    "seeking": false,
+    "dem": "Cydni Munson",
+    "rep": "Republican nominee",
+    "source": "https://www.nga.org/governors/elections/",
+    "note": "NGA candidate roster appears stale; nominee not verified. Incumbent and contested status are verified."
+  },
+  {
+    "state": "OR",
+    "name": "Oregon",
+    "incumbent": "Tina Kotek",
+    "party": "D",
+    "seeking": true,
+    "dem": "Tina Kotek",
+    "rep": "Christine Drazan",
+    "source": "https://www.nga.org/governors/elections/"
+  },
+  {
+    "state": "PA",
+    "name": "Pennsylvania",
+    "incumbent": "Josh Shapiro",
+    "party": "D",
+    "seeking": true,
+    "dem": "Josh Shapiro",
+    "rep": "Stacy Garrity",
+    "source": "https://www.nga.org/governors/elections/"
+  },
+  {
+    "state": "RI",
+    "name": "Rhode Island",
+    "incumbent": "Dan McKee",
+    "party": "D",
+    "seeking": false,
+    "dem": "Helena Foulkes",
+    "rep": "Aaron Guckian",
+    "source": "https://www.nga.org/governors/elections/",
+    "note": "Significant third-party or multiple same-party candidates; two-party approximation requires care."
+  },
+  {
+    "state": "SC",
+    "name": "South Carolina",
+    "incumbent": "Henry McMaster",
+    "party": "R",
+    "seeking": false,
+    "dem": "Jermaine Johnson",
+    "rep": "Republican nominee",
+    "source": "https://www.nga.org/governors/elections/",
+    "note": "NGA candidate roster appears stale; nominee not verified. Incumbent and contested status are verified."
+  },
+  {
+    "state": "SD",
+    "name": "South Dakota",
+    "incumbent": "Larry Rhoden",
+    "party": "R",
+    "seeking": true,
+    "dem": "Dan Ahlers",
+    "rep": "Larry Rhoden",
+    "source": "https://www.nga.org/governors/elections/"
+  },
+  {
+    "state": "TN",
+    "name": "Tennessee",
+    "incumbent": "Bill Lee",
+    "party": "R",
+    "seeking": false,
+    "dem": "Jerri Green",
+    "rep": "Marsha Blackburn",
+    "source": "https://www.nga.org/governors/elections/"
+  },
+  {
+    "state": "TX",
+    "name": "Texas",
+    "incumbent": "Greg Abbott",
+    "party": "R",
+    "seeking": true,
+    "dem": "Gina Hinojosa",
+    "rep": "Greg Abbott",
+    "source": "https://www.nga.org/governors/elections/"
+  },
+  {
+    "state": "VT",
+    "name": "Vermont",
+    "incumbent": "Phil Scott",
+    "party": "R",
+    "seeking": true,
+    "dem": "Amanda Janoo",
+    "rep": "Phil Scott",
+    "source": "https://www.nga.org/governors/elections/"
+  },
+  {
+    "state": "WI",
+    "name": "Wisconsin",
+    "incumbent": "Tony Evers",
+    "party": "D",
+    "seeking": false,
+    "dem": "David Crowley",
+    "rep": "Tom Tiffany",
+    "source": "https://www.nga.org/governors/elections/"
+  },
+  {
+    "state": "WY",
+    "name": "Wyoming",
+    "incumbent": "Mark Gordon",
+    "party": "R",
+    "seeking": false,
+    "dem": "Ken Casner",
+    "rep": "Republican nominee",
+    "source": "https://www.nga.org/governors/elections/",
+    "note": "NGA candidate roster appears stale; nominee not verified. Incumbent and contested status are verified."
+  }
+]
