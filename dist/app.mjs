@@ -122,6 +122,7 @@ function renderHistogram(){
 function renderTable(){
   const baseline=new Map(baseResults.races.map(r=>[r.id,r]));
   let rs=results.races.filter(r=>(!filterState||r.state===filterState)&&(!query||`${r.name} ${data.states.find(s=>s.abbr===r.state)?.name}`.toLowerCase().includes(query.toLowerCase())));
+  $('#state-filter').value=filterState;
   if(filter==='competitive')rs=rs.filter(r=>Math.max(r.probability,1-r.probability-r.thirdProbability)<.8);
   if(filter==='polled')rs=rs.filter(r=>r.pollCount);if(filter==='changed')rs=rs.filter(r=>(r.margin>0)!==(baseline.get(r.id).margin>0));
   rs.sort((a,b)=>Math.abs(a.probability-.5)-Math.abs(b.probability-.5)||a.name.localeCompare(b.name));
