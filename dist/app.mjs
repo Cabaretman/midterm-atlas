@@ -1,6 +1,6 @@
 import {DEFAULTS,nationalInputs,validatePoll,validateScenario,pollContribution} from './model.mjs';
 import {ForecastClient} from './forecast-client.mjs';
-import {renderMethodology} from './methodology.mjs';
+import {renderMethodology} from './methodology.mjs?v=notation-tone-10';
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const pct=x=>`${Math.round(x*100)}%`,signed=x=>`${x>0?'+':''}${x.toFixed(1)}`;
 const margin=(m,ind=false)=>`${m>=0?(ind?'I':'D'):'R'}+${Math.abs(m).toFixed(1)}`;

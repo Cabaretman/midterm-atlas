@@ -43,7 +43,7 @@ export function renderMethodology(data){
   <p>Margins are measured in percentage points. D+4 means the Democratic candidate leads the Republican by four points. In independent Senate races, the margin compares the independent candidate with the Republican. A vote margin and a win probability describe different quantities: the margin measures the expected lead; the probability measures how often that lead survives the modeled uncertainty.</p>
 
   <p>The polling dataset contains ${data.polls.length.toLocaleString()} records across race polls, generic-ballot polls and presidential approval. Sources include Silver Bulletin, PollResults.org, Wikipedia race tables and cited poll releases. The race model uses current general-election matchups. Duplicate pollster-family, race and field-end records are consolidated, preferring likely-voter samples.</p>
-  <p>The poll average is a weighted mean. Let ${math(pollMargin,'y sub i, the adjusted margin in poll i')} be a poll’s margin after any bias correction, and ${math(effective,'u sub i, its final effective weight')} its effective weight. The summation sign ${math(operator('&sum;'),'sum')} means “add this quantity across the included polls.”</p>
+  <p>The poll average weights each bias-adjusted margin ${math(pollMargin,'y sub i, the adjusted margin in poll i')} by its effective weight ${math(effective,'u sub i, its final effective weight')}:</p>
   ${equations('Weighted polling average',row(average,equals,fraction(row(sum(symbol('i')),effective,pollMargin),row(sum(symbol('i')),effective))))}
   <p>For example, a D+4 poll with weight 1 and an R+2 poll with weight 0.5 give a D+2 average: (4 − 1) / 1.5 = 2. The lower-weight poll still matters, but contributes half as much as the other poll.</p>
 
