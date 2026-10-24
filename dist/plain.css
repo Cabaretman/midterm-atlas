@@ -169,8 +169,11 @@ input[type="range"]::-webkit-slider-thumb, input[type="range"]::-moz-range-thumb
 .method-prose p { margin: 0 0 18px; color: #202020; font-size: 17px; line-height: 1.68; }
 .method-prose p:last-child { margin-bottom: 0; }
 .method-prose math { font-family: "Cambria Math", "STIX Two Math", math; font-size: 1.08em; }
-.method-math { max-width: 100%; margin: 18px 0 22px; padding: 2px 0; overflow-x: auto; overflow-y: hidden; }
-.method-math math, .method-details math { display: block math; width: max-content; min-width: max-content; margin: 12px auto; padding: 3px 1px; }
+.method-math { max-width: 100%; margin: 18px 0 22px; padding: 2px 0; }
+.method-math-scroll { max-width: 100%; overflow-x: auto; overflow-y: hidden; }
+.method-math-scroll > math { display: block math; width: max-content; min-width: max-content; margin: 12px auto; padding: 3px 1px; }
+.method-key { margin-top: 6px; color: #444; font-size: 14px; line-height: 1.6; text-align: left; }
+.method-key math { font-size: 1em; }
 .method-details { margin: 18px 0 22px; padding: 12px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); overflow-x: auto; }
 .method-details summary { width: fit-content; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
 .method-details[open] summary { margin-bottom: 12px; }
