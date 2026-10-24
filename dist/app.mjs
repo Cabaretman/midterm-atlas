@@ -12,7 +12,6 @@ let pollListLimit=100,pollLedgerFilter='all',pollLedgerQuery='';
 let saved=[];try{saved=JSON.parse(localStorage.getItem('atlas-scenarios-v1')||'[]');if(!Array.isArray(saved))saved=[];}catch{}
 const oldDate=d=>new Date(d+'T12:00:00Z').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'});
 function notify(text){$('#toast').textContent=text;$('#toast').style.display='block';clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').style.display='none',4500);}
-const isChanged=()=>JSON.stringify(scenario)!==JSON.stringify(DEFAULTS);
 function raceColor(r){if(!r)return '#eeede9';if(r.thirdProbability>0.5)return '#81ab93';const p=r.probability;if(r.independent&&p>.5)return p>.8?'#81ab93':'#b9cfc0';if(metric==='margin'){const m=r.margin;return Math.abs(m)<2?'#e5ad55':m>0?m>15?'#7392b8':m>5?'#a0b5cf':'#cbd7e6':m<-15?'#ba817a':m<-5?'#d8a9a3':'#ead2cf';}return p>.95?'#7392b8':p>.8?'#a0b5cf':p>.6?'#cbd7e6':p>=.4?'#e5ad55':p>.2?'#ead2cf':p>.05?'#d8a9a3':'#ba817a';}
 const rating=r=>r.thirdProbability>.25?'Multi-candidate':r.probability>.95?'Safe '+(r.independent?'I':'D'):r.probability>.8?'Likely '+(r.independent?'I':'D'):r.probability>.6?'Lean '+(r.independent?'I':'D'):r.probability>=.4?'Toss-up':r.probability>.2?'Lean R':r.probability>.05?'Likely R':'Safe R';
 async function calculate(){
@@ -57,7 +56,7 @@ function summary(){
   const odds=office==='governor'?`${results.mean.toFixed(1)}<span class="small"> / 50</span>`:pct(results.control);
   const seats=office==='governor'?`${r.toFixed(1)}<span class="small"> R</span>`:`${results.mean.toFixed(1)}<span class="small"> D / ${r.toFixed(1)} R</span>`;
   $('#summary').innerHTML=`<section class="summary" aria-live="polite"><div class="metric"><div class="label">${office==='governor'?'Expected D governors':'Democratic control'}</div><div class="metric-value blue">${odds}</div><div class="metric-note">${office==='governor'?'Includes 5 D and 9 R holdovers':`R control <span class="red">${pct(results.rcontrol)}</span>${results.unresolved>.001?' · unresolved '+pct(results.unresolved):''}`}</div></div><div class="metric"><div class="label">${office==='governor'?'Expected R governors':'Expected seat count'}</div><div class="metric-value">${seats}</div><div class="seatbar"><span class="dem" style="width:${results.mean/total*100}%"></span>${other>.001?`<span class="ind" style="width:${other/total*100}%"></span>`:''}<span class="rep" style="width:${r/total*100}%"></span></div><div class="metric-note">${other>.01?`${other.toFixed(1)} independent · `:''}${Math.abs(change)<.05?'Baseline scenario':`${signed(change)} D ${office==='governor'?'governors':'seats'} vs. baseline`}</div></div><div class="metric"><div class="label">Competitive races</div><div class="metric-value">${results.races.filter(r=>Math.max(r.probability,1-r.probability-r.thirdProbability)<.8).length}<span class="small"> / ${results.races.length}</span></div><div class="metric-note">No candidate above 80% win chance</div></div></section>`;
-  $('#scenario-badge').textContent=isChanged()?'Custom scenario':'';
+  $('#scenario-badge').textContent='';
 }
 function updateVisuals(){summary();renderMap();renderSelection();renderHistogram();renderTable();syncStateControl();$('#interval').textContent=`${results.low}–${results.high}`;}
 function renderMap(){
