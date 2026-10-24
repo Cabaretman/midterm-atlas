@@ -1,0 +1,78 @@
+/* Plain typography and document-like tables. No changes to forecast logic. */
+:root{--sans:Arial,Helvetica,sans-serif;--mono:Consolas,"Courier New",monospace;--white:#222;--muted:#666;--line:#ddd;--soft:#fff;--rail:0px}
+*,*::before,*::after{border-radius:0!important;box-shadow:none!important}
+body{font-size:14px;line-height:1.55;-webkit-font-smoothing:auto}
+header.topbar{position:static;inset:auto;width:auto;height:auto;min-height:64px;padding:18px 28px;display:flex;flex-direction:row;align-items:center;gap:40px;border:0;border-bottom:1px solid #ccc;background:#fff}
+.brand{padding:0;font:600 15px Arial,Helvetica,sans-serif;letter-spacing:0;white-space:nowrap}
+.brandmark,.workspace-label,.labtag{display:none}
+nav{margin-left:auto;display:flex;flex-direction:row;gap:24px}
+.navlink{padding:0;background:none!important;font-size:13px;gap:0;color:#555}
+.navlink svg{display:none}
+.navlink.active{color:#111;text-decoration:underline;text-underline-offset:5px;font-weight:400}
+main{margin:0 auto;max-width:1400px;padding:32px 28px 45px}
+.eyebrow{display:none}
+.hero{margin-bottom:26px}
+.hero h1,.page-content h1{font-family:Arial,Helvetica,sans-serif;font-size:30px;font-weight:600;letter-spacing:0;line-height:1.25;margin:0 0 10px}
+.hero p{font-size:13px;color:#555}
+.hero-meta{font-size:11px;line-height:1.8}
+.office-bar{gap:28px}
+.office-tab{font-size:14px;gap:7px}
+.office-tab>span{background:none;padding:0;color:#777;font-size:11px}
+.dashboard{grid-template-columns:minmax(0,1fr) 285px;gap:35px}
+.label{font-size:11px}
+.metric-value{font-size:29px;font-weight:400;letter-spacing:0}
+.metric-value .small{letter-spacing:0}
+.metric-note{font-size:11px}
+.section-head h2{font-size:15px;font-weight:600;letter-spacing:0}
+.map-options{padding:0;background:none;gap:0}
+.map-options button{border:1px solid #ccc;padding:4px 9px;background:#fff}
+.map-options button+button{border-left:0}
+.map-options button.active{background:#eee}
+.selection-detail{border:0;border-top:1px solid #ccc;border-bottom:1px solid #ddd;background:#fff;padding:16px 0}
+.selection-title{font-size:15px;letter-spacing:0}
+.detail-metrics strong{font-size:18px;font-weight:400;letter-spacing:0}
+.selection-subtitle,.selected-note,.map-caption{font-size:11px}
+.workbench{border:0;border-left:1px solid #ddd;padding-left:22px;overflow:visible}
+.workbench-head{background:none;padding:0 0 16px;border-bottom:1px solid #ddd}
+.workbench-head h2{font-size:16px;letter-spacing:0}
+.workbench-head p,.scenario-badge{font-size:11px}
+.controls{padding:20px 0}
+.workbench-section{padding:18px 0}
+.control label{font-size:12px;font-weight:400}
+.control-help{font-size:11px;line-height:1.65}
+.value-chip{background:none;padding:0;color:#222;font:11px Consolas,"Courier New",monospace}
+.range-labels{font-size:10px}
+input[type=range]::-webkit-slider-thumb{border-radius:50%!important;box-shadow:none!important}
+input[type=range]::-moz-range-thumb{border-radius:50%!important;box-shadow:none!important}
+.select,.search,.race-toolbar select{border:1px solid #bbb;background:#fff;font-size:12px;color:#333}
+.button{border:1px solid #aaa;background:#fff;font-size:12px;font-weight:400}
+.button.primary{background:#fff;color:#222;border-color:#777}
+.button.primary:hover,.button:hover{background:#eee}
+.button.ghost{border:0;text-decoration:underline;text-underline-offset:3px;padding-left:0;padding-right:0}
+.reset{font-size:11px;text-decoration:underline;text-underline-offset:3px}
+.coverage{background:none;border:0;border-left:2px solid #bbb;padding:3px 0 3px 10px;color:#666;font-size:11px}
+.coverage button{font-size:11px;color:#444}
+.race-table{font-size:13px}
+.race-table thead{background:#fff}
+.race-table th{padding:10px 12px;border-bottom:1px solid #999;font-size:11px;color:#444;font-weight:600}
+.race-table td{padding:10px 12px;border-top:1px solid #e3e3e3}
+.race-table td:nth-child(2),.race-table th:nth-child(2),.race-table td:nth-child(3),.race-table th:nth-child(3){text-align:right}
+.race-table .race-name{font-size:13px;font-weight:400}
+.race-name>small{font-size:10px}
+.race-table .margin{font:12px Consolas,"Courier New",monospace}
+.probability{display:block;text-align:right}
+.prob-track{display:none}
+.race-table tbody tr.selected{background:#f2f2f2}
+.race-table tbody tr:hover{background:#f7f7f7}
+.rating,.rating.tossup{background:none;color:#555;font-size:11px;padding:0}
+.table-foot{font-size:10px}
+.method-card,.source-card,.poll-card{background:none}
+.method-card h2{font-size:16px;letter-spacing:0}
+.method-card p,.page-content .intro{font-size:13px;color:#444}
+.poll-card-head{font-size:13px}
+.poll-meta,.poll-card p{font-size:11px;color:#555}
+footer{margin:0 auto;max-width:1400px;padding:18px 28px 25px;font-size:11px;color:#666}
+@media(max-width:1050px){.dashboard{grid-template-columns:minmax(0,1fr) 250px;gap:25px}.hero-meta{display:block}.workbench{padding-left:18px}.metric-note{font-size:10px}}
+@media(max-width:850px){header.topbar{padding:16px 22px;gap:25px}.dashboard{grid-template-columns:minmax(0,1fr) 245px;gap:22px}main{padding:26px 22px 35px}.brand{font-size:14px}nav{gap:18px}.hero-meta{display:none}.controls{border-right:0}}
+@media(max-width:680px){header.topbar{padding:16px 18px;flex-wrap:wrap;gap:14px}.brand{width:auto;padding:0}nav{width:auto;margin:0 0 0 auto;padding:0;gap:15px}.navlink,.navlink:first-child{padding:0;margin:0;font-size:12px}main{padding:25px 18px 35px}.dashboard{display:flex;flex-direction:column;gap:28px}.hero h1{font-size:28px}.workbench{width:100%;display:block;border-left:0;border-top:1px solid #aaa;padding:20px 0 0}.controls{border-right:0}.workbench-section{border-top:1px solid #ddd}.selection-detail{grid-template-columns:1fr;gap:18px}.table-scroll{max-height:440px}.race-table th,.race-table td{padding:10px 8px}.race-table th{font-size:10px}.office-note{display:none}.metric-value{font-size:28px}.coverage{font-size:10px}.section-head h2>span{font-size:11px}.hero-meta{display:none}footer{padding:17px 18px 25px;font-size:10px}}
+@media(max-width:400px){header.topbar{display:block}.brand{display:block;margin-bottom:15px}nav{margin:0;gap:22px}.navlink{font-size:12px}.race-table th:nth-child(5),.race-table td:nth-child(5){display:none}.hero h1{font-size:27px}}
