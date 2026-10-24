@@ -83,10 +83,18 @@ for identity,rows in groups.items():
     merged.append(selected)
 merged.sort(key=lambda p:(p['raceId'],p['end'],p['pollsterFamily']))
 for p in merged:
+    if p.get('notes','').startswith((
+        'General-election question, current named matchup;',
+        'Raw reported toplines from Silver Bulletin public download,',
+        'Transcribed from the current general-election polling table on Wikipedia.'
+    )):
+        p['notes']=''
+for p in merged:
     shares=[p.get('approve',0),p.get('disapprove',0)] if p['raceId']=='approval' else [p.get('independent',p.get('dem',0)),p.get('rep',0),p.get('other',0)]
     if not all(isinstance(x,(int,float)) and 0<=x<=100 for x in shares) or sum(shares)>100.2:raise ValueError('Invalid shares '+p['id'])
 used={p['pollsterFamily']:p['rating'] for p in merged}
 report={'asOf':ASOF,'rawRowsInHorizon':len(allrows),'uniquePolls':len(merged),'duplicatesRemoved':len(allrows)-len(merged),'rejected':dict(rejected),'countsByOffice':dict(collections.Counter(p['raceId'].split('-')[0] for p in merged)),'coverageByOffice':{office:len({p['raceId'] for p in merged if p['raceId'].startswith(office+'-')}) for office in ['senate','house','governor']},'ratingStatus':dict(collections.Counter(p['rating']['status'] for p in merged)),'crossSourceVariants':conflicts,'sourceNotes':['Silver Bulletin national downloads: raw reported toplines, not publisher-adjusted values.','PollResults is a third-party NYT mirror, not a direct NYT API connection.','Wikipedia numbers are transcriptions of cited releases; links do not imply independent re-extraction.','No paid FLIPR forecast content or NYT access restrictions were bypassed.','Exactly one population/question per race, pollster family and field-end date. LV preferred to RV/adults; source priority breaks ties.']}
+report['sourceNotes']=['Silver Bulletin national polls use reported toplines.','PollResults.org records link to NYT tracker entries and original releases.','Wikipedia poll rows are transcribed from cited releases.','Polls are deduplicated by pollster family, race and field-end date; likely-voter samples are preferred.']
 (ROOT/'data'/'current-polls.json').write_text(json.dumps(merged,ensure_ascii=False,indent=2),encoding='utf-8')
 (ROOT/'data'/'polling-audit.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
 print(json.dumps({k:v for k,v in report.items() if k not in ['crossSourceVariants','sourceNotes']},indent=2))

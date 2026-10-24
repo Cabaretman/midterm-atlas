@@ -60,9 +60,23 @@ if fitfile.exists():
             race['note']=r.get('notes','')
             race['rosterSource']=r['source'];race['rosterVerification']=r['verification']
     data['sources']+=[{'name':'Silver Bulletin · pollster grades and national polling','url':'https://www.natesilver.net/p/pollster-ratings-silver-bulletin','note':'January 14, 2026 letter grades, predictive plus-minus and mean-reverted D−R bias. Unrated is explicit; published exclusions are honored. National polls use raw public downloads, not adjusted averages.'},{'name':'FLIPR · public methodology and polling','url':'https://www.natesilver.net/p/flipr-midterms-model-methodology','note':'Public methodology and national polling downloads checked; no paid race forecasts imported and this model is not FLIPR.'},{'name':'NYT polling via PollResults.org','url':'https://pollresults.org/api/','note':'Third-party API mirror attributed to the NYT polling tracker, with original release links. Direct NYT access was unavailable; this is not a direct NYT API integration. Mirror attribution: CC BY 4.0.'},{'name':'Wikipedia · current race polling tables','url':'https://en.wikipedia.org/wiki/2026_United_States_Senate_elections','note':'Current general-election matchups transcribed from race tables, retaining original cited release URLs. Primary, obsolete hypothetical and aggregate-average rows excluded.'},{'name':'Historical election results · FiveThirtyEight / MEDSL','url':'https://github.com/fivethirtyeight/election-results','note':'Candidate-aligned historical Senate/governor results and original state sources; presidential leans from MEDSL. Candidate-history effects are partially pooled, not added to current polling twice.'}]
+source_notes={
+    'https://www.the-downballot.com/p/the-downballots-calculations-of-presidential':'2024 presidential results recalculated on 2026 district lines; margins rounded to whole points. Incumbent fields are reference names, not verified nominees.',
+    'https://github.com/tonmcg/US_County_Level_Election_Results_08-24':'2024 state presidential margins aggregated from county returns.',
+    'https://www.nga.org/governors/elections/':'Governor roster and election schedule for 36 states.',
+    'https://www.senate.gov/senators/Class_II.htm':'33 regular Class II seats plus Florida and Ohio specials; 34 Democratic-caucus and 31 Republican holdovers.',
+    'https://www.natesilver.net/p/pollster-ratings-silver-bulletin':'January 14, 2026 pollster grades, predictive plus-minus, mean-reverted bias, aliases and national poll downloads.',
+    'https://www.natesilver.net/p/flipr-midterms-model-methodology':'Public FLIPR methodology reference.',
+    'https://pollresults.org/api/':'PollResults.org records attributed to the NYT polling tracker; original release links are retained.',
+    'https://en.wikipedia.org/wiki/2026_United_States_Senate_elections':'Current general-election matchups transcribed from cited race tables.',
+    'https://github.com/fivethirtyeight/election-results':'Historical Senate and governor results; presidential lean from MEDSL.'
+}
+for source in data['sources']:
+    if source['url'] in source_notes:source['note']=source_notes[source['url']]
 auditfile=root/'data'/'polling-audit.json'
 if auditfile.exists():
     audit=json.loads(auditfile.read_text());data['pollingAudit']={k:v for k,v in audit.items() if k!='crossSourceVariants'}
+    data['pollingAudit']['sourceNotes']=['Silver Bulletin national polls use reported toplines.','PollResults.org records link to NYT tracker entries and original releases.','Wikipedia poll rows are transcribed from cited releases.','Polls are deduplicated by pollster family, race and field-end date; likely-voter samples are preferred.']
 data['pollsterRatings']=list({p['pollsterFamily']:p['rating'] for p in polls if p.get('rating')}.values())
 (root/'dist'/'data.json').write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf-8')
 print(f'{len(races)} races, {len(polls)} sourced polling rows, national 2024 margin {national:.3f}')

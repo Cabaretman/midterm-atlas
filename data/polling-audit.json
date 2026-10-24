@@ -139,10 +139,9 @@
     }
   ],
   "sourceNotes": [
-    "Silver Bulletin national downloads: raw reported toplines, not publisher-adjusted values.",
-    "PollResults is a third-party NYT mirror, not a direct NYT API connection.",
-    "Wikipedia numbers are transcriptions of cited releases; links do not imply independent re-extraction.",
-    "No paid FLIPR forecast content or NYT access restrictions were bypassed.",
-    "Exactly one population/question per race, pollster family and field-end date. LV preferred to RV/adults; source priority breaks ties."
+    "Silver Bulletin national polls use reported toplines.",
+    "PollResults.org records link to NYT tracker entries and original releases.",
+    "Wikipedia poll rows are transcribed from cited releases.",
+    "Polls are deduplicated by pollster family, race and field-end date; likely-voter samples are preferred."
   ]
 }

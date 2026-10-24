@@ -157,6 +157,11 @@ input[type="range"]::-webkit-slider-thumb, input[type="range"]::-moz-range-thumb
 .method-prose { max-width: 900px; margin: 0; color: #202020; font-size: 17px; line-height: 1.72; }
 .method-prose p { margin: 0 0 19px; color: #202020; font-size: 17px; line-height: 1.72; }
 .method-prose p:last-child { margin-bottom: 0; }
+.method-equation { margin: 22px 0; padding: 13px 0; border-top: 1px solid #aaa; border-bottom: 1px solid #aaa; }
+.method-equation > div { display: grid; grid-template-columns: minmax(135px, .32fr) 24px minmax(0, 1fr); gap: 12px; align-items: baseline; padding: 5px 0; font-size: 16px; line-height: 1.5; }
+.method-equation > div > span:first-child { font-weight: 600; }
+.method-equation > div > b { font-weight: 400; text-align: center; }
+.method-equation figcaption { margin: 4px 0 0 171px; color: #333; font-size: 14px; }
 .method-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; margin: 24px 0; }
 .method-card { padding: 20px 0; border-top: 1px solid var(--rule); }
 .method-card h2 { margin: 0 0 9px; font-size: 18px; font-weight: 600; }
@@ -245,6 +250,8 @@ dialog h2 { font-size: 19px; font-weight: 600; }
   .table-scroll { max-height: 460px; }
   .method-grid, .source-cards { display: block; }
   .method-prose, .method-prose p { font-size: 16px; line-height: 1.68; }
+  .method-equation > div { grid-template-columns: minmax(110px, .38fr) 20px minmax(0, 1fr); gap: 7px; font-size: 15px; }
+  .method-equation figcaption { margin-left: 137px; font-size: 13px; }
   footer { padding: 15px 18px 22px; font-size: 12px; }
   #toast { width: max-content; max-width: 92%; }
 }
