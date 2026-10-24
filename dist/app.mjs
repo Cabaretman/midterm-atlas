@@ -27,7 +27,9 @@ async function calculate(){
   }catch(error){if(request===calculationSequence){$('#app').removeAttribute('aria-busy');notify('Could not update the forecast: '+error.message);}return false;}
 }
 function rangeControl(key,label,min,max,step,value,left,right,help='',attrs=''){
-  return `<div class="control"><div class="control-top"><label for="${key}">${label}</label><output class="value-chip" for="${key}" id="${key}-value">${formatControl(key,value)}</output></div><input id="${key}" data-control="${key}" type="range" min="${min}" max="${max}" step="${step}" value="${value}" ${attrs}><div class="range-labels"><span>${left}</span><span>${right}</span></div>${help?`<div class="control-help">${help}</div>`:''}</div>`;
+  const display=v=>key==='incumbency'?v/2:v, shown=display(value), lo=display(min),hi=display(max),st=display(step);
+  const unit=['approval','pollWeight','partisanWeight','candidateWeight'].includes(key)?'%':key==='incumbency'?'×':key==='generic'||key==='nationalError'||key==='raceError'||key==='stateError'||key.includes('Sigma')?'pp':'';
+  return `<div class="control"><div class="control-top"><label for="${key}-number">${label}</label><div class="control-entry"><button type="button" class="nudge" data-nudge="${key}" data-delta="-${st}" aria-label="Decrease ${label}">−</button><input id="${key}-number" class="value-chip" data-control="${key}" type="number" min="${lo}" max="${hi}" step="${st}" value="${shown}" aria-label="${label} value" ${attrs}><span class="unit">${unit}</span><button type="button" class="nudge" data-nudge="${key}" data-delta="${st}" aria-label="Increase ${label}">+</button></div></div><input id="${key}" class="control-range" data-control="${key}" type="range" min="${min}" max="${max}" step="${step}" value="${value}" aria-label="${label} slider"><div class="range-labels"><span>${left}</span><span>${right}</span></div>${help?`<div class="control-help">${help}</div>`:''}</div>`;
 }
 function formatControl(key,value){if(key==='incumbency')return (value/2).toFixed(1)+'×';return ['approval','pollWeight','partisanWeight','candidateWeight'].includes(key)?`${Math.round(value)}%`:key==='generic'?margin(value):key.includes('Sigma')?`${value.toFixed(1)} pp`:signed(value)+' pp';}
 async function render(){
@@ -100,8 +102,7 @@ function renderSelection(){
     existing.children[0].replaceWith(next.children[0]);
     if(existing.querySelector('.candidate-history'))existing.querySelector('.candidate-history').open=Boolean(historyOpen);
     existing.querySelector('.detail-control .selected-note').replaceWith(next.querySelector('.detail-control .selected-note'));
-    const input=$('#raceError');if(document.activeElement!==input)input.value=scenario.races[r.id]??0;
-    $('#raceError-value').textContent=formatControl('raceError',scenario.races[r.id]??0);
+    const input=$('#raceError'),number=$('#raceError-number'),value=scenario.races[r.id]??0;if(document.activeElement!==input&&document.activeElement!==number){input.value=value;number.value=value;}
   }else $('#selection').innerHTML=markup;
 
 }
@@ -109,7 +110,7 @@ function syncStateControl(){
   const st=results.races.find(r=>r.id===selected)?.state||'MI',wrapper=$('#state-slider'),value=scenario.states[st]??0;
   $('#state-control').value=st;$('#state-chip').textContent=st;
   if(wrapper.dataset.state!==st){wrapper.innerHTML=rangeControl('stateError','State polling error',-20,20,.5,value,'R +20','D / I +20');wrapper.dataset.state=st;}
-  else {const input=$('#stateError');if(document.activeElement!==input)input.value=value;$('#stateError-value').textContent=formatControl('stateError',value);}
+  else {const input=$('#stateError'),number=$('#stateError-number');if(document.activeElement!==input&&document.activeElement!==number){input.value=value;number.value=value;}}
 }
 function renderHistogram(){
   const values=Object.keys(results.histogram).map(Number),min=Math.min(...values),max=Math.max(...values),peak=Math.max(...Object.values(results.histogram));
@@ -165,7 +166,8 @@ function bindForecast(){
   $('#save-scenario').onclick=saveScenario;$('#share-scenario').onclick=shareScenario;$('#reset-scenario').onclick=()=>{scenario=structuredClone(DEFAULTS);history.replaceState(null,'',location.pathname+location.search);render();notify('Baseline restored.');};$('#open-scenarios').onclick=openScenarios;
   $('#download-forecast').onclick=()=>{const rows=[['race','office','state','projected_left_minus_R','left_party','left_win_probability','independent_third_win_probability','poll_count','poll_weight','prior','local_adjustment','snapshot_date'],...results.races.map(r=>[r.name,r.office,r.state,r.margin.toFixed(3),r.independent?'I':'D',r.probability,r.thirdProbability,r.pollCount,r.pollWeight.toFixed(3),r.prior.toFixed(3),r.offset,data.asOf])];download('midterm-atlas-'+office+'-forecast.csv',rows.map(r=>r.join(',')).join('\n'),'text/csv');};
 }
-function onForecastInput(e){const k=e.target.dataset.control;if(!k)return;const val=Number(e.target.value);$('#'+k+'-value').textContent=formatControl(k,val);if(k==='raceError')scenario.races[selected]=val;else if(k==='stateError'){const state=results.races.find(r=>r.id===selected).state;scenario.states[state]=val;}else scenario[k]=val;scheduleUpdate();}
+function onForecastInput(e){const k=e.target.dataset.control;if(!k)return;if(e.target.value===''||!Number.isFinite(Number(e.target.value)))return;const range=$('#'+k),number=$('#'+k+'-number'),factor=k==='incumbency'?2:1;let n=e.target.type==='range'?Number(e.target.value):Number(e.target.value)*factor;const min=Number(range.min),max=Number(range.max),step=Number(range.step);n=Math.max(min,Math.min(max,min+Math.round((n-min)/step)*step));n=Number(n.toFixed(4));range.value=n;if(e.target.type==='range')number.value=k==='incumbency'?n/factor:n;else if(n!==Number(e.target.value)*factor)number.value=k==='incumbency'?n/factor:n;if(k==='raceError')scenario.races[selected]=n;else if(k==='stateError'){const state=results.races.find(r=>r.id===selected).state;scenario.states[state]=n;}else scenario[k]=n;scheduleUpdate();}
+$('#app').addEventListener('click',e=>{const b=e.target.closest('[data-nudge]');if(!b)return;const input=$('#'+b.dataset.nudge+'-number');input.value=String(Math.max(Number(input.min),Math.min(Number(input.max),Number(input.value||0)+Number(b.dataset.delta))));input.dispatchEvent(new Event('input',{bubbles:true}));});
 // Delegated controls survive map/table/detail redraws.
 $('#app').addEventListener('click',e=>{
   const officeButton=e.target.closest('[data-office]');if(officeButton){office=officeButton.dataset.office;selected=data.races.find(r=>r.office===office&&r.state==='MI').id;filterState='';query='';filter='all';tableLimit=50;render();return;}
