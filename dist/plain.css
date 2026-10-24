@@ -164,15 +164,16 @@ input[type="range"]::-webkit-slider-thumb, input[type="range"]::-moz-range-thumb
 .threshold-label { color: #333; font-size: 14px; }
 .page-content { max-width: 900px; margin: 0; }
 .page-content h1 { font-size: 28px; font-weight: 600; }
-.method-prose { max-width: 1000px; margin: 0; color: #202020; font-size: 16px; line-height: 1.6; }
+.method-prose { max-width: 900px; margin: 0; color: #202020; font-size: 17px; line-height: 1.68; }
 .method-prose > h1 { margin: 0 0 10px; font-size: 30px; }
-.method-prose p { margin: 0 0 14px; color: #202020; font-size: 16px; line-height: 1.6; }
+.method-prose p { margin: 0 0 18px; color: #202020; font-size: 17px; line-height: 1.68; }
 .method-prose p:last-child { margin-bottom: 0; }
-.method-equation { margin: 22px 0; padding: 13px 0; border-top: 1px solid #aaa; border-bottom: 1px solid #aaa; }
-.method-equation > div { display: grid; grid-template-columns: minmax(135px, .32fr) 24px minmax(0, 1fr); gap: 12px; align-items: baseline; padding: 5px 0; font-size: 16px; line-height: 1.5; }
-.method-equation > div > span:first-child { font-weight: 600; }
-.method-equation > div > b { font-weight: 400; text-align: center; }
-.method-equation figcaption { margin: 4px 0 0 171px; color: #333; font-size: 14px; }
+.method-prose math { font-family: "Cambria Math", "STIX Two Math", math; font-size: 1.08em; }
+.method-math { max-width: 100%; margin: 18px 0 22px; padding: 2px 0; overflow-x: auto; overflow-y: hidden; }
+.method-math math, .method-details math { display: block math; width: max-content; min-width: max-content; margin: 12px auto; padding: 3px 1px; }
+.method-details { margin: 18px 0 22px; padding: 12px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); overflow-x: auto; }
+.method-details summary { width: fit-content; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.method-details[open] summary { margin-bottom: 12px; }
 .method-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; margin: 24px 0; }
 .method-card { padding: 20px 0; border-top: 1px solid var(--rule); }
 .method-card h2 { margin: 0 0 9px; font-size: 18px; font-weight: 600; }
@@ -261,8 +262,7 @@ dialog h2 { font-size: 19px; font-weight: 600; }
   .table-scroll { max-height: 460px; }
   .method-grid, .source-cards { display: block; }
   .method-prose, .method-prose p { font-size: 16px; line-height: 1.68; }
-  .method-equation > div { grid-template-columns: minmax(110px, .38fr) 20px minmax(0, 1fr); gap: 7px; font-size: 15px; }
-  .method-equation figcaption { margin-left: 137px; font-size: 13px; }
+  .method-prose math { font-size: 1em; }
   footer { padding: 15px 18px 22px; font-size: 12px; }
   #toast { width: max-content; max-width: 92%; }
 }
