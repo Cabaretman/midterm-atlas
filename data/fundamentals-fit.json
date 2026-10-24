@@ -1,0 +1,2284 @@
+{
+  "version": 2,
+  "fittedThrough": 2024,
+  "fittingMethod": "Recency-weighted ridge regression with partially pooled candidate intercepts; separate Senate/governor fits. Candidate residuals reflect opponents and turnout too, not identified personal causal effects.",
+  "nationalEnvironment": "Current generic ballot margin. Approval shown as context; a hypothetical approval change adjusts the scenario environment only, without counting baseline approval twice.",
+  "validationCaveat": "Forward-year conditional diagnostics use realized national House popular vote, which was not known in advance. This is not an end-to-end ex-ante forecast backtest or calibration of win probabilities. Shrinkage selected on 2010\u20132020 only; 2022/2024 are held-out cycles.",
+  "models": {
+    "senate": {
+      "coefficients": {
+        "intercept": 2.186314,
+        "lean": 0.760607,
+        "national": 0.800535,
+        "incumbency": 4.732536,
+        "experience": 4.33881
+      },
+      "priorSigma": 8.3647,
+      "shrinkage": 0.5,
+      "candidateHalfLife": 10,
+      "trainingN": 398,
+      "trainingThrough": 2024,
+      "validation": {
+        "n": 61,
+        "rmse": 8.3647,
+        "mae": 6.5294
+      },
+      "validationWithoutCandidateEffects": {
+        "n": 61,
+        "rmse": 7.6456,
+        "mae": 6.2167
+      }
+    },
+    "governor": {
+      "coefficients": {
+        "intercept": -1.527907,
+        "lean": 0.455492,
+        "national": 0.588855,
+        "incumbency": 5.17827,
+        "experience": 5.003051
+      },
+      "priorSigma": 12.1863,
+      "shrinkage": 0.5,
+      "candidateHalfLife": 10,
+      "trainingN": 280,
+      "trainingThrough": 2024,
+      "validation": {
+        "n": 44,
+        "rmse": 12.1863,
+        "mae": 9.5753
+      },
+      "validationWithoutCandidateEffects": {
+        "n": 44,
+        "rmse": 14.5777,
+        "mae": 10.493
+      }
+    }
+  },
+  "profiles": {
+    "senate-AL": {
+      "dem": {
+        "name": "Everett Wess",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Barry Moore",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "senate-AK": {
+      "dem": {
+        "name": "Mary Peltola",
+        "effect": 4.1856,
+        "history": [
+          {
+            "year": 2022,
+            "office": "house",
+            "candidate": "Mary Peltola",
+            "margin": 9.92736271392762,
+            "genericExpectedMargin": -15.181809274131489,
+            "residual": 25.10917198805911,
+            "source": "https://www.elections.alaska.gov/results/22GENR/US%20REP.pdf",
+            "recencyWeight": 0.757858283255199,
+            "incumbencyInBaseline": true
+          },
+          {
+            "year": 2024,
+            "office": "house",
+            "candidate": "Mary Peltola",
+            "margin": -2.4471331009240442,
+            "genericExpectedMargin": -15.478720391041996,
+            "residual": 13.031587290117951,
+            "source": "https://www.elections.alaska.gov/results/24GENR/RCV-USRep.pdf",
+            "recencyWeight": 0.8705505632961241,
+            "incumbencyInBaseline": true
+          }
+        ],
+        "pastWinner": true,
+        "status": "cross-office historical estimate",
+        "effectiveRaces": 1.6284088465513231,
+        "transferFactor": 0.5,
+        "transferNote": "House-to-Senate transfer is an explicit 50% shrinkage assumption, not fitted from enough comparable transitions."
+      },
+      "rep": {
+        "name": "Dan Sullivan",
+        "effect": -0.6879,
+        "history": [
+          {
+            "year": 2014,
+            "office": "senate",
+            "candidate": "Dan Sullivan",
+            "margin": 2.14,
+            "genericExpectedMargin": 6.894,
+            "residual": -4.754,
+            "source": "https://history.house.gov/Institution/Election-Statistics/",
+            "recencyWeight": 0.4353,
+            "incumbencyInBaseline": true
+          },
+          {
+            "year": 2020,
+            "office": "senate",
+            "candidate": "Dan Sullivan",
+            "margin": 12.725,
+            "genericExpectedMargin": 17.245,
+            "residual": -4.52,
+            "source": "https://www.elections.alaska.gov/results/20GENR/data/sovc/ElectionSummaryReportRPT24.pdf",
+            "recencyWeight": 0.6598,
+            "incumbencyInBaseline": true
+          }
+        ],
+        "pastWinner": true,
+        "status": "historical estimate",
+        "effectiveRaces": 1.095
+      },
+      "transfer": true,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "official portal confirms Peltola; complete multi-candidate field crosschecked in secondary roster, Dan S vs Dan J disambiguation needs care"
+    },
+    "senate-AR": {
+      "dem": {
+        "name": "Hallie Shoffner",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Tom Cotton",
+        "effect": 2.6573,
+        "history": [
+          {
+            "year": 2014,
+            "office": "senate",
+            "candidate": "Tom Cotton",
+            "margin": 17.077,
+            "genericExpectedMargin": 14.271,
+            "residual": 2.806,
+            "source": "https://history.house.gov/Institution/Election-Statistics/",
+            "recencyWeight": 0.4353,
+            "incumbencyInBaseline": true
+          }
+        ],
+        "pastWinner": true,
+        "status": "historical estimate",
+        "effectiveRaces": 0.435
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "senate-CO": {
+      "dem": {
+        "name": "John Hickenlooper",
+        "effect": 6.2751,
+        "history": [
+          {
+            "year": 2020,
+            "office": "senate",
+            "candidate": "John Hickenlooper",
+            "margin": 9.321,
+            "genericExpectedMargin": -2.31,
+            "residual": 11.631,
+            "source": "https://www.sos.state.co.us/pubs/elections/resultsData.html",
+            "recencyWeight": 0.6598,
+            "incumbencyInBaseline": true
+          }
+        ],
+        "pastWinner": true,
+        "status": "historical estimate",
+        "effectiveRaces": 0.66
+      },
+      "rep": {
+        "name": "Mark Baisley",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "senate-DE": {
+      "dem": {
+        "name": "Chris Coons",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Michael Katz",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "senate-FL": {
+      "dem": {
+        "name": "Angie Nixon",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Ashley Moody",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "senate-GA": {
+      "dem": {
+        "name": "Jon Ossoff",
+        "effect": 4.1095,
+        "history": [
+          {
+            "year": 2020,
+            "office": "senate",
+            "candidate": "Jon Ossoff",
+            "margin": 1.225,
+            "genericExpectedMargin": -9.944,
+            "residual": 11.169,
+            "source": "https://results.enr.clarityelections.com/GA/105369/web.264614/#/summary",
+            "recencyWeight": 0.6598,
+            "incumbencyInBaseline": true
+          }
+        ],
+        "pastWinner": true,
+        "status": "historical estimate",
+        "effectiveRaces": 0.66
+      },
+      "rep": {
+        "name": "Mike Collins",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "senate-ID": {
+      "dem": null,
+      "rep": {
+        "name": "Jim Risch",
+        "effect": -0.6448,
+        "history": [
+          {
+            "year": 2008,
+            "office": "senate",
+            "candidate": "Jim Risch",
+            "margin": 23.549,
+            "genericExpectedMargin": 16.281,
+            "residual": 7.269,
+            "source": "https://history.house.gov/Institution/Election-Statistics/",
+            "recencyWeight": 0.2872,
+            "incumbencyInBaseline": false
+          },
+          {
+            "year": 2014,
+            "office": "senate",
+            "candidate": "Jim Risch",
+            "margin": 30.657,
+            "genericExpectedMargin": 38.665,
+            "residual": -8.009,
+            "source": "https://history.house.gov/Institution/Election-Statistics/",
+            "recencyWeight": 0.4353,
+            "incumbencyInBaseline": true
+          },
+          {
+            "year": 2020,
+            "office": "senate",
+            "candidate": "Jim Risch",
+            "margin": 29.376,
+            "genericExpectedMargin": 30.205,
+            "residual": -0.829,
+            "source": "https://sos.idaho.gov/elections-division/2020-results-statewide/",
+            "recencyWeight": 0.6598,
+            "incumbencyInBaseline": true
+          }
+        ],
+        "pastWinner": true,
+        "status": "historical estimate",
+        "effectiveRaces": 1.382
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "senate-IL": {
+      "dem": {
+        "name": "Juliana Stratton",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Don Tracy",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "senate-IA": {
+      "dem": {
+        "name": "Josh Turek",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Ashley Hinson",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "senate-KS": {
+      "dem": {
+        "name": "Adam Hamilton",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Roger Marshall",
+        "effect": -0.436,
+        "history": [
+          {
+            "year": 2020,
+            "office": "senate",
+            "candidate": "Roger Marshall",
+            "margin": 11.437,
+            "genericExpectedMargin": 12.64,
+            "residual": -1.202,
+            "source": "https://sos.ks.gov/elections/20elec/2020_General_Official_Vote_Totals.pdf",
+            "recencyWeight": 0.6598,
+            "incumbencyInBaseline": false
+          }
+        ],
+        "pastWinner": true,
+        "status": "historical estimate",
+        "effectiveRaces": 0.66
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "senate-KY": {
+      "dem": {
+        "name": "Charles Booker",
+        "effect": 1.36,
+        "history": [
+          {
+            "year": 2022,
+            "office": "senate",
+            "candidate": "Charles Booker",
+            "margin": -23.617,
+            "genericExpectedMargin": -32.134,
+            "residual": 8.517,
+            "source": "https://elect.ky.gov/Documents/11.28.2022%20Certified%20General%20Election%20Results.pdf",
+            "recencyWeight": 0.7579,
+            "incumbencyInBaseline": true
+          }
+        ],
+        "pastWinner": false,
+        "status": "historical estimate",
+        "effectiveRaces": 0.758
+      },
+      "rep": {
+        "name": "Andy Barr",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "senate-LA": {
+      "dem": {
+        "name": "Jamie Davis",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Julia Letlow",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "senate-ME": {
+      "dem": {
+        "name": "Troy Jackson",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Susan Collins",
+        "effect": 12.4496,
+        "history": [
+          {
+            "year": 2002,
+            "office": "senate",
+            "candidate": "Susan Collins",
+            "margin": 16.871,
+            "genericExpectedMargin": 7.317,
+            "residual": 9.554,
+            "source": "https://history.house.gov/Institution/Election-Statistics/",
+            "recencyWeight": 0.1895,
+            "incumbencyInBaseline": true
+          },
+          {
+            "year": 2008,
+            "office": "senate",
+            "candidate": "Susan Collins",
+            "margin": 22.767,
+            "genericExpectedMargin": -10.49,
+            "residual": 33.257,
+            "source": "https://history.house.gov/Institution/Election-Statistics/",
+            "recencyWeight": 0.2872,
+            "incumbencyInBaseline": true
+          },
+          {
+            "year": 2014,
+            "office": "senate",
+            "candidate": "Susan Collins",
+            "margin": 36.977,
+            "genericExpectedMargin": 2.954,
+            "residual": 34.023,
+            "source": "https://history.house.gov/Institution/Election-Statistics/",
+            "recencyWeight": 0.4353,
+            "incumbencyInBaseline": true
+          },
+          {
+            "year": 2020,
+            "office": "senate",
+            "candidate": "Susan Collins",
+            "margin": 8.599,
+            "genericExpectedMargin": 3.859,
+            "residual": 4.74,
+            "source": "https://www.maine.gov/sos/cec/elec/results/results20.html#novtab",
+            "recencyWeight": 0.6598,
+            "incumbencyInBaseline": true
+          }
+        ],
+        "pastWinner": true,
+        "status": "historical estimate",
+        "effectiveRaces": 1.572
+      },
+      "transfer": null,
+      "source": "https://www.maine.gov/sos/sites/maine.gov.sos/files/inline-files/2026%20General%20Candidate%20List%20-%20FINAL.xlsx",
+      "verification": "primary certified general-election candidate list downloaded and read"
+    },
+    "senate-MA": {
+      "dem": {
+        "name": "Ed Markey",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "John Deaton",
+        "effect": 3.5379,
+        "history": [
+          {
+            "year": 2024,
+            "office": "senate",
+            "candidate": "John Deaton",
+            "margin": -19.848,
+            "genericExpectedMargin": -30.761,
+            "residual": 10.913,
+            "source": "https://electionstats.state.ma.us/elections/view/165304/",
+            "recencyWeight": 0.8706,
+            "incumbencyInBaseline": true
+          }
+        ],
+        "pastWinner": false,
+        "status": "historical estimate",
+        "effectiveRaces": 0.871
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "senate-MI": {
+      "dem": {
+        "name": "Abdul El-Sayed",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Mike Rogers",
+        "effect": -0.6983,
+        "history": [
+          {
+            "year": 2024,
+            "office": "senate",
+            "candidate": "Mike Rogers",
+            "margin": -0.341,
+            "genericExpectedMargin": 1.457,
+            "residual": -1.798,
+            "source": "https://mvic.sos.state.mi.us/votehistory/Index?type=C&electionDate=11-5-2024",
+            "recencyWeight": 0.8706,
+            "incumbencyInBaseline": false
+          }
+        ],
+        "pastWinner": false,
+        "status": "historical estimate",
+        "effectiveRaces": 0.871
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "senate-MN": {
+      "dem": {
+        "name": "Peggy Flanagan",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Michele Tafoya",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "senate-MS": {
+      "dem": {
+        "name": "Scott Colom",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Cindy Hyde-Smith",
+        "effect": -3.4895,
+        "history": [
+          {
+            "year": 2020,
+            "office": "senate",
+            "candidate": "Cindy Hyde-Smith",
+            "margin": 9.976,
+            "genericExpectedMargin": 19.6,
+            "residual": -9.624,
+            "source": "https://www.sos.ms.gov/elections/electionresults/2020%20GE%20Statewide%20Recapitulation%20Report.pdf",
+            "recencyWeight": 0.6598,
+            "incumbencyInBaseline": true
+          }
+        ],
+        "pastWinner": true,
+        "status": "historical estimate",
+        "effectiveRaces": 0.66
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "senate-MT": {
+      "dem": {
+        "name": "Alani Bankhead",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Kurt Alme",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "senate-NE": {
+      "dem": null,
+      "rep": {
+        "name": "Pete Ricketts",
+        "effect": -7.6965,
+        "history": [
+          {
+            "year": 2006,
+            "office": "senate",
+            "candidate": "Pete Ricketts",
+            "margin": -27.766,
+            "genericExpectedMargin": 5.676,
+            "residual": -33.442,
+            "source": "https://history.house.gov/Institution/Election-Statistics/",
+            "recencyWeight": 0.25,
+            "incumbencyInBaseline": true
+          }
+        ],
+        "pastWinner": false,
+        "status": "historical estimate",
+        "effectiveRaces": 0.25
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "senate-NH": {
+      "dem": {
+        "name": "Chris Pappas",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "John E. Sununu",
+        "effect": -0.2514,
+        "history": [
+          {
+            "year": 2002,
+            "office": "senate",
+            "candidate": "John E. Sununu",
+            "margin": 4.419,
+            "genericExpectedMargin": 3.099,
+            "residual": 1.32,
+            "source": "https://history.house.gov/Institution/Election-Statistics/",
+            "recencyWeight": 0.1895,
+            "incumbencyInBaseline": false
+          },
+          {
+            "year": 2008,
+            "office": "senate",
+            "candidate": "John E. Sununu",
+            "margin": -6.342,
+            "genericExpectedMargin": -4.687,
+            "residual": -1.655,
+            "source": "https://history.house.gov/Institution/Election-Statistics/",
+            "recencyWeight": 0.2872,
+            "incumbencyInBaseline": true
+          }
+        ],
+        "pastWinner": true,
+        "status": "historical estimate",
+        "effectiveRaces": 0.477
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "senate-NJ": {
+      "dem": {
+        "name": "Cory Booker",
+        "effect": -2.6732,
+        "history": [
+          {
+            "year": 2014,
+            "office": "senate",
+            "candidate": "Cory Booker",
+            "margin": 13.51,
+            "genericExpectedMargin": 17.223,
+            "residual": -3.714,
+            "source": "https://history.house.gov/Institution/Election-Statistics/",
+            "recencyWeight": 0.4353,
+            "incumbencyInBaseline": true
+          },
+          {
+            "year": 2020,
+            "office": "senate",
+            "candidate": "Cory Booker",
+            "margin": 16.308,
+            "genericExpectedMargin": 22.829,
+            "residual": -6.521,
+            "source": "https://nj.gov/state/elections/assets/pdf/election-results/2020/2020-official-general-results-us-senate.pdf",
+            "recencyWeight": 0.6598,
+            "incumbencyInBaseline": true
+          }
+        ],
+        "pastWinner": true,
+        "status": "historical estimate",
+        "effectiveRaces": 1.095
+      },
+      "rep": {
+        "name": "Justin Murphy",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "senate-NM": {
+      "dem": {
+        "name": "Ben Ray Luj\u00e1n",
+        "effect": -1.1503,
+        "history": [
+          {
+            "year": 2020,
+            "office": "senate",
+            "candidate": "Ben Ray Luj\u00e1n",
+            "margin": 6.105,
+            "genericExpectedMargin": 9.278,
+            "residual": -3.172,
+            "source": "https://nmresults.azurewebsites.net/resultsSW.aspx?type=FED&map=CTY",
+            "recencyWeight": 0.6598,
+            "incumbencyInBaseline": false
+          }
+        ],
+        "pastWinner": true,
+        "status": "historical estimate",
+        "effectiveRaces": 0.66
+      },
+      "rep": {
+        "name": "Larry Marker",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "senate-NC": {
+      "dem": {
+        "name": "Roy Cooper",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Michael Whatley",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "senate-OH": {
+      "dem": {
+        "name": "Sherrod Brown",
+        "effect": -0.0036,
+        "history": [
+          {
+            "year": 2006,
+            "office": "senate",
+            "candidate": "Sherrod Brown",
+            "margin": 12.349,
+            "genericExpectedMargin": -0.157,
+            "residual": 12.506,
+            "source": "https://history.house.gov/Institution/Election-Statistics/",
+            "recencyWeight": 0.25,
+            "incumbencyInBaseline": true
+          },
+          {
+            "year": 2012,
+            "office": "senate",
+            "candidate": "Sherrod Brown",
+            "margin": 6.001,
+            "genericExpectedMargin": 10.124,
+            "residual": -4.123,
+            "source": "https://history.house.gov/Institution/Election-Statistics/",
+            "recencyWeight": 0.3789,
+            "incumbencyInBaseline": true
+          },
+          {
+            "year": 2018,
+            "office": "senate",
+            "candidate": "Sherrod Brown",
+            "margin": 6.846,
+            "genericExpectedMargin": 10.335,
+            "residual": -3.489,
+            "source": "https://history.house.gov/Institution/Election-Statistics/",
+            "recencyWeight": 0.5743,
+            "incumbencyInBaseline": true
+          },
+          {
+            "year": 2024,
+            "office": "senate",
+            "candidate": "Sherrod Brown",
+            "margin": -3.619,
+            "genericExpectedMargin": -0.612,
+            "residual": -3.007,
+            "source": "https://www.ohiosos.gov/elections/election-results-and-data/2024-official-election-results/",
+            "recencyWeight": 0.8706,
+            "incumbencyInBaseline": true
+          }
+        ],
+        "pastWinner": true,
+        "status": "historical estimate",
+        "effectiveRaces": 2.074
+      },
+      "rep": {
+        "name": "Jon Husted",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "senate-OK": {
+      "dem": {
+        "name": "N'Kiyla Jasmine Thomas",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Kevin Hern",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "senate-OR": {
+      "dem": {
+        "name": "Jeff Merkley",
+        "effect": 1.0887,
+        "history": [
+          {
+            "year": 2008,
+            "office": "senate",
+            "candidate": "Jeff Merkley",
+            "margin": 3.361,
+            "genericExpectedMargin": 6.808,
+            "residual": -3.446,
+            "source": "https://history.house.gov/Institution/Election-Statistics/",
+            "recencyWeight": 0.2872,
+            "incumbencyInBaseline": true
+          },
+          {
+            "year": 2014,
+            "office": "senate",
+            "candidate": "Jeff Merkley",
+            "margin": 18.948,
+            "genericExpectedMargin": 12.942,
+            "residual": 6.007,
+            "source": "https://history.house.gov/Institution/Election-Statistics/",
+            "recencyWeight": 0.4353,
+            "incumbencyInBaseline": true
+          },
+          {
+            "year": 2020,
+            "office": "senate",
+            "candidate": "Jeff Merkley",
+            "margin": 17.605,
+            "genericExpectedMargin": 20.452,
+            "residual": -2.847,
+            "source": "https://sos.oregon.gov/elections/Documents/results/november-general-2020.pdf",
+            "recencyWeight": 0.6598,
+            "incumbencyInBaseline": true
+          }
+        ],
+        "pastWinner": true,
+        "status": "historical estimate",
+        "effectiveRaces": 1.382
+      },
+      "rep": {
+        "name": "David Brock Smith",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "senate-RI": {
+      "dem": {
+        "name": "Jack Reed",
+        "effect": 8.4036,
+        "history": [
+          {
+            "year": 2002,
+            "office": "senate",
+            "candidate": "Jack Reed",
+            "margin": 56.853,
+            "genericExpectedMargin": 29.051,
+            "residual": 27.802,
+            "source": "https://history.house.gov/Institution/Election-Statistics/",
+            "recencyWeight": 0.1895,
+            "incumbencyInBaseline": true
+          },
+          {
+            "year": 2008,
+            "office": "senate",
+            "candidate": "Jack Reed",
+            "margin": 46.809,
+            "genericExpectedMargin": 37.574,
+            "residual": 9.235,
+            "source": "https://history.house.gov/Institution/Election-Statistics/",
+            "recencyWeight": 0.2872,
+            "incumbencyInBaseline": true
+          },
+          {
+            "year": 2014,
+            "office": "senate",
+            "candidate": "Jack Reed",
+            "margin": 41.406,
+            "genericExpectedMargin": 24.631,
+            "residual": 16.775,
+            "source": "https://history.house.gov/Institution/Election-Statistics/",
+            "recencyWeight": 0.4353,
+            "incumbencyInBaseline": true
+          },
+          {
+            "year": 2020,
+            "office": "senate",
+            "candidate": "Jack Reed",
+            "margin": 33.18,
+            "genericExpectedMargin": 23.898,
+            "residual": 9.282,
+            "source": "https://www.ri.gov/election/results/2020/general_election/",
+            "recencyWeight": 0.6598,
+            "incumbencyInBaseline": true
+          }
+        ],
+        "pastWinner": true,
+        "status": "historical estimate",
+        "effectiveRaces": 1.572
+      },
+      "rep": {
+        "name": "Raymond McKay",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "senate-SC": {
+      "dem": {
+        "name": "Annie Andrews",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Darline Graham",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "senate-SD": {
+      "dem": null,
+      "rep": {
+        "name": "Mike Rounds",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "senate-TN": {
+      "dem": {
+        "name": "Marquita Bradshaw",
+        "effect": -3.7303,
+        "history": [
+          {
+            "year": 2020,
+            "office": "senate",
+            "candidate": "Marquita Bradshaw",
+            "margin": -27.037,
+            "genericExpectedMargin": -16.75,
+            "residual": -10.288,
+            "source": "https://sos-tn-gov-files.tnsosfiles.com/Nov%202020%20General%20Totals.pdf",
+            "recencyWeight": 0.6598,
+            "incumbencyInBaseline": false
+          }
+        ],
+        "pastWinner": false,
+        "status": "historical estimate",
+        "effectiveRaces": 0.66
+      },
+      "rep": {
+        "name": "Bill Hagerty",
+        "effect": 3.7303,
+        "history": [
+          {
+            "year": 2020,
+            "office": "senate",
+            "candidate": "Bill Hagerty",
+            "margin": 27.037,
+            "genericExpectedMargin": 16.75,
+            "residual": 10.288,
+            "source": "https://sos-tn-gov-files.tnsosfiles.com/Nov%202020%20General%20Totals.pdf",
+            "recencyWeight": 0.6598,
+            "incumbencyInBaseline": false
+          }
+        ],
+        "pastWinner": true,
+        "status": "historical estimate",
+        "effectiveRaces": 0.66
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "senate-TX": {
+      "dem": {
+        "name": "James Talarico",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Ken Paxton",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "senate-VA": {
+      "dem": {
+        "name": "Mark Warner",
+        "effect": 1.6772,
+        "history": [
+          {
+            "year": 2008,
+            "office": "senate",
+            "candidate": "Mark Warner",
+            "margin": 31.331,
+            "genericExpectedMargin": 6.477,
+            "residual": 24.855,
+            "source": "https://history.house.gov/Institution/Election-Statistics/",
+            "recencyWeight": 0.2872,
+            "incumbencyInBaseline": false
+          },
+          {
+            "year": 2014,
+            "office": "senate",
+            "candidate": "Mark Warner",
+            "margin": 0.812,
+            "genericExpectedMargin": 6.692,
+            "residual": -5.88,
+            "source": "https://history.house.gov/Institution/Election-Statistics/",
+            "recencyWeight": 0.4353,
+            "incumbencyInBaseline": true
+          },
+          {
+            "year": 2020,
+            "office": "senate",
+            "candidate": "Mark Warner",
+            "margin": 12.096,
+            "genericExpectedMargin": 16.151,
+            "residual": -4.055,
+            "source": "https://results.elections.virginia.gov/vaelections/2020%20November%20General/Site/Presidential.html",
+            "recencyWeight": 0.6598,
+            "incumbencyInBaseline": true
+          }
+        ],
+        "pastWinner": true,
+        "status": "historical estimate",
+        "effectiveRaces": 1.382
+      },
+      "rep": {
+        "name": "Bert Mizusawa",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "senate-WV": {
+      "dem": {
+        "name": "Rachel Fetty Anderson",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Shelley Moore Capito",
+        "effect": 1.9011,
+        "history": [
+          {
+            "year": 2014,
+            "office": "senate",
+            "candidate": "Shelley Moore Capito",
+            "margin": 27.653,
+            "genericExpectedMargin": 25.676,
+            "residual": 1.977,
+            "source": "https://history.house.gov/Institution/Election-Statistics/",
+            "recencyWeight": 0.4353,
+            "incumbencyInBaseline": false
+          },
+          {
+            "year": 2020,
+            "office": "senate",
+            "candidate": "Shelley Moore Capito",
+            "margin": 43.284,
+            "genericExpectedMargin": 38.103,
+            "residual": 5.181,
+            "source": "https://results.enr.clarityelections.com/WV/106210/web.264614/#/summary",
+            "recencyWeight": 0.6598,
+            "incumbencyInBaseline": true
+          }
+        ],
+        "pastWinner": true,
+        "status": "historical estimate",
+        "effectiveRaces": 1.095
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "senate-WY": {
+      "dem": {
+        "name": "James W. Byrd",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Harriet Hageman",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "transfer": null,
+      "source": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+      "verification": "secondary roster checked2026-10-23; do not describe as state-certified until primary flag is added"
+    },
+    "governor-AL": {
+      "dem": {
+        "name": "Doug Jones",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Tommy Tuberville",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-AK": {
+      "dem": {
+        "name": "Jonathan Kreiss-Tomkins",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Multiple Republicans",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-AZ": {
+      "dem": {
+        "name": "Katie Hobbs",
+        "effect": 2.1264,
+        "history": [
+          {
+            "year": 2022,
+            "office": "governor",
+            "candidate": "Katie Hobbs",
+            "margin": 0.669,
+            "genericExpectedMargin": -4.987,
+            "residual": 5.656,
+            "source": "https://azsos.gov/sites/default/files/2022Dec05_General_Election_Canvass_Web.pdf",
+            "recencyWeight": 0.7579,
+            "incumbencyInBaseline": false
+          }
+        ],
+        "pastWinner": true,
+        "status": "historical estimate",
+        "effectiveRaces": 0.758
+      },
+      "rep": {
+        "name": "Andy Biggs",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-AR": {
+      "dem": {
+        "name": "Fredrick Love",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Sarah Huckabee Sanders",
+        "effect": 3.782,
+        "history": [
+          {
+            "year": 2022,
+            "office": "governor",
+            "candidate": "Sarah Huckabee Sanders",
+            "margin": 27.768,
+            "genericExpectedMargin": 17.709,
+            "residual": 10.059,
+            "source": "https://results.enr.clarityelections.com/AR/115767/web.307039/#/summary",
+            "recencyWeight": 0.7579,
+            "incumbencyInBaseline": false
+          }
+        ],
+        "pastWinner": true,
+        "status": "historical estimate",
+        "effectiveRaces": 0.758
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-CA": {
+      "dem": {
+        "name": "Xavier Becerra",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Steve Hilton",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-CO": {
+      "dem": {
+        "name": "Phil Weiser",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Victor Marx",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-CT": {
+      "dem": {
+        "name": "Ned Lamont",
+        "effect": -1.3422,
+        "history": [
+          {
+            "year": 2018,
+            "office": "governor",
+            "candidate": "Ned Lamont",
+            "margin": 3.154,
+            "genericExpectedMargin": 8.774,
+            "residual": -5.619,
+            "source": "https://authoring.ct.gov/-/media/SOTS/ElectionServices/StatementOfVote_PDFs/2018-SOV.pdf",
+            "recencyWeight": 0.5743,
+            "incumbencyInBaseline": false
+          },
+          {
+            "year": 2022,
+            "office": "governor",
+            "candidate": "Ned Lamont",
+            "margin": 12.851,
+            "genericExpectedMargin": 14.197,
+            "residual": -1.346,
+            "source": "https://ctemspublic.pcctg.net/#/home",
+            "recencyWeight": 0.7579,
+            "incumbencyInBaseline": true
+          }
+        ],
+        "pastWinner": true,
+        "status": "historical estimate",
+        "effectiveRaces": 1.332
+      },
+      "rep": {
+        "name": "Ryan Fazio",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-FL": {
+      "dem": {
+        "name": "David Jolly",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Byron Donalds",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-GA": {
+      "dem": {
+        "name": "Keisha Lance Bottoms",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Rick Jackson",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-HI": {
+      "dem": {
+        "name": "Josh Green",
+        "effect": 7.9765,
+        "history": [
+          {
+            "year": 2022,
+            "office": "governor",
+            "candidate": "Josh Green",
+            "margin": 26.324,
+            "genericExpectedMargin": 8.17,
+            "residual": 18.154,
+            "source": "https://elections.hawaii.gov/wp-content/results/histatewide.pdf",
+            "recencyWeight": 0.7579,
+            "incumbencyInBaseline": false
+          }
+        ],
+        "pastWinner": true,
+        "status": "historical estimate",
+        "effectiveRaces": 0.758
+      },
+      "rep": {
+        "name": "Gary Cordery",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-ID": {
+      "dem": {
+        "name": "Terri Pickens",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Brad Little",
+        "effect": 3.3683,
+        "history": [
+          {
+            "year": 2018,
+            "office": "governor",
+            "candidate": "Brad Little",
+            "margin": 21.579,
+            "genericExpectedMargin": 11.91,
+            "residual": 9.669,
+            "source": "https://sos.idaho.gov/elect/results/2018/General/statewide_totals.html",
+            "recencyWeight": 0.5743,
+            "incumbencyInBaseline": false
+          }
+        ],
+        "pastWinner": true,
+        "status": "historical estimate",
+        "effectiveRaces": 0.574
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-IL": {
+      "dem": {
+        "name": "JB Pritzker",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Darren Bailey",
+        "effect": 3.7319,
+        "history": [
+          {
+            "year": 2022,
+            "office": "governor",
+            "candidate": "Darren Bailey",
+            "margin": -12.538,
+            "genericExpectedMargin": -12.792,
+            "residual": 0.253,
+            "source": "https://www.elections.il.gov/ElectionOperations/ElectionVoteTotals.aspx",
+            "recencyWeight": 0.7579,
+            "incumbencyInBaseline": true
+          }
+        ],
+        "pastWinner": false,
+        "status": "historical estimate",
+        "effectiveRaces": 0.758
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-IA": {
+      "dem": {
+        "name": "Rob Sand",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Zach Lahn",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-KS": {
+      "dem": {
+        "name": "Cindy Holscher",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Ty Masterson",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-ME": {
+      "dem": {
+        "name": "Hannah Pingree",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Bobby Charles",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-MD": {
+      "dem": {
+        "name": "Wes Moore",
+        "effect": 8.4268,
+        "history": [
+          {
+            "year": 2022,
+            "office": "governor",
+            "candidate": "Wes Moore",
+            "margin": 32.413,
+            "genericExpectedMargin": 9.999,
+            "residual": 22.413,
+            "source": "https://elections.maryland.gov/elections/2022/general_results/gen_results_2022_1.html",
+            "recencyWeight": 0.7579,
+            "incumbencyInBaseline": false
+          }
+        ],
+        "pastWinner": true,
+        "status": "historical estimate",
+        "effectiveRaces": 0.758
+      },
+      "rep": {
+        "name": "Dan Cox",
+        "effect": -8.4268,
+        "history": [
+          {
+            "year": 2022,
+            "office": "governor",
+            "candidate": "Dan Cox",
+            "margin": -32.413,
+            "genericExpectedMargin": -9.999,
+            "residual": -22.413,
+            "source": "https://elections.maryland.gov/elections/2022/general_results/gen_results_2022_1.html",
+            "recencyWeight": 0.7579,
+            "incumbencyInBaseline": false
+          }
+        ],
+        "pastWinner": false,
+        "status": "historical estimate",
+        "effectiveRaces": 0.758
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-MA": {
+      "dem": {
+        "name": "Maura Healey",
+        "effect": 7.1704,
+        "history": [
+          {
+            "year": 2022,
+            "office": "governor",
+            "candidate": "Maura Healey",
+            "margin": 29.073,
+            "genericExpectedMargin": 10.002,
+            "residual": 19.072,
+            "source": "https://electionstats.state.ma.us/elections/search/year_from:2022/year_to:2022/stage:General",
+            "recencyWeight": 0.7579,
+            "incumbencyInBaseline": false
+          }
+        ],
+        "pastWinner": true,
+        "status": "historical estimate",
+        "effectiveRaces": 0.758
+      },
+      "rep": {
+        "name": "Michael Minogue",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-MI": {
+      "dem": {
+        "name": "Jocelyn Benson",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "John James",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-MN": {
+      "dem": {
+        "name": "Amy Klobuchar",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Lisa Demuth",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-NE": {
+      "dem": {
+        "name": "Lynne Walz",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Jim Pillen",
+        "effect": 3.5471,
+        "history": [
+          {
+            "year": 2022,
+            "office": "governor",
+            "candidate": "Jim Pillen",
+            "margin": 23.243,
+            "genericExpectedMargin": 13.808,
+            "residual": 9.434,
+            "source": "https://sos.nebraska.gov/sites/sos.nebraska.gov/files/doc/elections/2022/2022%20General%20Canvass%20Book.pdf",
+            "recencyWeight": 0.7579,
+            "incumbencyInBaseline": false
+          }
+        ],
+        "pastWinner": true,
+        "status": "historical estimate",
+        "effectiveRaces": 0.758
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-NV": {
+      "dem": {
+        "name": "Aaron Ford",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Joe Lombardo",
+        "effect": 3.3962,
+        "history": [
+          {
+            "year": 2022,
+            "office": "governor",
+            "candidate": "Joe Lombardo",
+            "margin": 1.532,
+            "genericExpectedMargin": -6.143,
+            "residual": 7.675,
+            "source": "https://www.nvsos.gov/sos/home/showpublisheddocument/11241/638054125276900756",
+            "recencyWeight": 0.7579,
+            "incumbencyInBaseline": true
+          }
+        ],
+        "pastWinner": true,
+        "status": "historical estimate",
+        "effectiveRaces": 0.758
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-NH": {
+      "dem": {
+        "name": "Cinde Warmington",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Kelly Ayotte",
+        "effect": 2.8687,
+        "history": [
+          {
+            "year": 2024,
+            "office": "governor",
+            "candidate": "Kelly Ayotte",
+            "margin": 9.339,
+            "genericExpectedMargin": 1.954,
+            "residual": 7.385,
+            "source": "https://www.sos.nh.gov/2024-general-election-results",
+            "recencyWeight": 0.8706,
+            "incumbencyInBaseline": false
+          }
+        ],
+        "pastWinner": true,
+        "status": "historical estimate",
+        "effectiveRaces": 0.871
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-NM": {
+      "dem": {
+        "name": "Deb Haaland",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Greggory Hull",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-NY": {
+      "dem": {
+        "name": "Kathy Hochul",
+        "effect": 0.4036,
+        "history": [
+          {
+            "year": 2022,
+            "office": "governor",
+            "candidate": "Kathy Hochul",
+            "margin": 6.391,
+            "genericExpectedMargin": 5.317,
+            "residual": 1.074,
+            "source": "https://www.elections.ny.gov/",
+            "recencyWeight": 0.7579,
+            "incumbencyInBaseline": false
+          }
+        ],
+        "pastWinner": true,
+        "status": "historical estimate",
+        "effectiveRaces": 0.758
+      },
+      "rep": {
+        "name": "Bruce Blakeman",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-OH": {
+      "dem": {
+        "name": "Amy Acton",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Vivek Ramaswamy",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-OK": {
+      "dem": {
+        "name": "Cydni Munson",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Republican nominee",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-OR": {
+      "dem": {
+        "name": "Tina Kotek",
+        "effect": 0.4577,
+        "history": [
+          {
+            "year": 2022,
+            "office": "governor",
+            "candidate": "Tina Kotek",
+            "margin": 3.417,
+            "genericExpectedMargin": 2.199,
+            "residual": 1.217,
+            "source": "https://sos.oregon.gov/elections/Documents/results/november-general-2022.pdf",
+            "recencyWeight": 0.7579,
+            "incumbencyInBaseline": false
+          }
+        ],
+        "pastWinner": true,
+        "status": "historical estimate",
+        "effectiveRaces": 0.758
+      },
+      "rep": {
+        "name": "Christine Drazan",
+        "effect": -0.4577,
+        "history": [
+          {
+            "year": 2022,
+            "office": "governor",
+            "candidate": "Christine Drazan",
+            "margin": -3.417,
+            "genericExpectedMargin": -2.199,
+            "residual": -1.217,
+            "source": "https://sos.oregon.gov/elections/Documents/results/november-general-2022.pdf",
+            "recencyWeight": 0.7579,
+            "incumbencyInBaseline": false
+          }
+        ],
+        "pastWinner": false,
+        "status": "historical estimate",
+        "effectiveRaces": 0.758
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-PA": {
+      "dem": {
+        "name": "Josh Shapiro",
+        "effect": 7.282,
+        "history": [
+          {
+            "year": 2022,
+            "office": "governor",
+            "candidate": "Josh Shapiro",
+            "margin": 14.771,
+            "genericExpectedMargin": -4.597,
+            "residual": 19.368,
+            "source": "https://www.electionreturns.pa.gov/",
+            "recencyWeight": 0.7579,
+            "incumbencyInBaseline": false
+          }
+        ],
+        "pastWinner": true,
+        "status": "historical estimate",
+        "effectiveRaces": 0.758
+      },
+      "rep": {
+        "name": "Stacy Garrity",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-RI": {
+      "dem": {
+        "name": "Helena Foulkes",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Aaron Guckian",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-SC": {
+      "dem": {
+        "name": "Jermaine Johnson",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Republican nominee",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-SD": {
+      "dem": {
+        "name": "Dan Ahlers",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Larry Rhoden",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-TN": {
+      "dem": {
+        "name": "Jerri Green",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Marsha Blackburn",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-TX": {
+      "dem": {
+        "name": "Gina Hinojosa",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Greg Abbott",
+        "effect": -0.1172,
+        "history": [
+          {
+            "year": 2014,
+            "office": "governor",
+            "candidate": "Greg Abbott",
+            "margin": 20.367,
+            "genericExpectedMargin": 13.842,
+            "residual": 6.524,
+            "source": "https://elections.sos.state.tx.us/elchist175_state.htm",
+            "recencyWeight": 0.4353,
+            "incumbencyInBaseline": false
+          },
+          {
+            "year": 2018,
+            "office": "governor",
+            "candidate": "Greg Abbott",
+            "margin": 13.299,
+            "genericExpectedMargin": 11.72,
+            "residual": 1.579,
+            "source": "https://elections.sos.state.tx.us/elchist331_state.htm",
+            "recencyWeight": 0.5743,
+            "incumbencyInBaseline": true
+          },
+          {
+            "year": 2022,
+            "office": "governor",
+            "candidate": "Greg Abbott",
+            "margin": 10.903,
+            "genericExpectedMargin": 17.85,
+            "residual": -6.947,
+            "source": "https://results.texas-election.com/races",
+            "recencyWeight": 0.7579,
+            "incumbencyInBaseline": true
+          }
+        ],
+        "pastWinner": true,
+        "status": "historical estimate",
+        "effectiveRaces": 1.768
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-VT": {
+      "dem": {
+        "name": "Amanda Janoo",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Phil Scott",
+        "effect": 27.7282,
+        "history": [
+          {
+            "year": 2016,
+            "office": "governor",
+            "candidate": "Phil Scott",
+            "margin": 8.742,
+            "genericExpectedMargin": -12.301,
+            "residual": 21.044,
+            "source": "https://electionarchive.vermont.gov/elections/search/year_from:2016/year_to:2016/office_id:3/stage:General",
+            "recencyWeight": 0.5,
+            "incumbencyInBaseline": false
+          },
+          {
+            "year": 2018,
+            "office": "governor",
+            "candidate": "Phil Scott",
+            "margin": 14.932,
+            "genericExpectedMargin": -4.206,
+            "residual": 19.137,
+            "source": "https://electionarchive.vermont.gov/elections/search/year_from:2018/year_to:2018/office_id:3/stage:General",
+            "recencyWeight": 0.5743,
+            "incumbencyInBaseline": true
+          },
+          {
+            "year": 2020,
+            "office": "governor",
+            "candidate": "Phil Scott",
+            "margin": 41.134,
+            "genericExpectedMargin": -0.957,
+            "residual": 42.091,
+            "source": "https://electionresults.vermont.gov/Index.html#/state",
+            "recencyWeight": 0.6598,
+            "incumbencyInBaseline": true
+          },
+          {
+            "year": 2022,
+            "office": "governor",
+            "candidate": "Phil Scott",
+            "margin": 47.015,
+            "genericExpectedMargin": -0.667,
+            "residual": 47.682,
+            "source": "https://outside.vermont.gov/dept/sos/Elections%20Division/election%20info%20and%20resources/elections%20results%20and%20data/GeneralOfficialResults%20-%2011-11-2022%20-%20SUMMARY.pdf",
+            "recencyWeight": 0.7579,
+            "incumbencyInBaseline": true
+          },
+          {
+            "year": 2024,
+            "office": "governor",
+            "candidate": "Phil Scott",
+            "margin": 51.599,
+            "genericExpectedMargin": -0.493,
+            "residual": 52.091,
+            "source": "https://electionresults.vermont.gov/#/state",
+            "recencyWeight": 0.8706,
+            "incumbencyInBaseline": true
+          }
+        ],
+        "pastWinner": true,
+        "status": "historical estimate",
+        "effectiveRaces": 3.363
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-WI": {
+      "dem": {
+        "name": "David Crowley",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Tom Tiffany",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    },
+    "governor-WY": {
+      "dem": {
+        "name": "Ken Casner",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "rep": {
+        "name": "Republican nominee",
+        "effect": 0,
+        "history": [],
+        "pastWinner": false,
+        "status": "no comparable history",
+        "effectiveRaces": 0
+      },
+      "source": "https://www.nga.org/governors/elections/",
+      "verification": "NGA roster; inspect current-matchup fields before using polls"
+    }
+  }
+}

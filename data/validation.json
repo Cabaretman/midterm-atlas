@@ -1,0 +1,787 @@
+{
+  "caveat": "Forward-year conditional diagnostics use realized national House popular vote, which was not known in advance. This is not an end-to-end ex-ante forecast backtest or calibration of win probabilities. Shrinkage selected on 2010\u20132020 only; 2022/2024 are held-out cycles.",
+  "offices": {
+    "senate": {
+      "tuning2010Through2020": [
+        {
+          "shrinkage": 0.5,
+          "n": 183,
+          "rmse": 11.2524,
+          "mae": 9.0481
+        },
+        {
+          "shrinkage": 1,
+          "n": 183,
+          "rmse": 11.3998,
+          "mae": 9.197
+        },
+        {
+          "shrinkage": 2,
+          "n": 183,
+          "rmse": 11.5224,
+          "mae": 9.3596
+        },
+        {
+          "shrinkage": 4,
+          "n": 183,
+          "rmse": 11.6465,
+          "mae": 9.4849
+        },
+        {
+          "shrinkage": 8,
+          "n": 183,
+          "rmse": 11.7578,
+          "mae": 9.5762
+        }
+      ],
+      "heldOutCycles": [
+        {
+          "year": 2022,
+          "candidateModel": {
+            "n": 30,
+            "rmse": 9.1962,
+            "mae": 7.3926
+          },
+          "withoutCandidateEffects": {
+            "n": 30,
+            "rmse": 7.9167,
+            "mae": 6.4615
+          },
+          "predictions": [
+            {
+              "state": "AL",
+              "predicted": -22.402,
+              "actual": -35.799,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "AR",
+              "predicted": -34.892,
+              "actual": -34.644,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "AZ",
+              "predicted": 6.877,
+              "actual": 4.887,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "CA",
+              "predicted": 18.095,
+              "actual": 22.129,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "CO",
+              "predicted": 15.618,
+              "actual": 14.618,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "CT",
+              "predicted": 24.578,
+              "actual": 14.916,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "FL",
+              "predicted": -14.874,
+              "actual": -16.413,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "GA",
+              "predicted": 6.823,
+              "actual": 2.806,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "HI",
+              "predicted": 30.415,
+              "actual": 45.172,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "IA",
+              "predicted": -32.254,
+              "actual": -12.197,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "ID",
+              "predicted": -39.184,
+              "actual": -31.94,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "IL",
+              "predicted": 26.657,
+              "actual": 15.323,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "IN",
+              "predicted": -30.589,
+              "actual": -20.746,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "KS",
+              "predicted": -30.502,
+              "actual": -22.962,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "KY",
+              "predicted": -26.77,
+              "actual": -23.617,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "MD",
+              "predicted": 34.055,
+              "actual": 31.736,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "MO",
+              "predicted": -14.936,
+              "actual": -13.255,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "NC",
+              "predicted": -4.525,
+              "actual": -3.228,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "NH",
+              "predicted": 18.138,
+              "actual": 9.068,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "NV",
+              "predicted": 8.182,
+              "actual": 0.786,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "NY",
+              "predicted": 30.63,
+              "actual": 14.01,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "OH",
+              "predicted": -9.48,
+              "actual": -6.112,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "OK",
+              "predicted": -40.531,
+              "actual": -32.205,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "OR",
+              "predicted": 21.881,
+              "actual": 14.926,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "PA",
+              "predicted": -2.662,
+              "actual": 4.913,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "SC",
+              "predicted": -23.79,
+              "actual": -25.896,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "SD",
+              "predicted": -36.045,
+              "actual": -43.477,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "VT",
+              "predicted": 22.478,
+              "actual": 40.528,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "WA",
+              "predicted": 18.54,
+              "actual": 14.551,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "WI",
+              "predicted": -16.787,
+              "actual": -1.009,
+              "trainingLatestYear": 2020
+            }
+          ]
+        },
+        {
+          "year": 2024,
+          "candidateModel": {
+            "n": 31,
+            "rmse": 7.4724,
+            "mae": 5.694
+          },
+          "withoutCandidateEffects": {
+            "n": 31,
+            "rmse": 7.3737,
+            "mae": 5.9798
+          },
+          "predictions": [
+            {
+              "state": "AZ",
+              "predicted": -3.368,
+              "actual": 2.406,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "CA",
+              "predicted": 18.305,
+              "actual": 17.745,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "CT",
+              "predicted": 15.725,
+              "actual": 18.875,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "DE",
+              "predicted": 10.647,
+              "actual": 17.088,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "FL",
+              "predicted": -24.252,
+              "actual": -12.778,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "HI",
+              "predicted": 33.697,
+              "actual": 32.708,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "IN",
+              "predicted": -15.663,
+              "actual": -19.872,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "MA",
+              "predicted": 27.444,
+              "actual": 19.848,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "MD",
+              "predicted": 21.345,
+              "actual": 11.824,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "MI",
+              "predicted": -1.509,
+              "actual": 0.341,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "MN",
+              "predicted": 17.679,
+              "actual": 15.718,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "MO",
+              "predicted": -30.271,
+              "actual": -13.732,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "MS",
+              "predicted": -25.445,
+              "actual": -25.624,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "MT",
+              "predicted": -4.11,
+              "actual": -7.143,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "ND",
+              "predicted": -40.119,
+              "actual": -33.033,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "NE",
+              "predicted": -27.5,
+              "actual": -6.694,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "NJ",
+              "predicted": 8.371,
+              "actual": 9.621,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "NM",
+              "predicted": 13.152,
+              "actual": 10.113,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "NV",
+              "predicted": 11.168,
+              "actual": 1.694,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "NY",
+              "predicted": 27.055,
+              "actual": 18.322,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "OH",
+              "predicted": 0.784,
+              "actual": -3.619,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "PA",
+              "predicted": 7.357,
+              "actual": -0.217,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "RI",
+              "predicted": 20.432,
+              "actual": 20.099,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "TN",
+              "predicted": -30.26,
+              "actual": -29.634,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "TX",
+              "predicted": -16.738,
+              "actual": -8.497,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "UT",
+              "predicted": -18.986,
+              "actual": -30.761,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "VA",
+              "predicted": 14.51,
+              "actual": 8.94,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "WA",
+              "predicted": 17.369,
+              "actual": 18.502,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "WI",
+              "predicted": 4.358,
+              "actual": 0.85,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "WV",
+              "predicted": -32.846,
+              "actual": -40.996,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "WY",
+              "predicted": -49.843,
+              "actual": -51.38,
+              "trainingLatestYear": 2022
+            }
+          ]
+        }
+      ],
+      "candidateModel": {
+        "n": 61,
+        "rmse": 8.3647,
+        "mae": 6.5294
+      },
+      "withoutCandidateEffects": {
+        "n": 61,
+        "rmse": 7.6456,
+        "mae": 6.2167
+      }
+    },
+    "governor": {
+      "tuning2010Through2020": [
+        {
+          "shrinkage": 0.5,
+          "n": 135,
+          "rmse": 13.0416,
+          "mae": 9.642
+        },
+        {
+          "shrinkage": 1,
+          "n": 135,
+          "rmse": 13.1702,
+          "mae": 9.796
+        },
+        {
+          "shrinkage": 2,
+          "n": 135,
+          "rmse": 13.3118,
+          "mae": 9.9746
+        },
+        {
+          "shrinkage": 4,
+          "n": 135,
+          "rmse": 13.4573,
+          "mae": 10.1639
+        },
+        {
+          "shrinkage": 8,
+          "n": 135,
+          "rmse": 13.5829,
+          "mae": 10.3109
+        }
+      ],
+      "heldOutCycles": [
+        {
+          "year": 2022,
+          "candidateModel": {
+            "n": 33,
+            "rmse": 11.4995,
+            "mae": 8.978
+          },
+          "withoutCandidateEffects": {
+            "n": 33,
+            "rmse": 13.2093,
+            "mae": 9.6487
+          },
+          "predictions": [
+            {
+              "state": "AL",
+              "predicted": -29.469,
+              "actual": -37.729,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "AR",
+              "predicted": -16.157,
+              "actual": -27.768,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "AZ",
+              "predicted": -5.05,
+              "actual": 0.669,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "CA",
+              "predicted": 20.555,
+              "actual": 18.359,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "CO",
+              "predicted": 13.065,
+              "actual": 19.35,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "CT",
+              "predicted": 10.002,
+              "actual": 12.851,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "FL",
+              "predicted": -8.089,
+              "actual": -19.403,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "GA",
+              "predicted": -16.484,
+              "actual": -7.535,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "HI",
+              "predicted": 8.318,
+              "actual": 26.324,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "IA",
+              "predicted": -19.182,
+              "actual": -18.517,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "IL",
+              "predicted": 22.071,
+              "actual": 12.538,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "KS",
+              "predicted": 3.635,
+              "actual": 2.206,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "MA",
+              "predicted": 8.035,
+              "actual": 29.073,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "MD",
+              "predicted": 8.033,
+              "actual": 32.413,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "MI",
+              "predicted": 9.212,
+              "actual": 10.531,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "MN",
+              "predicted": 12.429,
+              "actual": 7.664,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "NE",
+              "predicted": -12.752,
+              "actual": -23.243,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "NH",
+              "predicted": -17.102,
+              "actual": -15.513,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "NM",
+              "predicted": 12.952,
+              "actual": 6.384,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "NV",
+              "predicted": 6.63,
+              "actual": -1.532,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "NY",
+              "predicted": 3.945,
+              "actual": 6.391,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "OH",
+              "predicted": -19.69,
+              "actual": -25.029,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "OK",
+              "predicted": -28.586,
+              "actual": -13.664,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "OR",
+              "predicted": 1.224,
+              "actual": 3.417,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "PA",
+              "predicted": -4.71,
+              "actual": 14.771,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "RI",
+              "predicted": 3.1,
+              "actual": 19.058,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "SC",
+              "predicted": -21.849,
+              "actual": -17.368,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "SD",
+              "predicted": -23.539,
+              "actual": -26.812,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "TN",
+              "predicted": -29.558,
+              "actual": -31.989,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "TX",
+              "predicted": -20.026,
+              "actual": -10.903,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "VT",
+              "predicted": -18.112,
+              "actual": -47.015,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "WI",
+              "predicted": 9.238,
+              "actual": 3.397,
+              "trainingLatestYear": 2020
+            },
+            {
+              "state": "WY",
+              "predicted": -41.502,
+              "actual": -58.253,
+              "trainingLatestYear": 2020
+            }
+          ]
+        },
+        {
+          "year": 2024,
+          "candidateModel": {
+            "n": 11,
+            "rmse": 14.0469,
+            "mae": 11.3673
+          },
+          "withoutCandidateEffects": {
+            "n": 11,
+            "rmse": 18.0716,
+            "mae": 13.0259
+          },
+          "predictions": [
+            {
+              "state": "DE",
+              "predicted": 3.226,
+              "actual": 12.14,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "IN",
+              "predicted": -12.283,
+              "actual": -13.277,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "MO",
+              "predicted": -11.987,
+              "actual": -20.425,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "MT",
+              "predicted": -22.975,
+              "actual": -20.24,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "NC",
+              "predicted": -5.769,
+              "actual": 14.811,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "ND",
+              "predicted": -19.942,
+              "actual": -42.275,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "NH",
+              "predicted": -1.917,
+              "actual": -9.339,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "UT",
+              "predicted": -33.394,
+              "actual": -24.428,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "VT",
+              "predicted": -22.838,
+              "actual": -51.599,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "WA",
+              "predicted": 3.331,
+              "actual": 11.228,
+              "trainingLatestYear": 2022
+            },
+            {
+              "state": "WV",
+              "predicted": -22.411,
+              "actual": -30.411,
+              "trainingLatestYear": 2022
+            }
+          ]
+        }
+      ],
+      "candidateModel": {
+        "n": 44,
+        "rmse": 12.1863,
+        "mae": 9.5753
+      },
+      "withoutCandidateEffects": {
+        "n": 44,
+        "rmse": 14.5777,
+        "mae": 10.493
+      }
+    }
+  }
+}

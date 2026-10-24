@@ -1,0 +1,40 @@
+[
+  {
+    "year": 2022,
+    "state": "AK",
+    "office": "house",
+    "demCandidate": "Mary S. Peltola",
+    "repCandidate": "Sarah Palin",
+    "demCanonical": "mary peltola",
+    "repCanonical": "sarah palin",
+    "demId": "18432",
+    "repId": "6",
+    "margin": 9.92736271392762,
+    "demVotes": 137263.0,
+    "repVotes": 112471.0,
+    "demIncumbent": true,
+    "repIncumbent": false,
+    "source": "https://www.elections.alaska.gov/results/22GENR/US%20REP.pdf",
+    "rankedChoiceRound": 3,
+    "note": "Final ranked-choice result. Peltola elected in August2022 special before November2022 general; special result deliberately excluded as correlated. Cross-chamber transfer to Senate needs additional shrinkage."
+  },
+  {
+    "year": 2024,
+    "state": "AK",
+    "office": "house",
+    "demCandidate": "Mary S. Peltola",
+    "repCandidate": "Nick Begich",
+    "demCanonical": "mary peltola",
+    "repCanonical": "nick begich",
+    "demId": "18432",
+    "repId": "17843",
+    "margin": -2.4471331009240442,
+    "demVotes": 156985.0,
+    "repVotes": 164861.0,
+    "demIncumbent": true,
+    "repIncumbent": false,
+    "source": "https://www.elections.alaska.gov/results/24GENR/RCV-USRep.pdf",
+    "rankedChoiceRound": 3,
+    "note": "Final ranked-choice result. Peltola elected in August2022 special before November2022 general; special result deliberately excluded as correlated. Cross-chamber transfer to Senate needs additional shrinkage."
+  }
+]

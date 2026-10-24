@@ -11,6 +11,8 @@
     "test": "node --test tests/model.test.mjs",
     "test:browser": "playwright test",
     "profile": "node scripts/profile-browser.mjs",
+    "prepare:polling": "python scripts/build-polling.py && python scripts/prepare-data.py",
+    "fit:fundamentals": "python scripts/fit-fundamentals.py && python scripts/prepare-data.py",
     "prepare:data": "python scripts/prepare-data.py && node scripts/prepare-map.mjs"
   },
   "keywords": [],

@@ -1,7 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {DEFAULTS,aggregate,forecastRace,nationalInputs,simulate,validatePoll,validateScenario} from '../dist/model.mjs';
+import {DEFAULTS,aggregate,forecastRace,nationalInputs,simulate,validatePoll,validateScenario,pollContribution} from '../dist/model.mjs';
 const data=JSON.parse(readFileSync(new URL('../dist/data.json',import.meta.url))),config=()=>structuredClone(DEFAULTS);
 test('cached simulation preserves every published-model trial outcome for all offices',()=>{
  const fixture=JSON.parse(readFileSync(new URL('./fixtures/model-v1.json',import.meta.url)));
@@ -24,10 +24,10 @@ test('no-poll estimate uses fundamentals and disabling polls removes polling inf
  const noPoll=data.races.find(r=>r.office==='house'&&!data.polls.some(p=>p.raceId===r.id));const f=forecastRace(noPoll,data,DEFAULTS);assert.equal(f.pollCount,0);assert.equal(f.margin,f.prior);
 });
 test('national signal moves in correct direction without a redundant full approval effect',()=>{
- const s=config(),b=nationalInputs(data,s);s.generic=b.generic+1;assert.ok(Math.abs(nationalInputs(data,s).environment-b.environment-.8)<1e-10);s.generic=null;s.approval=b.approval+1;assert.ok(Math.abs(nationalInputs(data,s).environment-b.environment+.06)<1e-10);
+ const s=config(),b=nationalInputs(data,s);assert.equal(b.environment,b.generic);s.generic=b.generic+1;assert.ok(Math.abs(nationalInputs(data,s).environment-b.environment-1)<1e-10);s.generic=null;s.approval=b.approval+1;assert.ok(Math.abs(nationalInputs(data,s).environment-b.environment+.3)<1e-10);
 });
 test('poll recency exclusion and frequency cap prevent one pollster dominating',()=>{
- const p={id:'a',raceId:'senate-MI',pollster:'A',end:'2026-10-22',n:800,population:'LV',dem:50,rep:40};const q={...p,pollster:'B',dem:40,rep:50};const a=aggregate([p,q],data.asOf),b=aggregate([...Array(100).fill(p),q],data.asOf);assert.ok(Math.abs(a.margin)<1e-10);assert.ok(Math.abs(b.margin)<.3);assert.equal(aggregate([{...p,end:'2025-01-01'}],data.asOf),null);
+ const p={id:'a',raceId:'senate-MI',pollster:'A',end:'2026-10-22',n:800,population:'LV',dem:50,rep:40};const q={...p,id:'b',pollster:'B',dem:40,rep:50};const a=aggregate([p,q],data.asOf),b=aggregate([...Array(100).fill(p),q],data.asOf);assert.ok(Math.abs(a.margin)<1e-10);assert.deepEqual(b,a);assert.equal(aggregate([{...p,end:'2025-01-01'}],data.asOf),null);
 });
 test('Senate tie goes R, independent seats stay separate, deterministic trials',()=>{
  const s=config();s.nationalSigma=0;s.stateSigma=0;s.localSigma=.5;
@@ -46,5 +46,34 @@ test('three-way race can elect an independent and excludes that winner from D',(
 test('scenario and poll imports reject unsafe or impossible values',()=>{
  assert.throws(()=>validateScenario({nationalError:1000},data));assert.throws(()=>validateScenario({states:{XX:1}},data));assert.throws(()=>validateScenario({races:{'senate-MI':'bad'}},data));
  const p={...data.polls[0],url:'javascript:alert(1)'};assert.ok(validatePoll(p,new Set(data.races.map(r=>r.id))).length);
- assert.ok(validatePoll({...data.polls[0],dem:90,rep:60},new Set(data.races.map(r=>r.id))).length);
+ assert.ok(validatePoll({...data.polls.find(p=>p.raceId==='senate-ME'),dem:90,rep:60},new Set(data.races.map(r=>r.id))).length);
+});
+test('expanded polling has sourced grades, nonempty national series and one family record per field end',()=>{
+ assert.ok(data.polls.length>1000);assert.ok(data.polls.filter(p=>p.raceId==='senate-ME').length>=20);
+ const identities=data.polls.map(p=>`${p.raceId}|${p.pollsterFamily}|${p.end}`);assert.equal(new Set(identities).size,identities.length);
+ for(const p of data.polls){assert.ok(p.rating);assert.ok(p.rating.source.startsWith('https://'));assert.ok(p.provenance.length);if(p.rating.status==='unrated')assert.equal(p.rating.grade,null);}
+ const national=nationalInputs(data,DEFAULTS);assert.ok(national.genericAggregate.count>50);assert.ok(national.approvalAggregate.count>50);
+});
+test('accuracy, historical bias, partisan weighting and internal exclusion are separate',()=>{
+ const p={id:'test',raceId:'senate-ME',pollster:'Firm',end:data.asOf,n:800,population:'LV',dem:50,rep:45,rating:{status:'rated',predictivePlusMinus:-1,meanRevertedBias:2}};
+ const a=pollContribution(p,data.asOf),bad=pollContribution({...p,rating:{...p.rating,predictivePlusMinus:1}},data.asOf);assert.ok(a.weight>bad.weight);
+ assert.ok(Math.abs(aggregate([p],data.asOf).margin-3)<1e-10);assert.ok(Math.abs(aggregate([p],data.asOf,{...DEFAULTS,adjustBias:false}).margin-5)<1e-10);
+ assert.ok(Math.abs(pollContribution({...p,partisan:'R'},data.asOf).weight/a.weight-.5)<1e-10);
+ assert.equal(pollContribution({...p,internal:true},data.asOf).weight,0);
+ assert.ok(Math.abs(pollContribution({...p,internal:true},data.asOf,{...DEFAULTS,includeInternals:true}).weight/a.weight-.25)<1e-10);
+ assert.equal(pollContribution({...p,rating:{status:'banned'}},data.asOf).weight,0);
+ assert.equal(pollContribution({...p,raceId:'approval',approve:40,disapprove:60},data.asOf).bias,0);
+ assert.equal(pollContribution({...p,independent:50},data.asOf).bias,0);
+});
+test('candidate history adjusts the prior and polling is never adjusted twice for candidate strength',()=>{
+ const race=data.races.find(r=>r.id==='senate-ME'),base=forecastRace(race,data,DEFAULTS),off=forecastRace(race,data,{...DEFAULTS,candidateWeight:0});
+ assert.ok(base.candidateEffect<0);assert.ok(base.prior<off.prior);assert.equal(base.pollAverage,off.pollAverage);
+ const brown=forecastRace(data.races.find(r=>r.id==='senate-OH'),data,DEFAULTS);assert.ok(brown.candidateEffect>0);assert.equal(data.races.find(r=>r.id==='senate-TX').incumbentRunning,false);
+ const peltola=data.races.find(r=>r.id==='senate-AK').candidateHistory.dem;assert.equal(peltola.transferFactor,.5);assert.deepEqual(peltola.history.map(h=>h.year),[2022,2024]);
+});
+test('forward diagnostics never train on the target cycle; reported uncertainty survives many polls',()=>{
+ const diagnostic=JSON.parse(readFileSync(new URL('../data/validation.json',import.meta.url)));
+ for(const office of Object.values(diagnostic.offices))for(const cycle of office.heldOutCycles)for(const prediction of cycle.predictions)assert.ok(prediction.trainingLatestYear<cycle.year);
+ const r=forecastRace(data.races.find(r=>r.id==='senate-ME'),data,DEFAULTS);assert.ok(r.localSigma>=DEFAULTS.localSigma);assert.ok(r.pollWeight<1);
+ const scenario=validateScenario({includeInternals:true,adjustBias:false,partisanWeight:0,candidateWeight:50},data);assert.equal(scenario.includeInternals,true);assert.equal(scenario.adjustBias,false);
 });

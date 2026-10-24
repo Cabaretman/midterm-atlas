@@ -1,0 +1,4740 @@
+{
+  "provider": "PollResults.org",
+  "source": "https://pollresults.org/api/",
+  "primarySource": "https://www.nytimes.com/interactive/polls/latest-polls.html",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "retrievedAt": "2026-10-23",
+  "crosswalk": [
+    {
+      "pollster": "Peak Insights",
+      "apiPollsterIds": [
+        "2589e2d7-f927-4a4e-8b1c-0b002688f9e3"
+      ],
+      "ratingIds": [
+        "217"
+      ],
+      "ratingNames": [
+        "Moore Information Group"
+      ],
+      "silverMatches": [
+        "Moore Information Group"
+      ],
+      "sourcePollCount": 23,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "GBAO",
+      "apiPollsterIds": [
+        "5a7ec4cc-59c7-44e0-b7c0-e78c05f19438"
+      ],
+      "ratingIds": [
+        "109"
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [
+        "GBAO"
+      ],
+      "sourcePollCount": 56,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "VoteNexus",
+      "apiPollsterIds": [
+        "fb4391e3-5593-457e-9d5a-3c97f705812d"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 5,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Change Research",
+      "apiPollsterIds": [
+        "a6295aab-886d-497f-92c9-5407f56a8c33"
+      ],
+      "ratingIds": [
+        "48"
+      ],
+      "ratingNames": [
+        "Change Research"
+      ],
+      "silverMatches": [
+        "Change Research"
+      ],
+      "sourcePollCount": 72,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "InsiderAdvantage",
+      "apiPollsterIds": [
+        "adedfb3e-f4d9-4121-ae17-125b39b27da3"
+      ],
+      "ratingIds": [
+        "243"
+      ],
+      "ratingNames": [
+        "InsiderAdvantage"
+      ],
+      "silverMatches": [
+        "InsiderAdvantage"
+      ],
+      "sourcePollCount": 54,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Impact Research",
+      "apiPollsterIds": [
+        "508ef336-8100-45cc-aec5-d506b2a053b8"
+      ],
+      "ratingIds": [
+        "14"
+      ],
+      "ratingNames": [
+        "Impact Research"
+      ],
+      "silverMatches": [
+        "Impact Research"
+      ],
+      "sourcePollCount": 62,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Slingshot Strategies",
+      "apiPollsterIds": [
+        "50e74854-ced4-4bd8-8cbe-352224df2621"
+      ],
+      "ratingIds": [
+        "451"
+      ],
+      "ratingNames": [
+        "Slingshot Strategies"
+      ],
+      "silverMatches": [
+        "Slingshot Strategies"
+      ],
+      "sourcePollCount": 18,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Verasight",
+      "apiPollsterIds": [
+        "d64047d4-d15f-4b8d-8d37-714001c5f4f5"
+      ],
+      "ratingIds": [
+        "774"
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 38,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Beacon Research/Shaw & Company Research",
+      "apiPollsterIds": [
+        "4da0e617-fda4-4c29-a2c0-1055e6af4eaf"
+      ],
+      "ratingIds": [
+        "103"
+      ],
+      "ratingNames": [
+        "Beacon Research/Shaw & Co. Research"
+      ],
+      "silverMatches": [
+        "Beacon Research/Shaw & Co. Research"
+      ],
+      "sourcePollCount": 55,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "St. Anselm",
+      "apiPollsterIds": [
+        "8ae50356-cd55-458f-bd0c-297e307c84eb"
+      ],
+      "ratingIds": [
+        "494"
+      ],
+      "ratingNames": [
+        "Saint Anselm College Survey Center"
+      ],
+      "silverMatches": [
+        "Saint Anselm College"
+      ],
+      "sourcePollCount": 20,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "National Public Affairs",
+      "apiPollsterIds": [
+        "82246226-9b20-4334-81b3-3de5d48c9ff1"
+      ],
+      "ratingIds": [
+        "768"
+      ],
+      "ratingNames": [
+        "National Public Affairs"
+      ],
+      "silverMatches": [
+        "National Public Affairs"
+      ],
+      "sourcePollCount": 14,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Emerson College",
+      "apiPollsterIds": [
+        "7485e3b7-8959-43d7-985f-95417076d068"
+      ],
+      "ratingIds": [
+        "88"
+      ],
+      "ratingNames": [
+        "Emerson College"
+      ],
+      "silverMatches": [
+        "Emerson College"
+      ],
+      "sourcePollCount": 136,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Harper Polling",
+      "apiPollsterIds": [
+        "167f3d5d-b8ed-4d84-ab2f-0b13c8485850",
+        "e915ee8e-b340-4973-b865-9fde51536cf0"
+      ],
+      "ratingIds": [
+        "",
+        "132"
+      ],
+      "ratingNames": [
+        "",
+        "Harper Polling"
+      ],
+      "silverMatches": [
+        "Harper Polling"
+      ],
+      "sourcePollCount": 18,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Quantus Insights",
+      "apiPollsterIds": [
+        "642c8e51-c965-4a1b-b10d-1614d73cb18d"
+      ],
+      "ratingIds": [
+        "859"
+      ],
+      "ratingNames": [
+        "Quantus Insights"
+      ],
+      "silverMatches": [
+        "Quantus Insights"
+      ],
+      "sourcePollCount": 123,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "ActiVote",
+      "apiPollsterIds": [
+        "e2e08257-41fa-4956-ba29-b83cf7163c09"
+      ],
+      "ratingIds": [
+        "721"
+      ],
+      "ratingNames": [
+        "ActiVote"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 44,
+      "status": "unrated"
+    },
+    {
+      "pollster": "co/efficient",
+      "apiPollsterIds": [
+        "ba90f015-c45b-4884-8111-14ec9e67161e"
+      ],
+      "ratingIds": [
+        "514"
+      ],
+      "ratingNames": [
+        "co/efficient"
+      ],
+      "silverMatches": [
+        "co/efficient"
+      ],
+      "sourcePollCount": 72,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "New River Strategies/GS Strategy Group",
+      "apiPollsterIds": [
+        "ed7c4cbd-ffee-4e94-b834-373bc6036666"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 6,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Concord Public Opinion Partners",
+      "apiPollsterIds": [
+        "da1699d3-5a09-44a0-adf9-a5d1113f4db1"
+      ],
+      "ratingIds": [
+        "553"
+      ],
+      "ratingNames": [
+        "Concord Public Opinion Partners"
+      ],
+      "silverMatches": [
+        "Concord Public Opinion Partners"
+      ],
+      "sourcePollCount": 8,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "University of North Florida",
+      "apiPollsterIds": [
+        "165d68ed-3fc5-4419-a7e5-35aea087e05f"
+      ],
+      "ratingIds": [
+        "360"
+      ],
+      "ratingNames": [
+        "University of North Florida Public Opinion Research Lab"
+      ],
+      "silverMatches": [
+        "University of North Florida"
+      ],
+      "sourcePollCount": 10,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Marist University",
+      "apiPollsterIds": [
+        "a8db55ca-987d-4afd-83dc-e3f5f077682a"
+      ],
+      "ratingIds": [
+        "183"
+      ],
+      "ratingNames": [
+        "Marist College"
+      ],
+      "silverMatches": [
+        "Marist College"
+      ],
+      "sourcePollCount": 36,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Cygnal Political",
+      "apiPollsterIds": [
+        "e5a71de0-9670-47f6-a1be-12444adda7fb"
+      ],
+      "ratingIds": [
+        "67"
+      ],
+      "ratingNames": [
+        "Cygnal"
+      ],
+      "silverMatches": [
+        "Cygnal"
+      ],
+      "sourcePollCount": 67,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Data for Progress",
+      "apiPollsterIds": [
+        "2641a52c-cae5-4621-ace2-f96fd692db3e"
+      ],
+      "ratingIds": [
+        "522"
+      ],
+      "ratingNames": [
+        "Data for Progress"
+      ],
+      "silverMatches": [
+        "Data for Progress"
+      ],
+      "sourcePollCount": 41,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Public Opinion Strategies",
+      "apiPollsterIds": [
+        "5f931e1a-75ea-4dae-8a0f-45d6d6ae803f"
+      ],
+      "ratingIds": [
+        "260"
+      ],
+      "ratingNames": [
+        "Public Opinion Strategies"
+      ],
+      "silverMatches": [
+        "Public Opinion Strategies"
+      ],
+      "sourcePollCount": 21,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "University of Georgia",
+      "apiPollsterIds": [
+        "81d4da0d-160d-416f-b171-4fbb02a5cd08"
+      ],
+      "ratingIds": [
+        "350"
+      ],
+      "ratingNames": [
+        "University of Georgia School of Public and International Affairs"
+      ],
+      "silverMatches": [
+        "University of Georgia"
+      ],
+      "sourcePollCount": 9,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "YouGov",
+      "apiPollsterIds": [
+        "59ef5d62-c6ba-41a3-b2cd-24b8543e62b9"
+      ],
+      "ratingIds": [
+        "391"
+      ],
+      "ratingNames": [
+        "YouGov"
+      ],
+      "silverMatches": [
+        "YouGov"
+      ],
+      "sourcePollCount": 306,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "The Alabama Poll",
+      "apiPollsterIds": [
+        "605e6dcd-de81-4649-bb94-23f61731d674"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 7,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Embold Research",
+      "apiPollsterIds": [
+        "fa85d572-6e60-49f3-b545-d0181fa13717"
+      ],
+      "ratingIds": [
+        "48"
+      ],
+      "ratingNames": [
+        "Change Research"
+      ],
+      "silverMatches": [
+        "Change Research"
+      ],
+      "sourcePollCount": 6,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Suffolk University",
+      "apiPollsterIds": [
+        "4d57a1ce-1ebc-4594-95bb-7a06ed7ddba5"
+      ],
+      "ratingIds": [
+        "323"
+      ],
+      "ratingNames": [
+        "Suffolk University"
+      ],
+      "silverMatches": [
+        "Suffolk University"
+      ],
+      "sourcePollCount": 22,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Bravo Group",
+      "apiPollsterIds": [
+        "cb7ffc61-80fa-43e2-b174-021b901814a7"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 10,
+      "status": "unrated"
+    },
+    {
+      "pollster": "University of Houston Hobby School of Public Affairs",
+      "apiPollsterIds": [
+        "a034da71-63f7-46ed-a6fc-e9cc0ff5a7b0"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 18,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Trafalgar Group",
+      "apiPollsterIds": [
+        "9a75302d-c3be-4e86-ac7b-c6a6a2a52ac3"
+      ],
+      "ratingIds": [
+        "338"
+      ],
+      "ratingNames": [
+        "Trafalgar Group"
+      ],
+      "silverMatches": [
+        "Trafalgar Group"
+      ],
+      "sourcePollCount": 43,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Bowling Green State University Democracy and Public Policy Research Network/YouGov",
+      "apiPollsterIds": [
+        "8431696c-6b6d-49d4-a4c5-b7dfff9d1e7f"
+      ],
+      "ratingIds": [
+        "868"
+      ],
+      "ratingNames": [
+        "Bowling Green State University/YouGov"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 14,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Hendrix College",
+      "apiPollsterIds": [
+        "9961fa84-29d9-424c-b3b7-7e7118a86c98"
+      ],
+      "ratingIds": [
+        "138"
+      ],
+      "ratingNames": [
+        "Hendrix College"
+      ],
+      "silverMatches": [
+        "Hendrix College"
+      ],
+      "sourcePollCount": 5,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "The Tyson Group",
+      "apiPollsterIds": [
+        "caeca03c-4022-40de-a5fc-316c43ac3160"
+      ],
+      "ratingIds": [
+        "334"
+      ],
+      "ratingNames": [
+        "The Tyson Group"
+      ],
+      "silverMatches": [
+        "The Tyson Group"
+      ],
+      "sourcePollCount": 10,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "SurveyUSA",
+      "apiPollsterIds": [
+        "8c016954-3c5a-4142-a87a-14bf33fc469c"
+      ],
+      "ratingIds": [
+        "325"
+      ],
+      "ratingNames": [
+        "SurveyUSA"
+      ],
+      "silverMatches": [
+        "SurveyUSA"
+      ],
+      "sourcePollCount": 37,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "MDW Communications",
+      "apiPollsterIds": [
+        "19845149-b215-484a-bc95-e0dd7e2001b0"
+      ],
+      "ratingIds": [
+        "848"
+      ],
+      "ratingNames": [
+        "MDW Communications"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 7,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Stetson University Center for Public Opinion Research",
+      "apiPollsterIds": [
+        "89830012-d3a1-4997-ae0b-120650107d1f"
+      ],
+      "ratingIds": [
+        "730"
+      ],
+      "ratingNames": [
+        "Stetson University Center for Public Opinion Research"
+      ],
+      "silverMatches": [
+        "Stetson University"
+      ],
+      "sourcePollCount": 6,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "ReconMR/Siena Research Institute",
+      "apiPollsterIds": [
+        "bdd9d298-2386-4725-b91f-132f04638909"
+      ],
+      "ratingIds": [
+        "305"
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [
+        "Siena College"
+      ],
+      "sourcePollCount": 8,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Mason-Dixon Polling & Research, Inc.",
+      "apiPollsterIds": [
+        "04941b3b-4f95-41b9-a906-c3f507b5ffa2"
+      ],
+      "ratingIds": [
+        "197"
+      ],
+      "ratingNames": [
+        "Mason-Dixon Polling & Strategy"
+      ],
+      "silverMatches": [
+        "Mason-Dixon Polling & Strategy"
+      ],
+      "sourcePollCount": 18,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Research & Polling Inc.",
+      "apiPollsterIds": [
+        "a37e742c-cf70-4844-ad79-e8ba7be77559"
+      ],
+      "ratingIds": [
+        "280"
+      ],
+      "ratingNames": [
+        "Research & Polling Inc."
+      ],
+      "silverMatches": [
+        "Research & Polling Inc."
+      ],
+      "sourcePollCount": 8,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Morning Consult",
+      "apiPollsterIds": [
+        "4bc528cc-f55c-4f8b-8c90-adfe09f46c76"
+      ],
+      "ratingIds": [
+        "218"
+      ],
+      "ratingNames": [
+        "Morning Consult"
+      ],
+      "silverMatches": [
+        "Morning Consult"
+      ],
+      "sourcePollCount": 240,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "GrayHouse",
+      "apiPollsterIds": [
+        "b2978307-eed3-420a-84ff-9e73574db513"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 21,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Z to A Research",
+      "apiPollsterIds": [
+        "be9a3aec-e042-4755-9caa-4538e87f5962"
+      ],
+      "ratingIds": [
+        "831"
+      ],
+      "ratingNames": [
+        "Z to A Research"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 10,
+      "status": "unrated"
+    },
+    {
+      "pollster": "The Washington Post/George Mason University Schar School of Policy and Government",
+      "apiPollsterIds": [
+        "6b64be2d-911f-4b4d-9506-38cfc12e3b02"
+      ],
+      "ratingIds": [
+        "754"
+      ],
+      "ratingNames": [
+        "The Washington Post/George Mason University Schar School of Policy and Government"
+      ],
+      "silverMatches": [
+        "The Washington Post/George Mason University Schar School of Policy and Government"
+      ],
+      "sourcePollCount": 8,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "GQR",
+      "apiPollsterIds": [
+        "a64a876e-bc33-45b8-b3d1-86ae963bfa7d"
+      ],
+      "ratingIds": [
+        "126"
+      ],
+      "ratingNames": [
+        "GQR"
+      ],
+      "silverMatches": [
+        "Greenberg Quinlan Rosner"
+      ],
+      "sourcePollCount": 30,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Targoz Market Research",
+      "apiPollsterIds": [
+        "7e648c0c-a715-4d5c-bc28-93c71899af71"
+      ],
+      "ratingIds": [
+        "454"
+      ],
+      "ratingNames": [
+        "Targoz Market Research"
+      ],
+      "silverMatches": [
+        "Targoz Market Research"
+      ],
+      "sourcePollCount": 19,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "East Carolina University Center for Survey Research",
+      "apiPollsterIds": [
+        "d503ac01-1df8-4fd2-a144-17ec9b61f9b8"
+      ],
+      "ratingIds": [
+        "523"
+      ],
+      "ratingNames": [
+        "East Carolina University Center for Survey Research"
+      ],
+      "silverMatches": [
+        "East Carolina University"
+      ],
+      "sourcePollCount": 2,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "St. Pete Polls",
+      "apiPollsterIds": [
+        "8406ce7c-9571-4745-98f0-3f31fdbaf972"
+      ],
+      "ratingIds": [
+        "314"
+      ],
+      "ratingNames": [
+        "St. Pete Polls"
+      ],
+      "silverMatches": [
+        "St. Pete Polls"
+      ],
+      "sourcePollCount": 12,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "University of Massachusetts Lowell Center for Public Opinion/YouGov",
+      "apiPollsterIds": [
+        "5f397f40-11d9-4ff7-b214-498f71cbb855"
+      ],
+      "ratingIds": [
+        "355"
+      ],
+      "ratingNames": [
+        "University of Massachusetts Lowell Center for Public Opinion"
+      ],
+      "silverMatches": [
+        "University of Massachusetts Lowell"
+      ],
+      "sourcePollCount": 11,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "CNN/SSRS",
+      "apiPollsterIds": [
+        "3be4d123-848b-430a-8168-689af60cefa2"
+      ],
+      "ratingIds": [
+        "844"
+      ],
+      "ratingNames": [
+        "CNN"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 29,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Guidant Polling and Strategy",
+      "apiPollsterIds": [
+        "6786c2d0-5bac-4a36-9db6-b3b018a6fafc"
+      ],
+      "ratingIds": [
+        "828"
+      ],
+      "ratingNames": [
+        "Guidant Polling and Strategy"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 7,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Alaska Survey Research",
+      "apiPollsterIds": [
+        "d0327862-be51-4f7b-9b68-3fb7a63af2bd"
+      ],
+      "ratingIds": [
+        "155"
+      ],
+      "ratingNames": [
+        "Alaska Survey Research"
+      ],
+      "silverMatches": [
+        "Alaska Survey Research"
+      ],
+      "sourcePollCount": 24,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Public Policy Polling",
+      "apiPollsterIds": [
+        "9b245451-0334-4f8c-909e-b48d602feb76"
+      ],
+      "ratingIds": [
+        "263"
+      ],
+      "ratingNames": [
+        "Public Policy Polling"
+      ],
+      "silverMatches": [
+        "Public Policy Polling"
+      ],
+      "sourcePollCount": 130,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Mitchell Research & Communications",
+      "apiPollsterIds": [
+        "f792b6ab-1126-43c4-8e7f-bd3ca54a2b3b"
+      ],
+      "ratingIds": [
+        "213"
+      ],
+      "ratingNames": [
+        "Mitchell Research & Communications"
+      ],
+      "silverMatches": [
+        "Mitchell Research & Communications"
+      ],
+      "sourcePollCount": 11,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Maine People's Resource Center",
+      "apiPollsterIds": [
+        "7e920240-8855-4b7b-b17a-750220161599"
+      ],
+      "ratingIds": [
+        "180"
+      ],
+      "ratingNames": [
+        "Maine People's Resource Center"
+      ],
+      "silverMatches": [
+        "Maine People's Resource Center"
+      ],
+      "sourcePollCount": 3,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "The New York Times/Siena University",
+      "apiPollsterIds": [
+        "92215ea1-dfa7-4284-a40b-477b73739ee6"
+      ],
+      "ratingIds": [
+        "448"
+      ],
+      "ratingNames": [
+        "The New York Times/Siena College"
+      ],
+      "silverMatches": [
+        "The New York Times/Siena College"
+      ],
+      "sourcePollCount": 42,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Big Data Poll",
+      "apiPollsterIds": [
+        "312f97da-ebc5-446e-8856-cdded6ea1251"
+      ],
+      "ratingIds": [
+        "251"
+      ],
+      "ratingNames": [
+        "Big Data Poll"
+      ],
+      "silverMatches": [
+        "Big Data Poll"
+      ],
+      "sourcePollCount": 45,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Lake Research Partners",
+      "apiPollsterIds": [
+        "bd236cc6-142b-4003-897f-7feb32f74126"
+      ],
+      "ratingIds": [
+        "165"
+      ],
+      "ratingNames": [
+        "Lake Research Partners"
+      ],
+      "silverMatches": [
+        "Lake Research Partners"
+      ],
+      "sourcePollCount": 23,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Fabrizio Ward/Impact Research",
+      "apiPollsterIds": [
+        "285876f7-5e4c-4a98-8f47-f7a38f2dafe1"
+      ],
+      "ratingIds": [
+        "694"
+      ],
+      "ratingNames": [
+        "Fabrizio Lee & Associates/Impact Research"
+      ],
+      "silverMatches": [
+        "Fabrizio Lee & Associates/Impact Research"
+      ],
+      "sourcePollCount": 17,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "RMG Research",
+      "apiPollsterIds": [
+        "ae31ea8f-0d54-476d-ab98-61b258a0a986"
+      ],
+      "ratingIds": [
+        "555"
+      ],
+      "ratingNames": [
+        "RMG Research"
+      ],
+      "silverMatches": [
+        "RMG Research"
+      ],
+      "sourcePollCount": 113,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Global Strategy Group",
+      "apiPollsterIds": [
+        "515110ac-affe-4b0c-a37c-3fb9aad38004"
+      ],
+      "ratingIds": [
+        "118"
+      ],
+      "ratingNames": [
+        "Global Strategy Group"
+      ],
+      "silverMatches": [
+        "Global Strategy Group"
+      ],
+      "sourcePollCount": 42,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Zenith Research",
+      "apiPollsterIds": [
+        "68e21c00-6461-4cb0-bc1e-7c723d11d0c4"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 6,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Pulse Decision Science",
+      "apiPollsterIds": [
+        "4441d98f-cf28-4bb7-957a-5ff6dd310ef8"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 21,
+      "status": "unrated"
+    },
+    {
+      "pollster": "MassINC Polling Group",
+      "apiPollsterIds": [
+        "45357925-67e7-442f-8fe0-cee6a331ae01"
+      ],
+      "ratingIds": [
+        "198"
+      ],
+      "ratingNames": [
+        "MassINC Polling Group"
+      ],
+      "silverMatches": [
+        "MassINC Polling Group"
+      ],
+      "sourcePollCount": 3,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Cygnal/Beacon Research",
+      "apiPollsterIds": [
+        "e6562210-7945-4363-af4e-7f5b8dcd4908"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 2,
+      "status": "unrated"
+    },
+    {
+      "pollster": "American Pulse Research & Polling",
+      "apiPollsterIds": [
+        "9e2efe56-2b05-419d-b512-7005547b47cb"
+      ],
+      "ratingIds": [
+        "836"
+      ],
+      "ratingNames": [
+        "American Pulse Research & Polling"
+      ],
+      "silverMatches": [
+        "American Pulse Research & Polling"
+      ],
+      "sourcePollCount": 8,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Stratus Intelligence",
+      "apiPollsterIds": [
+        "55959218-2db6-42bc-835c-c9baf89b133c"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 18,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Opinion Diagnostics",
+      "apiPollsterIds": [
+        "7c25f6c3-cc63-4614-aec1-dfc392ef7872"
+      ],
+      "ratingIds": [
+        "769"
+      ],
+      "ratingNames": [
+        "Opinion Diagnostics"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 8,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Torchlight Strategies",
+      "apiPollsterIds": [
+        "b77abab4-3507-4c9c-93ad-a9d290e44223"
+      ],
+      "ratingIds": [
+        "745"
+      ],
+      "ratingNames": [
+        "Torchlight Strategies"
+      ],
+      "silverMatches": [
+        "Torchlight Strategies"
+      ],
+      "sourcePollCount": 2,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "University of New Hampshire",
+      "apiPollsterIds": [
+        "a18ec25b-ef6c-44ce-84b1-e5d59b798228"
+      ],
+      "ratingIds": [
+        "357"
+      ],
+      "ratingNames": [
+        "University of New Hampshire Survey Center"
+      ],
+      "silverMatches": [
+        "University of New Hampshire"
+      ],
+      "sourcePollCount": 67,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "High Point University",
+      "apiPollsterIds": [
+        "55c8b5f7-bc0c-40df-8b2e-a72330d46567"
+      ],
+      "ratingIds": [
+        "139"
+      ],
+      "ratingNames": [
+        "High Point University Survey Research Center"
+      ],
+      "silverMatches": [
+        "High Point University"
+      ],
+      "sourcePollCount": 10,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Aspect Strategic",
+      "apiPollsterIds": [
+        "c5ff1a97-91f2-4daa-b35d-d851f76816e8"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Hart Research Associates",
+      "apiPollsterIds": [
+        "c7ce7592-5c6a-4a25-bb62-3e11f01555d4"
+      ],
+      "ratingIds": [
+        "113"
+      ],
+      "ratingNames": [
+        "Garin-Hart-Yang Research Group"
+      ],
+      "silverMatches": [
+        "Garin-Hart-Yang Research Group"
+      ],
+      "sourcePollCount": 25,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Barbara Jordan Public Policy Research and Survey Center",
+      "apiPollsterIds": [
+        "9d39ad0f-23bc-4e75-8390-8db5132e1207"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 12,
+      "status": "unrated"
+    },
+    {
+      "pollster": "SoCal Strategies",
+      "apiPollsterIds": [
+        "cb32537c-1d43-458f-be44-d73d21ec8b68"
+      ],
+      "ratingIds": [
+        "851"
+      ],
+      "ratingNames": [
+        "SoCal Research"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 14,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Rutgers-Eagleton",
+      "apiPollsterIds": [
+        "cbf58fcf-dde5-4e5c-ac08-2bee215ce8d1"
+      ],
+      "ratingIds": [
+        "295"
+      ],
+      "ratingNames": [
+        "Rutgers University Eagleton Center for Public Interest Polling"
+      ],
+      "silverMatches": [
+        "Rutgers University"
+      ],
+      "sourcePollCount": 6,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Glengariff Group, Inc.",
+      "apiPollsterIds": [
+        "76060e19-7324-4afe-9bbe-7e92156f0976"
+      ],
+      "ratingIds": [
+        "117"
+      ],
+      "ratingNames": [
+        "Glengariff Group"
+      ],
+      "silverMatches": [
+        "Glengariff Group"
+      ],
+      "sourcePollCount": 16,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "TIPP Insights",
+      "apiPollsterIds": [
+        "b0b42ed9-f490-419e-942f-af97e2cda604"
+      ],
+      "ratingIds": [
+        "144"
+      ],
+      "ratingNames": [
+        "TIPP Insights"
+      ],
+      "silverMatches": [
+        "TIPP Insights"
+      ],
+      "sourcePollCount": 45,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Fabrizio, Lee & Associates",
+      "apiPollsterIds": [
+        "60b356c5-445b-4e05-bbe4-500f73d5ec9c"
+      ],
+      "ratingIds": [
+        "90"
+      ],
+      "ratingNames": [
+        "Fabrizio, Lee & Associates"
+      ],
+      "silverMatches": [
+        "Fabrizio, Lee & Associates"
+      ],
+      "sourcePollCount": 19,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Overton Insights",
+      "apiPollsterIds": [
+        "cffb7aae-eac7-4c8a-9e0e-b2f160c0c885"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 3,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Michigan State University Institute for Public Policy and Social Research/YouGov",
+      "apiPollsterIds": [
+        "61e780d7-6831-4d79-ad15-5e1c0982bb76"
+      ],
+      "ratingIds": [
+        "876"
+      ],
+      "ratingNames": [
+        "Michigan State University Institute for Public Policy and Social Research/YouGov"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 3,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Abacus Data",
+      "apiPollsterIds": [
+        "618af181-8baa-4fdc-af7c-53d0bae5f0ec"
+      ],
+      "ratingIds": [
+        "586"
+      ],
+      "ratingNames": [
+        "Abacus Data"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 5,
+      "status": "unrated"
+    },
+    {
+      "pollster": "EPIC-MRA",
+      "apiPollsterIds": [
+        "6519d13d-a226-4733-8ef0-70d520169e7d"
+      ],
+      "ratingIds": [
+        "84"
+      ],
+      "ratingNames": [
+        "EPIC-MRA"
+      ],
+      "silverMatches": [
+        "EPIC-MRA"
+      ],
+      "sourcePollCount": 6,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Cole Hargrave",
+      "apiPollsterIds": [
+        "b074c528-0416-4780-8ac3-19511d12e80d"
+      ],
+      "ratingIds": [
+        "56"
+      ],
+      "ratingNames": [
+        "Cole Hargrave Snodgrass & Associates"
+      ],
+      "silverMatches": [
+        "Cole Hargrave Snodgrass & Associates"
+      ],
+      "sourcePollCount": 6,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Susquehanna Polling & Research, Inc.",
+      "apiPollsterIds": [
+        "0b171deb-f2e3-42da-bb70-69a897f86d18"
+      ],
+      "ratingIds": [
+        "326"
+      ],
+      "ratingNames": [
+        "Susquehanna Polling & Research Inc."
+      ],
+      "silverMatches": [
+        "Susquehanna Polling & Research Inc."
+      ],
+      "sourcePollCount": 8,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "J.L. Partners",
+      "apiPollsterIds": [
+        "2df67459-2691-479a-8c87-f98549fe2429"
+      ],
+      "ratingIds": [
+        "619"
+      ],
+      "ratingNames": [
+        "J.L. Partners"
+      ],
+      "silverMatches": [
+        "J.L. Partners"
+      ],
+      "sourcePollCount": 39,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "The Bullfinch Group",
+      "apiPollsterIds": [
+        "530091d3-1f98-43b8-8b9f-4a2bff415234"
+      ],
+      "ratingIds": [
+        "692"
+      ],
+      "ratingNames": [
+        "The Bullfinch Group"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 30,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Tulchin Research",
+      "apiPollsterIds": [
+        "433ef9e7-7784-4272-92fc-ad8ae9efb109"
+      ],
+      "ratingIds": [
+        "340"
+      ],
+      "ratingNames": [
+        "Tulchin Research"
+      ],
+      "silverMatches": [
+        "Tulchin Research"
+      ],
+      "sourcePollCount": 25,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "2040 Strategy Group",
+      "apiPollsterIds": [
+        "1378e25f-8d39-499b-a100-3a1e46bacdf5"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 2,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Deep Root Analytics",
+      "apiPollsterIds": [
+        "74446bda-d9c3-4672-967f-afbf4fd07706"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 2,
+      "status": "unrated"
+    },
+    {
+      "pollster": "YouGov Blue",
+      "apiPollsterIds": [
+        "70000fc3-84af-4803-b34c-a72b40a844a1"
+      ],
+      "ratingIds": [
+        "391"
+      ],
+      "ratingNames": [
+        "YouGov"
+      ],
+      "silverMatches": [
+        "YouGov"
+      ],
+      "sourcePollCount": 1,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "yes. every kid. foundation.",
+      "apiPollsterIds": [
+        "fe62c424-9e60-4d2a-9b42-2e21b10ed732"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 9,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Tavern Research",
+      "apiPollsterIds": [
+        "051ba522-1b39-4264-b05f-81a45419f175"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 38,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Wick",
+      "apiPollsterIds": [
+        "4f114c0f-bcdd-4e06-ba3b-1f4a125e60bd"
+      ],
+      "ratingIds": [
+        "284"
+      ],
+      "ratingNames": [
+        "Wick"
+      ],
+      "silverMatches": [
+        "Wick"
+      ],
+      "sourcePollCount": 11,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "A2 Insights",
+      "apiPollsterIds": [
+        "4005500f-d064-432d-bd67-f9da8c6de64b"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 7,
+      "status": "unrated"
+    },
+    {
+      "pollster": "JMC Enterprises",
+      "apiPollsterIds": [
+        "6aeee3f3-adf4-43b8-84db-77514a3f5b64"
+      ],
+      "ratingIds": [
+        "156"
+      ],
+      "ratingNames": [
+        "JMC Analytics"
+      ],
+      "silverMatches": [
+        "JMC Analytics"
+      ],
+      "sourcePollCount": 17,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "BDPC",
+      "apiPollsterIds": [
+        "e9997628-1dd4-4d5a-b9af-b6210a48f1e8"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 7,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Strategy Management",
+      "apiPollsterIds": [
+        "cf4962f2-33fe-483d-a9b2-ff61534516f7"
+      ],
+      "ratingIds": [
+        "857"
+      ],
+      "ratingNames": [
+        "Strategy Management"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Colorado Community Research",
+      "apiPollsterIds": [
+        "bf18dfc6-60d2-4a05-bb07-950f193bb78c"
+      ],
+      "ratingIds": [
+        "867"
+      ],
+      "ratingNames": [
+        "Colorado Community Research"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 2,
+      "status": "unrated"
+    },
+    {
+      "pollster": "CivicLens Research",
+      "apiPollsterIds": [
+        "4508b62e-ccb9-486f-a1cb-c3857ed15421"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 4,
+      "status": "unrated"
+    },
+    {
+      "pollster": "The Citadel School of Humanities and Social Sciences",
+      "apiPollsterIds": [
+        "294ccf55-b483-442f-9cdf-4f66f8ccb75f"
+      ],
+      "ratingIds": [
+        "832"
+      ],
+      "ratingNames": [
+        "The Citadel School of Humanities and Social Sciences"
+      ],
+      "silverMatches": [
+        "The Citadel"
+      ],
+      "sourcePollCount": 2,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Kaplan Strategies",
+      "apiPollsterIds": [
+        "16ef3c5d-8b51-437f-87ab-9410cc8a0bb2"
+      ],
+      "ratingIds": [
+        "124"
+      ],
+      "ratingNames": [
+        "Kaplan Strategies"
+      ],
+      "silverMatches": [
+        "Gravis Marketing/Kaplan Strategies"
+      ],
+      "sourcePollCount": 4,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Remington",
+      "apiPollsterIds": [
+        "e7ca8143-0533-4312-8213-e42141e25144"
+      ],
+      "ratingIds": [
+        "279"
+      ],
+      "ratingNames": [
+        "Remington Research Group"
+      ],
+      "silverMatches": [
+        "Remington Research Group"
+      ],
+      "sourcePollCount": 11,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Pan Atlantic SMS Group",
+      "apiPollsterIds": [
+        "ebfa8ec5-4b26-4947-a65d-c575a697ba0b"
+      ],
+      "ratingIds": [
+        "249"
+      ],
+      "ratingNames": [
+        "Pan Atlantic Research"
+      ],
+      "silverMatches": [
+        "Pan Atlantic Research"
+      ],
+      "sourcePollCount": 7,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Praecones Analytica",
+      "apiPollsterIds": [
+        "aac2cdcc-9c4b-48e9-a8f5-9605bf858291"
+      ],
+      "ratingIds": [
+        "257"
+      ],
+      "ratingNames": [
+        "Praecones Analytica"
+      ],
+      "silverMatches": [
+        "Praecones Analytica"
+      ],
+      "sourcePollCount": 3,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Cherry Communications",
+      "apiPollsterIds": [
+        "7a9d7082-9b32-4809-a081-01498609ddef"
+      ],
+      "ratingIds": [
+        "49"
+      ],
+      "ratingNames": [
+        "Cherry Communications"
+      ],
+      "silverMatches": [
+        "Cherry Communications"
+      ],
+      "sourcePollCount": 2,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "UpONE Insights",
+      "apiPollsterIds": [
+        "d26bd5e0-f951-4074-9aad-76c7777a4c2e"
+      ],
+      "ratingIds": [
+        "839"
+      ],
+      "ratingNames": [
+        "UpONE Insights"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 3,
+      "status": "unrated"
+    },
+    {
+      "pollster": "FM3 Research",
+      "apiPollsterIds": [
+        "b6cc8956-c66e-4b7c-b566-622d0666dda1"
+      ],
+      "ratingIds": [
+        "91"
+      ],
+      "ratingNames": [
+        "FM3 Research"
+      ],
+      "silverMatches": [
+        "FM3 Research"
+      ],
+      "sourcePollCount": 9,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Echelon Insights",
+      "apiPollsterIds": [
+        "932da08a-7f8a-48e3-a92a-c443c039fbd1"
+      ],
+      "ratingIds": [
+        "407"
+      ],
+      "ratingNames": [
+        "Echelon Insights"
+      ],
+      "silverMatches": [
+        "Echelon Insights"
+      ],
+      "sourcePollCount": 64,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Tarrance Group",
+      "apiPollsterIds": [
+        "7dc9ea9a-a610-4ec0-bb7d-d61ec96b07ae"
+      ],
+      "ratingIds": [
+        "333"
+      ],
+      "ratingNames": [
+        "Tarrance Group"
+      ],
+      "silverMatches": [
+        "Tarrance Group"
+      ],
+      "sourcePollCount": 9,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Workbench Strategy",
+      "apiPollsterIds": [
+        "d1c73376-3599-4b5f-91ec-087c53ce365a"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 8,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Actionable Intel",
+      "apiPollsterIds": [
+        "ff48a4d2-c96e-4831-b5e9-01119349dd31"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Bedrock Polling",
+      "apiPollsterIds": [
+        "0aa210a0-c783-42b9-84a6-62b9f6bf1b30"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 7,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Pulse Opinion Research",
+      "apiPollsterIds": [
+        "ac8f4d8a-6857-450a-af90-23361d5df702"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 3,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Victory Research",
+      "apiPollsterIds": [
+        "b36529c7-1e3d-4953-9639-3576280d4047"
+      ],
+      "ratingIds": [
+        "437"
+      ],
+      "ratingNames": [
+        "Victory Research"
+      ],
+      "silverMatches": [
+        "Victory Research"
+      ],
+      "sourcePollCount": 4,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "EMC Research",
+      "apiPollsterIds": [
+        "37fbb03d-b9d0-4901-bfa8-0bf033230ade"
+      ],
+      "ratingIds": [
+        "130"
+      ],
+      "ratingNames": [
+        "EMC Research"
+      ],
+      "silverMatches": [
+        "EMC Research"
+      ],
+      "sourcePollCount": 8,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Upswing Research",
+      "apiPollsterIds": [
+        "28530383-68dc-49ad-bf0a-6206eab86a67"
+      ],
+      "ratingIds": [
+        "847"
+      ],
+      "ratingNames": [
+        "Upswing Research"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 10,
+      "status": "unrated"
+    },
+    {
+      "pollster": "OnMessage Inc.",
+      "apiPollsterIds": [
+        "de64cc10-6c30-4b6c-8359-cbb9c7070d25"
+      ],
+      "ratingIds": [
+        "239"
+      ],
+      "ratingNames": [
+        "OnMessage Inc."
+      ],
+      "silverMatches": [
+        "OnMessage Inc."
+      ],
+      "sourcePollCount": 12,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Cor Strategies",
+      "apiPollsterIds": [
+        "975fa7c6-d100-4719-9ca6-fd4cb09e934d"
+      ],
+      "ratingIds": [
+        "688"
+      ],
+      "ratingNames": [
+        "Cor Services, Inc."
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 2,
+      "status": "unrated"
+    },
+    {
+      "pollster": "McLaughlin & Associates",
+      "apiPollsterIds": [
+        "b616c2cc-cb2e-4394-9d34-8ee9a1b530d2"
+      ],
+      "ratingIds": [
+        "203"
+      ],
+      "ratingNames": [
+        "McLaughlin & Associates"
+      ],
+      "silverMatches": [
+        "McLaughlin & Associates"
+      ],
+      "sourcePollCount": 54,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "University of Texas at Tyler Center for Opinion Research",
+      "apiPollsterIds": [
+        "d915eb02-bc03-4194-b1ec-c301d098d90c"
+      ],
+      "ratingIds": [
+        "458"
+      ],
+      "ratingNames": [
+        "University of Texas at Tyler Center for Opinion Research"
+      ],
+      "silverMatches": [
+        "University of Texas at Tyler"
+      ],
+      "sourcePollCount": 3,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Blueprint Polling",
+      "apiPollsterIds": [
+        "12486d5d-2d75-4750-bbb9-529573b7d641"
+      ],
+      "ratingIds": [
+        "470"
+      ],
+      "ratingNames": [
+        "Blueprint Polling"
+      ],
+      "silverMatches": [
+        "Blueprint Polling"
+      ],
+      "sourcePollCount": 10,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "NRSC",
+      "apiPollsterIds": [
+        "484e5d80-2fd6-437a-a3b1-28c57b6f3cb1"
+      ],
+      "ratingIds": [
+        "695"
+      ],
+      "ratingNames": [
+        "NRSC"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 7,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Ragnar Research Partners",
+      "apiPollsterIds": [
+        "59812bd0-883a-4b06-8426-73eead0329b0"
+      ],
+      "ratingIds": [
+        "517"
+      ],
+      "ratingNames": [
+        "Ragnar Research Partners"
+      ],
+      "silverMatches": [
+        "Ragnar Research Partners"
+      ],
+      "sourcePollCount": 17,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "HIT Strategies",
+      "apiPollsterIds": [
+        "d236cf4e-d8e2-4704-a0fc-33a0e6cfa4b6"
+      ],
+      "ratingIds": [
+        "596"
+      ],
+      "ratingNames": [
+        "HIT Strategies"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 2,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Hunt Research",
+      "apiPollsterIds": [
+        "a38372ca-2170-46c5-8abc-78d993aeff83"
+      ],
+      "ratingIds": [
+        "870"
+      ],
+      "ratingNames": [
+        "Hunt Research"
+      ],
+      "silverMatches": [
+        "Hunt Research"
+      ],
+      "sourcePollCount": 1,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Rosetta Stone",
+      "apiPollsterIds": [
+        "4edbcec6-f23c-4b78-982f-a62ad912bb68"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 2,
+      "status": "unrated"
+    },
+    {
+      "pollster": "University of Houston Hobby School of Public Affairs/Texas Southern University School of Public Affairs",
+      "apiPollsterIds": [
+        "fbcd1d78-1ba3-44e6-b754-bbbc3984c453"
+      ],
+      "ratingIds": [
+        "351"
+      ],
+      "ratingNames": [
+        "University of Houston Hobby School of Public Affairs"
+      ],
+      "silverMatches": [
+        "University of Houston"
+      ],
+      "sourcePollCount": 1,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Advantage Inc.",
+      "apiPollsterIds": [
+        "b6e9a73c-430f-4b95-91d7-a9983095b489"
+      ],
+      "ratingIds": [
+        "747"
+      ],
+      "ratingNames": [
+        "Advantage"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 2,
+      "status": "unrated"
+    },
+    {
+      "pollster": "1892 Polling",
+      "apiPollsterIds": [
+        "4d2ad30b-5412-4c16-ac02-43ea6dfc4b81"
+      ],
+      "ratingIds": [
+        "461"
+      ],
+      "ratingNames": [
+        "1892 Polling"
+      ],
+      "silverMatches": [
+        "1892 Polling"
+      ],
+      "sourcePollCount": 8,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Victory Insights",
+      "apiPollsterIds": [
+        "1b3d7c5d-feee-49fd-9936-7dd83dc5d760"
+      ],
+      "ratingIds": [
+        "673"
+      ],
+      "ratingNames": [
+        "Victory Insights"
+      ],
+      "silverMatches": [
+        "Victory Insights"
+      ],
+      "sourcePollCount": 17,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Normington, Petts & Associates",
+      "apiPollsterIds": [
+        "6fa6167a-c09c-423b-af3d-3a47f49e055b",
+        "91a3089b-c001-401f-8db5-0c900da235d8"
+      ],
+      "ratingIds": [
+        "",
+        "232"
+      ],
+      "ratingNames": [
+        "",
+        "Normington, Petts & Associates"
+      ],
+      "silverMatches": [
+        "Normington, Petts & Associates"
+      ],
+      "sourcePollCount": 17,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Target Insyght",
+      "apiPollsterIds": [
+        "b9dec230-2b8b-4cc9-8688-ae3d8625fe27"
+      ],
+      "ratingIds": [
+        "330"
+      ],
+      "ratingNames": [
+        "Target Insyght"
+      ],
+      "silverMatches": [
+        "Target Insyght"
+      ],
+      "sourcePollCount": 2,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Responsive Management",
+      "apiPollsterIds": [
+        "904a2070-adfa-41d3-a24f-ee903bc51a4a"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "WPA Intelligence",
+      "apiPollsterIds": [
+        "815c1587-7e0b-45fd-9ce6-c207ee7d43a0"
+      ],
+      "ratingIds": [
+        "383"
+      ],
+      "ratingNames": [
+        "WPA Intelligence"
+      ],
+      "silverMatches": [
+        "WPA Intelligence"
+      ],
+      "sourcePollCount": 2,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "CWS Research",
+      "apiPollsterIds": [
+        "d30e27c7-3763-47ff-8520-157e7d7adb31"
+      ],
+      "ratingIds": [
+        "697"
+      ],
+      "ratingNames": [
+        "CWS Research"
+      ],
+      "silverMatches": [
+        "CWS Research"
+      ],
+      "sourcePollCount": 2,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "SSRS",
+      "apiPollsterIds": [
+        "e35cbe11-c174-4c8d-98f3-5c15f8fa27f4"
+      ],
+      "ratingIds": [
+        "297"
+      ],
+      "ratingNames": [
+        "SSRS"
+      ],
+      "silverMatches": [
+        "SSRS"
+      ],
+      "sourcePollCount": 2,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "DCCC Targeting Team",
+      "apiPollsterIds": [
+        "c8e8dc89-672f-4b1c-8958-669cd59b35c2"
+      ],
+      "ratingIds": [
+        "68"
+      ],
+      "ratingNames": [
+        "DCCC Targeting and Analytics Department"
+      ],
+      "silverMatches": [
+        "DCCC"
+      ],
+      "sourcePollCount": 12,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "USC Democracy and Fair Elections Lab",
+      "apiPollsterIds": [
+        "d4016c39-3266-4f55-8419-b5e1479f43d7"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Hart Research Associates/Public Opinion Strategies",
+      "apiPollsterIds": [
+        "9ab6b302-92ac-4132-97a6-c3580bd5ed77"
+      ],
+      "ratingIds": [
+        "221"
+      ],
+      "ratingNames": [
+        "Hart Research Associates/Public Opinion Strategies"
+      ],
+      "silverMatches": [
+        "Hart Research Associates/Public Opinion Strategies"
+      ],
+      "sourcePollCount": 24,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "National Research",
+      "apiPollsterIds": [
+        "73743d65-713e-41fa-ace4-1574b19a6572"
+      ],
+      "ratingIds": [
+        "225"
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [
+        "National Research"
+      ],
+      "sourcePollCount": 1,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Expedition Strategies",
+      "apiPollsterIds": [
+        "b51515b6-b7a2-4ea6-a97d-f7e96c5aff62"
+      ],
+      "ratingIds": [
+        "409"
+      ],
+      "ratingNames": [
+        "Expedition Strategies"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 5,
+      "status": "unrated"
+    },
+    {
+      "pollster": "PRRI",
+      "apiPollsterIds": [
+        "4174c9e7-5f01-418f-9ca1-924ab4b840bb"
+      ],
+      "ratingIds": [
+        "428"
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [
+        "Public Religion Research Institute"
+      ],
+      "sourcePollCount": 5,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "SEA Polling",
+      "apiPollsterIds": [
+        "8728e1c0-6074-400c-a12b-eb606b290f17"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 3,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Ipsos",
+      "apiPollsterIds": [
+        "a6ab99b0-9d30-4a77-bbe7-03c9a3566a22"
+      ],
+      "ratingIds": [
+        "154"
+      ],
+      "ratingNames": [
+        "Ipsos"
+      ],
+      "silverMatches": [
+        "Ipsos"
+      ],
+      "sourcePollCount": 105,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "SurveyMonkey",
+      "apiPollsterIds": [
+        "c429da10-5aa0-445e-9800-039c0a295b43"
+      ],
+      "ratingIds": [
+        "324"
+      ],
+      "ratingNames": [
+        "SurveyMonkey"
+      ],
+      "silverMatches": [
+        "SurveyMonkey"
+      ],
+      "sourcePollCount": 10,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Center for Strategic Politics",
+      "apiPollsterIds": [
+        "09afad39-8ae0-4db3-868f-5e92a5a06cd3"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 3,
+      "status": "unrated"
+    },
+    {
+      "pollster": "AP-NORC",
+      "apiPollsterIds": [
+        "bd24b786-354a-4dae-8616-a5a888d550e4"
+      ],
+      "ratingIds": [
+        "397"
+      ],
+      "ratingNames": [
+        "AP-NORC"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 20,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Christopher Newport University",
+      "apiPollsterIds": [
+        "b594ddd7-db87-40df-8214-66f0945d0205"
+      ],
+      "ratingIds": [
+        "50"
+      ],
+      "ratingNames": [
+        "Christopher Newport University Wason Center for Civic Leadership"
+      ],
+      "silverMatches": [
+        "Christopher Newport University"
+      ],
+      "sourcePollCount": 5,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "TrueDot",
+      "apiPollsterIds": [
+        "1f9b50af-1809-46fb-b2ff-e5330586f910"
+      ],
+      "ratingIds": [
+        "880"
+      ],
+      "ratingNames": [
+        "Truedot"
+      ],
+      "silverMatches": [
+        "Truedot"
+      ],
+      "sourcePollCount": 10,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "20/20 Insight",
+      "apiPollsterIds": [
+        "1ba4d4e8-133c-46c9-8c8b-3f54348b849b"
+      ],
+      "ratingIds": [
+        "1"
+      ],
+      "ratingNames": [
+        "20/20 Insight"
+      ],
+      "silverMatches": [
+        "20/20 Insight"
+      ],
+      "sourcePollCount": 4,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Focaldata",
+      "apiPollsterIds": [
+        "15524f36-81eb-4b8c-b19f-663cee931c01"
+      ],
+      "ratingIds": [
+        "837"
+      ],
+      "ratingNames": [
+        "Focaldata"
+      ],
+      "silverMatches": [
+        "Focaldata"
+      ],
+      "sourcePollCount": 18,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Noble Predictive Insights",
+      "apiPollsterIds": [
+        "9b7fb509-d8c7-41d5-8c3a-2f534b3f7068"
+      ],
+      "ratingIds": [
+        "235"
+      ],
+      "ratingNames": [
+        "Noble Predictive Insights"
+      ],
+      "silverMatches": [
+        "OH Predictive Insights"
+      ],
+      "sourcePollCount": 22,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Siena University",
+      "apiPollsterIds": [
+        "8890c0f0-6e78-4218-ab02-1fa8c5a921fb"
+      ],
+      "ratingIds": [
+        "305"
+      ],
+      "ratingNames": [
+        "Siena College"
+      ],
+      "silverMatches": [
+        "Siena College"
+      ],
+      "sourcePollCount": 18,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Pew Research Center",
+      "apiPollsterIds": [
+        "d7661595-0345-4bf2-b37b-f8fa234d783c"
+      ],
+      "ratingIds": [
+        "253"
+      ],
+      "ratingNames": [
+        "Pew Research Center"
+      ],
+      "silverMatches": [
+        "Pew Research Center"
+      ],
+      "sourcePollCount": 11,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Neighborhood Research Corporation",
+      "apiPollsterIds": [
+        "695b38b5-4955-444d-abdb-8afe04a5412a"
+      ],
+      "ratingIds": [
+        "227"
+      ],
+      "ratingNames": [
+        "Neighborhood Research and Media"
+      ],
+      "silverMatches": [
+        "Neighborhood Research and Media"
+      ],
+      "sourcePollCount": 3,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Centerline Research & Strategy",
+      "apiPollsterIds": [
+        "7462fc13-dae1-4169-b2cd-d7ff8632ed22"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 2,
+      "status": "unrated"
+    },
+    {
+      "pollster": "The Honest Poll",
+      "apiPollsterIds": [
+        "418f4a8c-86bd-4bc3-a899-3a7a2005f3fd"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 6,
+      "status": "unrated"
+    },
+    {
+      "pollster": "FirstStrategic Communications and Public Affairs",
+      "apiPollsterIds": [
+        "c70dfeda-a13a-4759-8d59-6c938037cd03"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "KFF",
+      "apiPollsterIds": [
+        "a3629ec6-f7c8-4fd8-aa9c-b1a43643cfa0"
+      ],
+      "ratingIds": [
+        "419"
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 3,
+      "status": "unrated"
+    },
+    {
+      "pollster": "AlphaROC",
+      "apiPollsterIds": [
+        "6370a7c6-0baa-490a-9dbb-77757dd71514"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 8,
+      "status": "unrated"
+    },
+    {
+      "pollster": "DHM Research",
+      "apiPollsterIds": [
+        "831e5fd7-7d68-43d3-be68-d9e10540f18a"
+      ],
+      "ratingIds": [
+        "76"
+      ],
+      "ratingNames": [
+        "DHM Research"
+      ],
+      "silverMatches": [
+        "DHM Research"
+      ],
+      "sourcePollCount": 4,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Lighthouse Research",
+      "apiPollsterIds": [
+        "cb577356-f71e-41d2-b771-c1f853e96335"
+      ],
+      "ratingIds": [
+        "483"
+      ],
+      "ratingNames": [
+        "Lighthouse Research"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 4,
+      "status": "unrated"
+    },
+    {
+      "pollster": "The Argument/Verasight",
+      "apiPollsterIds": [
+        "fd91b31c-8953-44da-bfb5-fc15fadb2f5e"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 24,
+      "status": "unrated"
+    },
+    {
+      "pollster": "HarrisX/Harris Poll",
+      "apiPollsterIds": [
+        "e006101f-7fff-4657-a2e9-19e3032386a2"
+      ],
+      "ratingIds": [
+        "133"
+      ],
+      "ratingNames": [
+        "Harris Insights & Analytics"
+      ],
+      "silverMatches": [
+        "Harris Insights & Analytics"
+      ],
+      "sourcePollCount": 26,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Quinnipiac University",
+      "apiPollsterIds": [
+        "daec1c64-6ced-4bd1-992a-bf7e95b32f74"
+      ],
+      "ratingIds": [
+        "267"
+      ],
+      "ratingNames": [
+        "Quinnipiac University"
+      ],
+      "silverMatches": [
+        "Quinnipiac University"
+      ],
+      "sourcePollCount": 40,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Angus Reid Global",
+      "apiPollsterIds": [
+        "3b65bd53-0347-48ff-a808-b054ac635dcc"
+      ],
+      "ratingIds": [
+        "13"
+      ],
+      "ratingNames": [
+        "Angus Reid Global"
+      ],
+      "silverMatches": [
+        "Angus Reid Global"
+      ],
+      "sourcePollCount": 8,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Clarity Campaign Labs",
+      "apiPollsterIds": [
+        "9824a356-03ef-4183-8d56-72de54a66fee"
+      ],
+      "ratingIds": [
+        "52"
+      ],
+      "ratingNames": [
+        "Clarity Campaign Labs"
+      ],
+      "silverMatches": [
+        "Clarity Campaign Labs"
+      ],
+      "sourcePollCount": 31,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Braun Research",
+      "apiPollsterIds": [
+        "6e0abf7c-f55d-415f-ab85-6d80b5d92163"
+      ],
+      "ratingIds": [
+        "33"
+      ],
+      "ratingNames": [
+        "Braun Research"
+      ],
+      "silverMatches": [
+        "Braun Research"
+      ],
+      "sourcePollCount": 4,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Impact Research/National Research Inc.",
+      "apiPollsterIds": [
+        "af3519fb-170f-4fff-ab14-eb5275b8d837"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 6,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Franklin & Marshall College",
+      "apiPollsterIds": [
+        "84964d1b-5082-4c05-9229-9bc71ffe3d0d"
+      ],
+      "ratingIds": [
+        "106"
+      ],
+      "ratingNames": [
+        "Franklin & Marshall College Center for Opinion Research"
+      ],
+      "silverMatches": [
+        "Franklin & Marshall College"
+      ],
+      "sourcePollCount": 5,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Miller Consulting Services",
+      "apiPollsterIds": [
+        "2f83ba8e-dd90-4325-8a8c-77a493897668"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "John Zogby Strategies",
+      "apiPollsterIds": [
+        "9268c8ab-c57b-43d1-8541-c6047caab802"
+      ],
+      "ratingIds": [
+        "583"
+      ],
+      "ratingNames": [
+        "John Zogby Strategies"
+      ],
+      "silverMatches": [
+        "John Zogby Strategies"
+      ],
+      "sourcePollCount": 26,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Grassroots Targeting",
+      "apiPollsterIds": [
+        "1de7610b-1eca-4814-8fc6-a9240e2772a6"
+      ],
+      "ratingIds": [
+        "701"
+      ],
+      "ratingNames": [
+        "Grassroots Targeting"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 2,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Marquette University Law School",
+      "apiPollsterIds": [
+        "d4af6439-dec0-4fa7-826b-5b409e1f3280"
+      ],
+      "ratingIds": [
+        "195"
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [
+        "Marquette University Law School"
+      ],
+      "sourcePollCount": 26,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "StimSight Research",
+      "apiPollsterIds": [
+        "57076f70-6f0c-4473-8f80-0bec6494dcb5"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 3,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Bendixen & Amandi International",
+      "apiPollsterIds": [
+        "995b92e5-69e4-46e2-8d80-3ebac7ceb2f2"
+      ],
+      "ratingIds": [
+        "29"
+      ],
+      "ratingNames": [
+        "Bendixen & Amandi International"
+      ],
+      "silverMatches": [
+        "Bendixen & Amandi International"
+      ],
+      "sourcePollCount": 3,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Strategies 360",
+      "apiPollsterIds": [
+        "a2a71400-1962-4859-99df-b0c70f970239"
+      ],
+      "ratingIds": [
+        "321"
+      ],
+      "ratingNames": [
+        "Strategies 360"
+      ],
+      "silverMatches": [
+        "Strategies 360"
+      ],
+      "sourcePollCount": 1,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Wave Polling and Research/Verasight",
+      "apiPollsterIds": [
+        "f75298c9-78a0-4e4b-a321-7e124d15f7bc"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Capital Strategic Partners",
+      "apiPollsterIds": [
+        "95b8d0dc-dc24-45b4-8e0c-b9a7db712166"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Survey 160",
+      "apiPollsterIds": [
+        "96ca8540-cc0b-41a9-9f43-35c85caf7147"
+      ],
+      "ratingIds": [
+        "557"
+      ],
+      "ratingNames": [
+        "Survey 160"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 10,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Catalyst",
+      "apiPollsterIds": [
+        "1bf19253-d8f7-44e6-b8e5-90a30d6b5074"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Beacon Insights",
+      "apiPollsterIds": [
+        "f8639ffe-c3ba-4faf-9324-5df4d584b3eb"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 3,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Keating Research, Inc.",
+      "apiPollsterIds": [
+        "92c013f6-4061-47d8-a6c6-b19fa6d1f875"
+      ],
+      "ratingIds": [
+        "161"
+      ],
+      "ratingNames": [
+        "Keating Research"
+      ],
+      "silverMatches": [
+        "Keating Research"
+      ],
+      "sourcePollCount": 2,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Patriot Polling",
+      "apiPollsterIds": [
+        "cb8f5744-c61d-49b9-be23-daf5247d4a57"
+      ],
+      "ratingIds": [
+        "732"
+      ],
+      "ratingNames": [
+        "Patriot Polling"
+      ],
+      "silverMatches": [
+        "Patriot Polling"
+      ],
+      "sourcePollCount": 4,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Manhattan Institute",
+      "apiPollsterIds": [
+        "1fbdf97c-bfb0-497d-a4f6-2d79569ea9fc"
+      ],
+      "ratingIds": [
+        "781"
+      ],
+      "ratingNames": [
+        "Manhattan Institute"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 5,
+      "status": "unrated"
+    },
+    {
+      "pollster": "American Viewpoint",
+      "apiPollsterIds": [
+        "44fe543e-53fb-4fe1-8410-87dbe5cf709e"
+      ],
+      "ratingIds": [
+        "10"
+      ],
+      "ratingNames": [
+        "American Viewpoint"
+      ],
+      "silverMatches": [
+        "American Viewpoint"
+      ],
+      "sourcePollCount": 1,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Zogby Analytics",
+      "apiPollsterIds": [
+        "8daee975-cbd6-4842-9b72-e2d55fc40db1"
+      ],
+      "ratingIds": [
+        "395"
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [
+        "Zogby Analytics"
+      ],
+      "sourcePollCount": 3,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "HarrisX",
+      "apiPollsterIds": [
+        "e2cc75c0-2978-4a80-a25a-6170419fa6fe"
+      ],
+      "ratingIds": [
+        "133"
+      ],
+      "ratingNames": [
+        "Harris Insights & Analytics"
+      ],
+      "silverMatches": [
+        "Harris Insights & Analytics"
+      ],
+      "sourcePollCount": 9,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Middle Seat",
+      "apiPollsterIds": [
+        "363daf1d-acd8-4598-9eb4-d1bcb385ab24"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Applecart",
+      "apiPollsterIds": [
+        "a684c691-af93-4589-aec9-d1545b17c245"
+      ],
+      "ratingIds": [
+        "718"
+      ],
+      "ratingNames": [
+        "Applecart"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Talker Research",
+      "apiPollsterIds": [
+        "80029fd7-3cc7-4be2-93be-cdb8be68ee94"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 6,
+      "status": "unrated"
+    },
+    {
+      "pollster": "The Winston Group",
+      "apiPollsterIds": [
+        "ddf2f9e6-9c91-43ea-9952-d6b2966becbe"
+      ],
+      "ratingIds": [
+        "385"
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [
+        "The Winston Group"
+      ],
+      "sourcePollCount": 15,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "NextGenP",
+      "apiPollsterIds": [
+        "f5cbd60e-82f2-4da5-8b57-37df53946bc5"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 11,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Mercury Public Affairs",
+      "apiPollsterIds": [
+        "640ce254-5ac1-4a90-aab4-457bd4469196"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 2,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Research Co.",
+      "apiPollsterIds": [
+        "598f59c0-e1d5-4658-b384-c5ffa68cfbf8"
+      ],
+      "ratingIds": [
+        "449"
+      ],
+      "ratingNames": [
+        "Research Co."
+      ],
+      "silverMatches": [
+        "Research Co."
+      ],
+      "sourcePollCount": 7,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Meeting Street Research",
+      "apiPollsterIds": [
+        "a521d3f1-0520-4238-8aa8-61014a954095"
+      ],
+      "ratingIds": [
+        "204"
+      ],
+      "ratingNames": [
+        "Meeting Street Insights"
+      ],
+      "silverMatches": [
+        "Meeting Street Insights"
+      ],
+      "sourcePollCount": 4,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "The Political Matrix/The Listener Group",
+      "apiPollsterIds": [
+        "be1086ef-29db-43e7-b1a9-e12c5ba50e7f"
+      ],
+      "ratingIds": [
+        "677"
+      ],
+      "ratingNames": [
+        "The Political Matrix/The Listener Group"
+      ],
+      "silverMatches": [
+        "The Political Matrix/The Listener Group"
+      ],
+      "sourcePollCount": 5,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Pennsylvania State University McCourtney Institute for Democracy/YouGov",
+      "apiPollsterIds": [
+        "5bad18d1-aa91-46ef-a35d-13348ab9b0f7"
+      ],
+      "ratingIds": [
+        "391"
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [
+        "YouGov"
+      ],
+      "sourcePollCount": 2,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Honan Strategy Group",
+      "apiPollsterIds": [
+        "6af4705b-f330-4fdc-9ae6-bcb45d7fbedb"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "AtlasIntel",
+      "apiPollsterIds": [
+        "6af9e17b-94e6-497a-bbe7-4cad3f67fd36"
+      ],
+      "ratingIds": [
+        "546"
+      ],
+      "ratingNames": [
+        "AtlasIntel"
+      ],
+      "silverMatches": [
+        "AtlasIntel"
+      ],
+      "sourcePollCount": 16,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Schoen Cooperman Research",
+      "apiPollsterIds": [
+        "c3af25c9-2c5e-4cab-8405-e1ac2dd64daa"
+      ],
+      "ratingIds": [
+        "301"
+      ],
+      "ratingNames": [
+        "Schoen Cooperman Research"
+      ],
+      "silverMatches": [
+        "Schoen Cooperman Research"
+      ],
+      "sourcePollCount": 10,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Sextant Strategies",
+      "apiPollsterIds": [
+        "2a6f6f15-1f96-4a1b-ac0f-a319bd5d7556"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "David Binder Research",
+      "apiPollsterIds": [
+        "a605848d-293e-4e7a-9aed-984cfeb0da1b"
+      ],
+      "ratingIds": [
+        "578"
+      ],
+      "ratingNames": [
+        "David Binder Research"
+      ],
+      "silverMatches": [
+        "David Binder Research"
+      ],
+      "sourcePollCount": 6,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Yale University Institution for Social and Policy Studies",
+      "apiPollsterIds": [
+        "6d5f6726-ef9e-4266-b71a-e0ebe3d1bc0b"
+      ],
+      "ratingIds": [
+        "872"
+      ],
+      "ratingNames": [
+        "Yale University Institution for Social and Policy Studies"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 5,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Winston Group",
+      "apiPollsterIds": [
+        "b54cc6ce-44ae-433f-918f-70b60749c91a"
+      ],
+      "ratingIds": [
+        "385"
+      ],
+      "ratingNames": [
+        "The Winston Group"
+      ],
+      "silverMatches": [
+        "The Winston Group"
+      ],
+      "sourcePollCount": 2,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Molitico",
+      "apiPollsterIds": [
+        "6441b918-82f1-4ce6-9e81-f7376f551bf2"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "HighGround",
+      "apiPollsterIds": [
+        "d21087ec-c9a9-4e54-ad60-faa7bf4f17b2"
+      ],
+      "ratingIds": [
+        "416"
+      ],
+      "ratingNames": [
+        "HighGround Inc."
+      ],
+      "silverMatches": [
+        "HighGround Inc."
+      ],
+      "sourcePollCount": 3,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "The Public Sentiment Institute",
+      "apiPollsterIds": [
+        "9fd8c20a-f574-4ab8-8081-9e362df9cf29"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 3,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Political Intelligence",
+      "apiPollsterIds": [
+        "f7174ba9-4b17-4757-affe-a4d3e93934f6"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 2,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Echelon Insights/GBAO",
+      "apiPollsterIds": [
+        "8b045463-75a0-4929-afae-f29505f2a156"
+      ],
+      "ratingIds": [
+        "740"
+      ],
+      "ratingNames": [
+        "Echelon Insights/GBAO"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 2,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Fabrizio Ward",
+      "apiPollsterIds": [
+        "b3a9562d-1bc0-4190-a4e1-05594bfcc91d"
+      ],
+      "ratingIds": [
+        "90"
+      ],
+      "ratingNames": [
+        "Fabrizio, Lee & Associates"
+      ],
+      "silverMatches": [
+        "Fabrizio, Lee & Associates"
+      ],
+      "sourcePollCount": 3,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Gravis Marketing",
+      "apiPollsterIds": [
+        "2b0da051-1813-4fbe-b394-22bb334a8b71"
+      ],
+      "ratingIds": [
+        "124"
+      ],
+      "ratingNames": [
+        "Gravis Marketing"
+      ],
+      "silverMatches": [
+        "Gravis Marketing/Kaplan Strategies"
+      ],
+      "sourcePollCount": 1,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Beacon Research",
+      "apiPollsterIds": [
+        "7922976a-1d64-48d1-aa83-d2e5d43d91a5"
+      ],
+      "ratingIds": [
+        "545"
+      ],
+      "ratingNames": [
+        "Beacon Research"
+      ],
+      "silverMatches": [
+        "Beacon Research"
+      ],
+      "sourcePollCount": 2,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "National Association of Independent Pollsters",
+      "apiPollsterIds": [
+        "3382c10d-356f-4bdc-b6ed-3f2055ea2b7e"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "i360",
+      "apiPollsterIds": [
+        "8143b478-7381-4f57-976b-9b299d2f94a5"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "brilliant corners Research & Strategies",
+      "apiPollsterIds": [
+        "b00760d3-55ba-4bec-a081-2fad1b52f0bf"
+      ],
+      "ratingIds": [
+        "564"
+      ],
+      "ratingNames": [
+        "brilliant corners Research & Strategies"
+      ],
+      "silverMatches": [
+        "brilliant corners Research & Strategies"
+      ],
+      "sourcePollCount": 2,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Ron Lester and Associates",
+      "apiPollsterIds": [
+        "292fce21-400d-467d-a6f9-1452d7738d78"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Fabrizio, Lee & Associates/Impact Research",
+      "apiPollsterIds": [
+        "5f1a3174-9e76-4c15-8129-c89586c65240"
+      ],
+      "ratingIds": [
+        "694"
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [
+        "Fabrizio Lee & Associates/Impact Research"
+      ],
+      "sourcePollCount": 4,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Mellman Group",
+      "apiPollsterIds": [
+        "20c72e73-f8ac-4bec-b8d9-7b4d4c940e43"
+      ],
+      "ratingIds": [
+        "205"
+      ],
+      "ratingNames": [
+        "Mellman Group"
+      ],
+      "silverMatches": [
+        "Mellman Group"
+      ],
+      "sourcePollCount": 2,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "RealClear Opinion Research",
+      "apiPollsterIds": [
+        "4fc04fd0-4728-402e-8cde-10b23b5d15b4"
+      ],
+      "ratingIds": [
+        "307"
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [
+        "SocialSphere"
+      ],
+      "sourcePollCount": 3,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Spry Strategies",
+      "apiPollsterIds": [
+        "38c86301-7e19-4065-8ba7-cde6e0259d48"
+      ],
+      "ratingIds": [
+        "508"
+      ],
+      "ratingNames": [
+        "Spry Strategies"
+      ],
+      "silverMatches": [
+        "Spry Strategies"
+      ],
+      "sourcePollCount": 1,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "BSP Research",
+      "apiPollsterIds": [
+        "a72819e2-54dd-4eb3-9fc4-d0bdf6ce3ef4"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 2,
+      "status": "unrated"
+    },
+    {
+      "pollster": "GreatBlue Research",
+      "apiPollsterIds": [
+        "a982593b-5d38-48f2-80e4-2eed5a1da8e7"
+      ],
+      "ratingIds": [
+        "748"
+      ],
+      "ratingNames": [
+        "GreatBlue Research"
+      ],
+      "silverMatches": [
+        "GreatBlue Research"
+      ],
+      "sourcePollCount": 3,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "State Navigate",
+      "apiPollsterIds": [
+        "3392a38f-91e4-4ca1-a123-1e5b69c578e1"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 6,
+      "status": "unrated"
+    },
+    {
+      "pollster": "UMBC Institute of Politics",
+      "apiPollsterIds": [
+        "38285a0f-1694-4763-8998-ff2f04525ec5"
+      ],
+      "ratingIds": [
+        "869"
+      ],
+      "ratingNames": [
+        "UMBC Institute of Politics"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "IVC Media",
+      "apiPollsterIds": [
+        "88ced138-b6c2-44e3-bc14-458df6489c76"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 3,
+      "status": "unrated"
+    },
+    {
+      "pollster": "University of California Berkeley Institute of Governmental Studies",
+      "apiPollsterIds": [
+        "e529b72a-d01d-400f-abaf-da9e087cb977"
+      ],
+      "ratingIds": [
+        "457"
+      ],
+      "ratingNames": [
+        "University of California Berkeley Institute of Governmental Studies"
+      ],
+      "silverMatches": [
+        "University of California Berkeley"
+      ],
+      "sourcePollCount": 6,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Moxie Strategies",
+      "apiPollsterIds": [
+        "4fb0ee81-5551-480f-bfc4-d9b2bdcec136"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "TargetSmart",
+      "apiPollsterIds": [
+        "8b13aa18-a98b-472a-abe4-45624df262cd"
+      ],
+      "ratingIds": [
+        "332"
+      ],
+      "ratingNames": [
+        "TargetSmart"
+      ],
+      "silverMatches": [
+        "TargetSmart"
+      ],
+      "sourcePollCount": 1,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Public Policy Institute of California",
+      "apiPollsterIds": [
+        "ef0fd05d-0f5e-4c34-97dc-5be15e5e7055"
+      ],
+      "ratingIds": [
+        "262"
+      ],
+      "ratingNames": [
+        "Public Policy Institute of California"
+      ],
+      "silverMatches": [
+        "Public Policy Institute of California"
+      ],
+      "sourcePollCount": 6,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Kreate Strategies",
+      "apiPollsterIds": [
+        "0e4ba2d5-835a-4ad2-a620-dfd952903598"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 9,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Stealth Analytics",
+      "apiPollsterIds": [
+        "5b037019-8403-4a3d-8a70-604fc3877ca1"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 2,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Platform Communications",
+      "apiPollsterIds": [
+        "c7fa82d5-9436-4bea-ab9e-9cb23214b49b"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 2,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Red Oak Strategic",
+      "apiPollsterIds": [
+        "084814dd-3abb-4d03-9327-5f5c8940022c"
+      ],
+      "ratingIds": [
+        "122"
+      ],
+      "ratingNames": [
+        "Google Consumer Surveys"
+      ],
+      "silverMatches": [
+        "Google Consumer Surveys"
+      ],
+      "sourcePollCount": 1,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Minnesota Private Business Council",
+      "apiPollsterIds": [
+        "b3c29033-43b6-4eef-9b03-966d310184d9"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "MAD Global Strategy",
+      "apiPollsterIds": [
+        "d45cd30e-0744-42a1-9ca4-9f5dd56bef50"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 2,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Strategic National",
+      "apiPollsterIds": [
+        "80e16730-f260-4aa8-8de7-4da102a5ba54"
+      ],
+      "ratingIds": [
+        "318"
+      ],
+      "ratingNames": [
+        "Strategic National"
+      ],
+      "silverMatches": [
+        "Strategic National"
+      ],
+      "sourcePollCount": 1,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "University of Southern California/California State University Long Beach Center for Urban Politics and Policy/Cal Poly Pomona",
+      "apiPollsterIds": [
+        "2ababbac-3b61-4b8d-9e06-1b85feeb70c0"
+      ],
+      "ratingIds": [
+        "830"
+      ],
+      "ratingNames": [
+        "USC Dornsife/CSU Long Beach/Cal Poly Pomona"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 2,
+      "status": "unrated"
+    },
+    {
+      "pollster": "NonDoc",
+      "apiPollsterIds": [
+        "2b88f252-a6ca-49ec-b68c-3b554c1a7187"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Conquest Group",
+      "apiPollsterIds": [
+        "a5625098-a9fc-4c4d-a0e9-a6ddda135795"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Predict Oregon",
+      "apiPollsterIds": [
+        "cafb33bc-a3ab-4a82-ba3f-5c3d72e6d52e"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Evitarus",
+      "apiPollsterIds": [
+        "e42fda5c-39b4-4688-ab95-803a906dca15"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 6,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Polity Research Consulting",
+      "apiPollsterIds": [
+        "71591036-0a44-4f69-9cf6-4262de4a0f0f"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Hoffman Research Group",
+      "apiPollsterIds": [
+        "c54f4f52-c7f1-438b-aad5-3b8296377f6b"
+      ],
+      "ratingIds": [
+        "141"
+      ],
+      "ratingNames": [
+        "Hoffman Research Group"
+      ],
+      "silverMatches": [
+        "Hoffman Research Group"
+      ],
+      "sourcePollCount": 2,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Dittman Research",
+      "apiPollsterIds": [
+        "2222dd8a-9910-4a8a-a88a-9f1c970fb58c"
+      ],
+      "ratingIds": [
+        "79"
+      ],
+      "ratingNames": [
+        "Dittman Research"
+      ],
+      "silverMatches": [
+        "Dittman Research"
+      ],
+      "sourcePollCount": 1,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Rodriguez Gudelunas Strategies",
+      "apiPollsterIds": [
+        "e6659c6c-441d-430c-bf3b-1a0f2ece80fe"
+      ],
+      "ratingIds": [
+        "865"
+      ],
+      "ratingNames": [
+        "Rodriguez Gudelunas Strategies"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 2,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Axis Research",
+      "apiPollsterIds": [
+        "0e6a2758-26a3-4469-b5fd-e253b7937cd5"
+      ],
+      "ratingIds": [
+        "467"
+      ],
+      "ratingNames": [
+        "Axis Research"
+      ],
+      "silverMatches": [
+        "Axis Research"
+      ],
+      "sourcePollCount": 1,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Starboard Communications",
+      "apiPollsterIds": [
+        "8cbd2deb-ac1d-473b-bd6f-e345a71d9f69"
+      ],
+      "ratingIds": [
+        "316"
+      ],
+      "ratingNames": [
+        "Starboard Communications"
+      ],
+      "silverMatches": [
+        "Starboard Communications"
+      ],
+      "sourcePollCount": 1,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Victory Enterprises",
+      "apiPollsterIds": [
+        "a05e12fc-4234-4ee7-a59f-b137930d43e4"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Nelson Research",
+      "apiPollsterIds": [
+        "b5be4d07-704a-41ca-81d7-f4ac4e698dbe"
+      ],
+      "ratingIds": [
+        "703"
+      ],
+      "ratingNames": [
+        "Nelson Research"
+      ],
+      "silverMatches": [
+        "Nelson Research"
+      ],
+      "sourcePollCount": 1,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "VictoryPhones",
+      "apiPollsterIds": [
+        "db417bf2-42f7-4857-acd9-dabb205d8bdf"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 2,
+      "status": "unrated"
+    },
+    {
+      "pollster": "The American Promise",
+      "apiPollsterIds": [
+        "52a9d0b8-058d-41b6-a0e9-150f1811a68a"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 4,
+      "status": "unrated"
+    },
+    {
+      "pollster": "RBI Strategies & Research",
+      "apiPollsterIds": [
+        "c71e0078-54f1-4273-b162-59a06dff733d"
+      ],
+      "ratingIds": [
+        "271"
+      ],
+      "ratingNames": [
+        "RBI Strategies & Research"
+      ],
+      "silverMatches": [
+        "RBI Strategies & Research"
+      ],
+      "sourcePollCount": 1,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "J. Wallin Opinion Research",
+      "apiPollsterIds": [
+        "24de2c7f-8c44-4ae7-9c2c-e9ca07ee5d0a"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Osage Research",
+      "apiPollsterIds": [
+        "71e072f7-962c-41b8-a448-534ed667f9a4"
+      ],
+      "ratingIds": [
+        "720"
+      ],
+      "ratingNames": [
+        "Osage Research"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Gonzales Research",
+      "apiPollsterIds": [
+        "ac601a60-a6af-46e0-9c40-569f6c59751c"
+      ],
+      "ratingIds": [
+        "121"
+      ],
+      "ratingNames": [
+        "Gonzales Research & Marketing Strategies Inc."
+      ],
+      "silverMatches": [
+        "Gonzales Research & Marketing Strategies Inc."
+      ],
+      "sourcePollCount": 1,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Data Targeting",
+      "apiPollsterIds": [
+        "54a342f8-fdd5-4cc6-b73a-ec57ed610c8d"
+      ],
+      "ratingIds": [
+        "406"
+      ],
+      "ratingNames": [
+        "Data Targeting"
+      ],
+      "silverMatches": [
+        "Data Targeting"
+      ],
+      "sourcePollCount": 1,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "University of Maryland Baltimore County",
+      "apiPollsterIds": [
+        "fc5d80a2-f873-4716-8b78-ee56c694d928"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Trafalgar Group/InsiderAdvantage",
+      "apiPollsterIds": [
+        "8e60f0a1-fca9-4c1b-9f94-84e1f57c4dc9"
+      ],
+      "ratingIds": [
+        "671"
+      ],
+      "ratingNames": [
+        "Trafalgar Group/InsiderAdvantage"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 8,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Bold Decision",
+      "apiPollsterIds": [
+        "2f628328-b85c-4e99-a6f6-284996e79f06"
+      ],
+      "ratingIds": [
+        "686"
+      ],
+      "ratingNames": [
+        "Bold Decision"
+      ],
+      "silverMatches": [
+        "Bold Decision"
+      ],
+      "sourcePollCount": 1,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Roanoke College",
+      "apiPollsterIds": [
+        "6639364a-1e42-4fbf-ab42-72e92e4e3386"
+      ],
+      "ratingIds": [
+        "292"
+      ],
+      "ratingNames": [
+        "Roanoke College Institute for Policy and Opinion Research"
+      ],
+      "silverMatches": [
+        "Roanoke College"
+      ],
+      "sourcePollCount": 4,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Winthrop University",
+      "apiPollsterIds": [
+        "bd1fd2bc-43f7-4112-8387-79e58f22ed58"
+      ],
+      "ratingIds": [
+        "386"
+      ],
+      "ratingNames": [
+        "Winthrop University Center for Public Opinion & Policy Research"
+      ],
+      "silverMatches": [
+        "Winthrop University"
+      ],
+      "sourcePollCount": 1,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Virginia Commonwealth University",
+      "apiPollsterIds": [
+        "0527e725-4193-43aa-9910-41ebc6d9050e"
+      ],
+      "ratingIds": [
+        "370"
+      ],
+      "ratingNames": [
+        "Virginia Commonwealth University L. Douglas Wilder School of Government and Public Affairs"
+      ],
+      "silverMatches": [
+        "Virginia Commonwealth University"
+      ],
+      "sourcePollCount": 4,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "KAConsulting",
+      "apiPollsterIds": [
+        "86d547a0-e6fe-4008-b3c1-6f6c2747901e"
+      ],
+      "ratingIds": [
+        "757"
+      ],
+      "ratingNames": [
+        "KAConsulting"
+      ],
+      "silverMatches": [
+        "KAConsulting"
+      ],
+      "sourcePollCount": 2,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Fairleigh Dickinson University",
+      "apiPollsterIds": [
+        "5236811f-3677-4322-8b47-5113eb814ded"
+      ],
+      "ratingIds": [
+        "92"
+      ],
+      "ratingNames": [
+        "Fairleigh Dickinson University"
+      ],
+      "silverMatches": [
+        "Fairleigh Dickinson University"
+      ],
+      "sourcePollCount": 2,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "OpinionWorks",
+      "apiPollsterIds": [
+        "9545267d-b279-4de7-b0b9-c01165069fcc"
+      ],
+      "ratingIds": [
+        "244"
+      ],
+      "ratingNames": [
+        "OpinionWorks"
+      ],
+      "silverMatches": [
+        "OpinionWorks"
+      ],
+      "sourcePollCount": 1,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Frederick Polls",
+      "apiPollsterIds": [
+        "75e53eff-6cfa-45a5-88da-5c813ced3ab5"
+      ],
+      "ratingIds": [
+        "108"
+      ],
+      "ratingNames": [
+        "Frederick Polls"
+      ],
+      "silverMatches": [
+        "Frederick Polls"
+      ],
+      "sourcePollCount": 1,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "American Directions Research Group",
+      "apiPollsterIds": [
+        "6dbb995b-193b-4ae7-bc33-428a832e60d2"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Valcour",
+      "apiPollsterIds": [
+        "ee1f749c-3e74-4c51-9162-084ffbfb264d"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Clear Insights Group",
+      "apiPollsterIds": [
+        "7684a4fd-7715-4c5b-9135-4dbad9081e67"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "National Research, Inc.",
+      "apiPollsterIds": [
+        "7c6ce406-8c54-481b-a2fe-9aad9addbced"
+      ],
+      "ratingIds": [
+        "225"
+      ],
+      "ratingNames": [
+        "National Research"
+      ],
+      "silverMatches": [
+        "National Research"
+      ],
+      "sourcePollCount": 4,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Reveille Research",
+      "apiPollsterIds": [
+        "891ac862-7fb0-4a5a-86d4-4bc13b032163"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Magellan Strategies",
+      "apiPollsterIds": [
+        "ff4c7b92-b47c-4997-988e-ecd0fa8c4228"
+      ],
+      "ratingIds": [
+        "179"
+      ],
+      "ratingNames": [
+        "Magellan Strategies"
+      ],
+      "silverMatches": [
+        "Magellan Strategies"
+      ],
+      "sourcePollCount": 2,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Pantheon Insights/HarrisX",
+      "apiPollsterIds": [
+        "16c3a4ba-0b27-4209-a565-9f8011d0b762"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "First Tuesday Strategies",
+      "apiPollsterIds": [
+        "98541bb3-01b7-4983-99e0-9b9482ec8825"
+      ],
+      "ratingIds": [
+        "410"
+      ],
+      "ratingNames": [
+        "First Tuesday Strategies"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Citizen Data",
+      "apiPollsterIds": [
+        "84319416-26d6-4c73-ab9f-38f7c2e7301b"
+      ],
+      "ratingIds": [
+        "616"
+      ],
+      "ratingNames": [
+        "Citizen Data"
+      ],
+      "silverMatches": [
+        "Citizen Data"
+      ],
+      "sourcePollCount": 1,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Capitol Weekly",
+      "apiPollsterIds": [
+        "1f88c377-6d4a-4e18-9efb-3432240e14e8"
+      ],
+      "ratingIds": [
+        "510"
+      ],
+      "ratingNames": [
+        "Capitol Weekly"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Data Orbital",
+      "apiPollsterIds": [
+        "8fc67cab-3fdd-4815-9fca-191bf2e8ec27"
+      ],
+      "ratingIds": [
+        "73"
+      ],
+      "ratingNames": [
+        "Data Orbital"
+      ],
+      "silverMatches": [
+        "Data Orbital"
+      ],
+      "sourcePollCount": 1,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Breakthrough Campaigns",
+      "apiPollsterIds": [
+        "ac36a3d6-bc8d-404e-a616-016850af6817"
+      ],
+      "ratingIds": [
+        "623"
+      ],
+      "ratingNames": [
+        "Breakthrough Campaigns"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Research America Inc.",
+      "apiPollsterIds": [
+        "9640ce5d-06c2-4500-9898-711e7c4103ae"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Florida Atlantic University PolCom Lab/Mainstreet Research",
+      "apiPollsterIds": [
+        "a8567f6c-71fb-4fcd-9add-7e11e314ccd3"
+      ],
+      "ratingIds": [
+        "770"
+      ],
+      "ratingNames": [
+        "Florida Atlantic University PolCom Lab/Mainstreet Research"
+      ],
+      "silverMatches": [
+        "Florida Atlantic University/Mainstreet Research"
+      ],
+      "sourcePollCount": 2,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "American Research Group",
+      "apiPollsterIds": [
+        "ae3b5ee9-8be5-4f3b-b117-6abf33720e63"
+      ],
+      "ratingIds": [
+        "9"
+      ],
+      "ratingNames": [
+        "American Research Group"
+      ],
+      "silverMatches": [
+        "American Research Group"
+      ],
+      "sourcePollCount": 21,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Navigator Research",
+      "apiPollsterIds": [
+        "72908461-a4cf-42da-9ef4-f4299cc7b9d8"
+      ],
+      "ratingIds": [
+        "413"
+      ],
+      "ratingNames": [
+        "Global Strategy Group/GBAO (Navigator Research)"
+      ],
+      "silverMatches": [
+        "Global Strategy Group/GBAO (Navigator Research)"
+      ],
+      "sourcePollCount": 31,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Leger",
+      "apiPollsterIds": [
+        "7af36d36-6e24-41ad-9c51-b6de9ff0edb2"
+      ],
+      "ratingIds": [
+        "572"
+      ],
+      "ratingNames": [
+        "Leger"
+      ],
+      "silverMatches": [
+        "Leger"
+      ],
+      "sourcePollCount": 7,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Gallup",
+      "apiPollsterIds": [
+        "0e8d5118-1108-4fcf-ac49-0859271a4597"
+      ],
+      "ratingIds": [
+        "112"
+      ],
+      "ratingNames": [
+        "Gallup"
+      ],
+      "silverMatches": [
+        "Gallup"
+      ],
+      "sourcePollCount": 12,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Lord Ashcroft Polls",
+      "apiPollsterIds": [
+        "b52f71c0-a6c9-4ec5-8613-80a21c1b079d"
+      ],
+      "ratingIds": [
+        "560"
+      ],
+      "ratingNames": [
+        "Lord Ashcroft Polls"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 2,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Merlin Strategy",
+      "apiPollsterIds": [
+        "2adcaf33-be3f-41f4-bbc5-70c3d6f12118"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "PureSpectrum",
+      "apiPollsterIds": [
+        "ce4db0c2-f6ed-4298-8049-909f988df649"
+      ],
+      "ratingIds": [
+        "567"
+      ],
+      "ratingNames": [
+        "PureSpectrum"
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    },
+    {
+      "pollster": "Civiqs",
+      "apiPollsterIds": [
+        "c8eb5194-d7d3-4ae5-b7c1-e658491c0891"
+      ],
+      "ratingIds": [
+        "471"
+      ],
+      "ratingNames": [
+        "Civiqs"
+      ],
+      "silverMatches": [
+        "Civiqs"
+      ],
+      "sourcePollCount": 4,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "North Star Opinion Research",
+      "apiPollsterIds": [
+        "6640a9b5-6380-47c2-8d34-03542a96be10"
+      ],
+      "ratingIds": [
+        "233"
+      ],
+      "ratingNames": [
+        "North Star Opinion Research"
+      ],
+      "silverMatches": [
+        "North Star Opinion Research"
+      ],
+      "sourcePollCount": 1,
+      "status": "matched-by-provider-rating-id"
+    },
+    {
+      "pollster": "Justice Research Fund",
+      "apiPollsterIds": [
+        "ffa8dccd-b13b-4cbe-89f1-fbcd3c8b8240"
+      ],
+      "ratingIds": [
+        ""
+      ],
+      "ratingNames": [
+        ""
+      ],
+      "silverMatches": [],
+      "sourcePollCount": 1,
+      "status": "unrated"
+    }
+  ],
+  "note": "Provider field pollsterRatingId joins to official Silver Jan2026 ratings. This is an attributed provider crosswalk, not an independent assertion of field-firm identity. When conflicting or absent, leave unrated and inspect original source."
+}

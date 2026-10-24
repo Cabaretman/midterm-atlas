@@ -1,0 +1,148 @@
+{
+  "asOf": "2026-10-24",
+  "rawRowsInHorizon": 1878,
+  "uniquePolls": 1366,
+  "duplicatesRemoved": 512,
+  "rejected": {
+    "outside 120-day horizon": 166,
+    "invalid field date range": 1
+  },
+  "countsByOffice": {
+    "approval": 246,
+    "generic": 153,
+    "governor": 365,
+    "house": 210,
+    "senate": 392
+  },
+  "coverageByOffice": {
+    "senate": 28,
+    "house": 98,
+    "governor": 32
+  },
+  "ratingStatus": {
+    "rated": 1112,
+    "unrated": 229,
+    "unrated-excluded-methodology": 16,
+    "banned": 9
+  },
+  "crossSourceVariants": [
+    {
+      "raceId": "senate-AK",
+      "family": "522",
+      "end": "2026-08-04",
+      "chosen": "nyt-mirror-85b9118c-7541-460a-bc99-13f73fcf6fd2",
+      "alternatives": [
+        "nyt-mirror-85b9118c-7541-460a-bc99-13f73fcf6fd2",
+        "wiki-senate-AK-data-for-progress-d-2026-08-04"
+      ]
+    },
+    {
+      "raceId": "senate-IA",
+      "family": "391",
+      "end": "2026-09-08",
+      "chosen": "nyt-mirror-752a8d42-8ede-4847-afcc-9a51f9e491fc",
+      "alternatives": [
+        "nyt-mirror-752a8d42-8ede-4847-afcc-9a51f9e491fc",
+        "wiki-senate-IA-yougov-2026-09-08"
+      ]
+    },
+    {
+      "raceId": "senate-IA",
+      "family": "abacusdata",
+      "end": "2026-08-28",
+      "chosen": "nyt-mirror-8001aa00-3ab0-4387-b34a-2d3de2be4c9f",
+      "alternatives": [
+        "nyt-mirror-8001aa00-3ab0-4387-b34a-2d3de2be4c9f",
+        "wiki-senate-IA-abacus-data-2026-08-28"
+      ]
+    },
+    {
+      "raceId": "senate-ID",
+      "family": "48",
+      "end": "2026-07-30",
+      "chosen": "nyt-mirror-bcf7bc7f-bd97-4037-9999-9536c18f1fab",
+      "alternatives": [
+        "nyt-mirror-bcf7bc7f-bd97-4037-9999-9536c18f1fab",
+        "wiki-senate-ID-change-research-i-2026-07-30"
+      ]
+    },
+    {
+      "raceId": "senate-KS",
+      "family": "448",
+      "end": "2026-09-30",
+      "chosen": "nyt-mirror-66d8ad19-aca9-4a2b-8411-c89f000791c3",
+      "alternatives": [
+        "nyt-mirror-66d8ad19-aca9-4a2b-8411-c89f000791c3",
+        "wiki-senate-KS-new-york-times-siena-university-2026-09-30"
+      ]
+    },
+    {
+      "raceId": "senate-KS",
+      "family": "118",
+      "end": "2026-09-16",
+      "chosen": "nyt-mirror-9ae27d3b-f428-4463-9fae-e9f530c9d943",
+      "alternatives": [
+        "nyt-mirror-9ae27d3b-f428-4463-9fae-e9f530c9d943",
+        "wiki-senate-KS-global-strategy-group-d-2026-09-16"
+      ]
+    },
+    {
+      "raceId": "senate-NH",
+      "family": "768",
+      "end": "2026-10-12",
+      "chosen": "nyt-mirror-d44e3e2d-b7f7-4945-ab81-11d8c1b07d15",
+      "alternatives": [
+        "nyt-mirror-d44e3e2d-b7f7-4945-ab81-11d8c1b07d15",
+        "wiki-senate-NH-national-public-affairs-r-2026-10-12"
+      ]
+    },
+    {
+      "raceId": "senate-SD",
+      "family": "165",
+      "end": "2026-08-30",
+      "chosen": "nyt-mirror-270b4a36-c529-4b51-b3b6-a9672795680b",
+      "alternatives": [
+        "nyt-mirror-270b4a36-c529-4b51-b3b6-a9672795680b",
+        "wiki-senate-SD-lake-research-partners-d-2026-08-30"
+      ]
+    },
+    {
+      "raceId": "senate-TX",
+      "family": "391",
+      "end": "2026-10-05",
+      "chosen": "nyt-mirror-7382c84a-9f84-4c4e-8a56-46b0e8ea8ea4",
+      "alternatives": [
+        "nyt-mirror-7382c84a-9f84-4c4e-8a56-46b0e8ea8ea4",
+        "nyt-mirror-986200cf-7a02-4e12-95ad-51be09affead",
+        "wiki-senate-TX-yougov-2026-10-05"
+      ]
+    },
+    {
+      "raceId": "generic",
+      "family": "391",
+      "end": "2026-10-20",
+      "chosen": "silver-generic-9019416",
+      "alternatives": [
+        "silver-generic-9019416",
+        "silver-generic-9019415"
+      ]
+    },
+    {
+      "raceId": "generic",
+      "family": "391",
+      "end": "2026-10-12",
+      "chosen": "silver-generic-9019128",
+      "alternatives": [
+        "silver-generic-9019128",
+        "silver-generic-9019127"
+      ]
+    }
+  ],
+  "sourceNotes": [
+    "Silver Bulletin national downloads: raw reported toplines, not publisher-adjusted values.",
+    "PollResults is a third-party NYT mirror, not a direct NYT API connection.",
+    "Wikipedia numbers are transcriptions of cited releases; links do not imply independent re-extraction.",
+    "No paid FLIPR forecast content or NYT access restrictions were bypassed.",
+    "Exactly one population/question per race, pollster family and field-end date. LV preferred to RV/adults; source priority breaks ties."
+  ]
+}

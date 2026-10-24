@@ -35,15 +35,34 @@ for p in json.loads((raw/'gov-house-polls.json').read_text(encoding='utf-8-sig')
     if not any(q['raceId']==p['raceId'] and q['pollster']==p['pollster'] and q['end']==p['end'] for q in polls):polls.append(p)
 polls.append({'id':'yougov-ne-2026-10-03','raceId':'senate-NE','pollster':'YouGov','start':'2026-09-24','end':'2026-10-03','n':1809,'population':'LV','moe':3.3,'independent':48,'rep':47,'url':'https://d3nkl3psvxxpe9.cloudfront.net/documents/ttw_ne_20260921_lv.pdf','notes':'Dan Osborn is independent; positive margin denotes I over R. Not a Democratic candidate.'})
 snapshot=json.loads((root/'data'/'snapshot.json').read_text())
+current=root/'data'/'current-polls.json'
+if current.exists():polls=json.loads(current.read_text(encoding='utf-8'))
 imported=json.loads((root/'data'/'imported-polls.json').read_text())
 merged={p['id']:p for p in polls}
 for p in imported:merged[p['id']]=p
 polls=list(merged.values())
 by_source={}
-for p in polls:by_source[(p['raceId'],p['pollster'].lower().split('/')[0].strip(),p['end'])]=p
+for p in polls:by_source[(p['raceId'],p.get('pollsterFamily') or p['pollster'].lower().split('/')[0].strip(),p['end'])]=p
 polls=list(by_source.values())
 assert len(races)==506
 assert len({p['id'] for p in polls})==len(polls)
 data={'asOf':snapshot['asOf'],'electionDate':'2026-11-03','version':snapshot['version'],'national2024Margin':round(national,4),'states':states,'races':races,'polls':polls,'sources':[{'name':'House baselines · The Downballot','url':'https://www.the-downballot.com/p/the-downballots-calculations-of-presidential','note':'2024 presidential results recalculated on 2026 district lines, rounded to whole points. Incumbents are reference officeholders, not verified nominees.'},{'name':'State baselines · Tony McGovern','url':'https://github.com/tonmcg/US_County_Level_Election_Results_08-24','note':'State presidential margins aggregated from the 2024 county-level compilation of official returns.'},{'name':'Governor roster · NGA','url':'https://www.nga.org/governors/elections/','note':'36 state elections. Territories are outside scope. Some nominee fields may lag changes.'},{'name':'Senate election classes · US Senate','url':'https://www.senate.gov/senators/Class_II.htm','note':'33 regular Class II seats plus Florida and Ohio specials; 34 Democratic-caucus and 31 Republican holdovers.'}]}
+fitfile=root/'data'/'fundamentals-fit.json'
+if fitfile.exists():
+    fit=json.loads(fitfile.read_text(encoding='utf-8'));profiles=fit.pop('profiles');data['fundamentals']=fit
+    roster={r['raceId']:r for r in json.loads((root/'data'/'history'/'senate-roster-v2.json').read_text(encoding='utf-8'))['roster']}
+    for race in races:
+        race['candidateHistory']=profiles.get(race['id'])
+        if race['id'] in roster:
+            r=roster[race['id']]
+            for field in ['demCandidate','repCandidate','independentCandidate','incumbentParty','incumbentRunning']:race[field]=r.get(field)
+            race['independent']=bool(r.get('independentCandidate'))
+            race['note']=r.get('notes','')
+            race['rosterSource']=r['source'];race['rosterVerification']=r['verification']
+    data['sources']+=[{'name':'Silver Bulletin · pollster grades and national polling','url':'https://www.natesilver.net/p/pollster-ratings-silver-bulletin','note':'January 14, 2026 letter grades, predictive plus-minus and mean-reverted D−R bias. Unrated is explicit; published exclusions are honored. National polls use raw public downloads, not adjusted averages.'},{'name':'FLIPR · public methodology and polling','url':'https://www.natesilver.net/p/flipr-midterms-model-methodology','note':'Public methodology and national polling downloads checked; no paid race forecasts imported and this model is not FLIPR.'},{'name':'NYT polling via PollResults.org','url':'https://pollresults.org/api/','note':'Third-party API mirror attributed to the NYT polling tracker, with original release links. Direct NYT access was unavailable; this is not a direct NYT API integration. Mirror attribution: CC BY 4.0.'},{'name':'Wikipedia · current race polling tables','url':'https://en.wikipedia.org/wiki/2026_United_States_Senate_elections','note':'Current general-election matchups transcribed from race tables, retaining original cited release URLs. Primary, obsolete hypothetical and aggregate-average rows excluded.'},{'name':'Historical election results · FiveThirtyEight / MEDSL','url':'https://github.com/fivethirtyeight/election-results','note':'Candidate-aligned historical Senate/governor results and original state sources; presidential leans from MEDSL. Candidate-history effects are partially pooled, not added to current polling twice.'}]
+auditfile=root/'data'/'polling-audit.json'
+if auditfile.exists():
+    audit=json.loads(auditfile.read_text());data['pollingAudit']={k:v for k,v in audit.items() if k!='crossSourceVariants'}
+data['pollsterRatings']=list({p['pollsterFamily']:p['rating'] for p in polls if p.get('rating')}.values())
 (root/'dist'/'data.json').write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf-8')
 print(f'{len(races)} races, {len(polls)} sourced polling rows, national 2024 margin {national:.3f}')
