@@ -82,6 +82,7 @@ function renderMap(){
     const fill=raceColor(race);if(path.getAttribute('fill')!==fill)path.setAttribute('fill',fill);
     path.classList.toggle('selected',currentState===state.abbr);path.setAttribute('aria-label',label);path.querySelector('title').textContent=label;
   }
+  const svg=container.querySelector('svg'),selectedPath=svg.querySelector('[data-state].selected'),firstLabel=svg.querySelector('text');if(selectedPath&&firstLabel)svg.insertBefore(selectedPath,firstLabel);
   $('#map-caption').textContent=office==='house'?'State colors show average district D win probability. Select Districts to see all 435 seats.':metric==='probability'?'Color shows win probability. Gray states have no election for this office.':'Color shows the projected D−R margin; independent Senate races use I−R.';
 }
 function historyEvidence(r){
@@ -169,6 +170,7 @@ function bindForecast(){
 function onForecastInput(e){const k=e.target.dataset.control;if(!k)return;if(e.target.value===''||!Number.isFinite(Number(e.target.value)))return;const range=$('#'+k),number=$('#'+k+'-number'),factor=k==='incumbency'?2:1;let n=e.target.type==='range'?Number(e.target.value):Number(e.target.value)*factor;const min=Number(range.min),max=Number(range.max),step=Number(range.step);n=Math.max(min,Math.min(max,min+Math.round((n-min)/step)*step));n=Number(n.toFixed(4));range.value=n;if(e.target.type==='range')number.value=k==='incumbency'?n/factor:n;else if(n!==Number(e.target.value)*factor)number.value=k==='incumbency'?n/factor:n;if(k==='raceError')scenario.races[selected]=n;else if(k==='stateError'){const state=results.races.find(r=>r.id===selected).state;scenario.states[state]=n;}else scenario[k]=n;scheduleUpdate();}
 $('#app').addEventListener('click',e=>{const b=e.target.closest('[data-nudge]');if(!b)return;const input=$('#'+b.dataset.nudge+'-number');input.value=String(Math.max(Number(input.min),Math.min(Number(input.max),Number(input.value||0)+Number(b.dataset.delta))));input.dispatchEvent(new Event('input',{bubbles:true}));});
 // Delegated controls survive map/table/detail redraws.
+$('#app').addEventListener('focusin',e=>{const path=e.target.closest('svg.us-map [data-state]');if(path){const svg=path.ownerSVGElement,label=svg.querySelector('text');if(label)svg.insertBefore(path,label);}});
 $('#app').addEventListener('click',e=>{
   const officeButton=e.target.closest('[data-office]');if(officeButton){office=officeButton.dataset.office;view=office==='house'?'tiles':'map';selected=data.races.find(r=>r.office===office&&r.state==='MI').id;filterState='';query='';filter='all';tableLimit=50;render();return;}
   const b=e.target.closest('[data-page]');if(b){page=b.dataset.page;render();window.scrollTo({top:0});return;}
