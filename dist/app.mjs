@@ -36,6 +36,7 @@ function formatControl(key,value){if(key==='incumbency')return (value/2).toFixed
 async function render(){
   const renderId=++renderSequence;clearTimeout(timer);
   document.querySelectorAll('[data-page]').forEach(b=>b.classList.toggle('active',b.dataset.page===page));
+  if(!data||!map)return;
   if(page!=='forecast'){calculationSequence++;$('#app').removeAttribute('aria-busy');return page==='method'?renderMethod():renderSources();}
   if(!await calculate()||renderId!==renderSequence)return;
   const nat=nationalInputs(data,scenario),polled=results.races.filter(r=>r.pollCount).length;
