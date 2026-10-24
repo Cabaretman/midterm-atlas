@@ -201,6 +201,36 @@ dialog h2{font-size:16px}
 @media(max-width:900px){header.topbar{padding:13px 22px}.dashboard{grid-template-columns:minmax(0,1fr) 245px;gap:22px}main{padding:30px 22px 45px}.workbench{padding-left:18px}.hero-meta{display:block}.metric-note{font-size:11px}}
 @media(max-width:680px){header.topbar{padding:15px 18px 0;gap:10px}.brand{width:100%;padding:0 0 10px}nav{width:100%;margin:0;gap:18px;padding-bottom:10px}.navlink,.navlink:first-child{font-size:13px;padding:4px 0;margin:0}main{padding:25px 18px 38px}.hero{margin-bottom:20px;padding-bottom:15px}.hero h1{font-size:25px}.hero-meta{font-size:11px}.dashboard{display:flex;flex-direction:column;gap:25px}.content-column,.workbench{width:100%}.workbench{border-left:0;border-top:1px solid #e5e5e5;padding:18px 0 0}.workbench-head,.workbench-section{padding-left:0;padding-right:0}.summary{grid-template-columns:1fr 1fr 1fr}.metric{padding:0 8px}.metric:first-child{padding-left:0}.metric-value{font-size:18px}.metric-note{font-size:10px}.office-bar{gap:18px}.office-note{display:none}.selection-detail{grid-template-columns:1fr;gap:15px}.detail-metrics{gap:16px}.race-table th,.race-table td{padding:8px 7px}.race-table th{font-size:10px}.race-table td:nth-child(5),.race-table th:nth-child(5){display:none}.method-grid,.source-cards{display:block}.page-content h1{font-size:25px}.page-content .intro{font-size:13px}footer{padding:15px 18px 22px;font-size:11px}}
 @media(max-width:420px){main{padding-left:15px;padding-right:15px}.summary{grid-template-columns:1fr 1fr}.metric:last-child{display:none}.metric-value{font-size:19px}.section-head{align-items:flex-start}.section-head h2{font-size:14px}.office-tab{font-size:13px}.race-toolbar{flex-wrap:wrap}.search{flex-basis:100%}.race-toolbar select{flex:1}.race-table{font-size:12px}.race-table th,.race-table td{padding:8px 5px}.race-table th:nth-child(4),.race-table td:nth-child(4){display:none}.coverage{font-size:11px}}
+.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+body{font-size:16px;line-height:1.65}
+.office-tab{font-size:15px}
+.office-tab>span{font-size:13px}
+.office-note,.label,.control label,.workbench-section>details>summary{font-size:14px}
+.metric-value{font-size:24px}
+.metric-note,.control-help,.checkbox-label,.selected-note,.selection-subtitle,.candidate-history,.candidate-history p{font-size:14px;line-height:1.6}
+.section-head{padding-bottom:10px}
+section[aria-label$="map"] .section-head,.distribution-panel .section-head{padding:0}
+.map-options button{font-size:14px;padding:5px 10px}
+.map-caption,.map-instruction,.legend,.legend-label,.coverage,.coverage button{font-size:14px}
+.coverage{line-height:1.6}
+.coverage button{text-underline-offset:3px}
+.race-table{font-size:15px}
+.race-table th{font-size:13px;padding:11px 12px}
+.race-table td{font-size:15px;padding:12px}
+.race-table .race-name{font-size:15px}
+.race-name>small{font-size:13px}
+.race-table .margin,.probability,.rating,.rating.tossup{font-size:14px}
+.table-foot,.table-foot span,.threshold-label,.distribution-axis{font-size:13px}
+.search,.race-toolbar select,.select,.button{font-size:14px;min-height:38px}
+.range-labels,.value-chip{font-size:13px}
+.method-card p,.method-card li,.source-card p,.poll-card p,.poll-meta,.poll-card a,.ratings-ledger p{font-size:14px;line-height:1.7}
+.candidate-history table,.diagnostic-table{font-size:13px}
+.candidate-history th,.candidate-history td,.diagnostic-table th,.diagnostic-table td{padding:9px 7px}
+.poll-card-head,.source-card>a{font-size:15px}
+.poll-provenance{font-size:13px}
+footer{font-size:13px}
+@media(max-width:680px){body{font-size:15px}.office-tab{font-size:14px}.metric-value{font-size:21px}.metric-note{font-size:12px}.race-table,.race-table td,.race-table .race-name{font-size:14px}.race-table th{font-size:12px}.race-table td,.race-table th{padding:10px 7px}.race-name>small{font-size:12px}.coverage,.map-caption,.map-instruction,.legend{font-size:13px}.control label,.control-help,.checkbox-label{font-size:14px}}
+@media(max-width:420px){.metric-value{font-size:20px}.office-tab{font-size:13px}.race-table,.race-table td,.race-table .race-name{font-size:13px}.race-table th{font-size:11px}.race-table td,.race-table th{padding:9px 5px}}
 
 /* Unadorned document view. Whitespace is the only section separator. */
 :root{color-scheme:light;--bg:#fff;--panel:#fff;--soft:#fff;--white:#292929;--muted:#747474;--line:transparent;--sans:Arial,Helvetica,sans-serif;--mono:Arial,Helvetica,sans-serif}
