@@ -171,6 +171,7 @@ function onForecastInput(e){const k=e.target.dataset.control;if(!k)return;if(e.t
 $('#app').addEventListener('click',e=>{const b=e.target.closest('[data-nudge]');if(!b)return;const input=$('#'+b.dataset.nudge+'-number');input.value=String(Math.max(Number(input.min),Math.min(Number(input.max),Number(input.value||0)+Number(b.dataset.delta))));input.dispatchEvent(new Event('input',{bubbles:true}));});
 // Delegated controls survive map/table/detail redraws.
 $('#app').addEventListener('focusin',e=>{const path=e.target.closest('svg.us-map [data-state]');if(path){const svg=path.ownerSVGElement,label=svg.querySelector('text');if(label)svg.insertBefore(path,label);}});
+$('#app').addEventListener('pointerover',e=>{const path=e.target.closest('svg.us-map [data-state]');if(path){const svg=path.ownerSVGElement,label=svg.querySelector('text');if(label&&path.nextElementSibling!==label)svg.insertBefore(path,label);}});
 $('#app').addEventListener('click',e=>{
   const officeButton=e.target.closest('[data-office]');if(officeButton){office=officeButton.dataset.office;view=office==='house'?'tiles':'map';selected=data.races.find(r=>r.office===office&&r.state==='MI').id;filterState='';query='';filter='all';tableLimit=50;render();return;}
   const b=e.target.closest('[data-page]');if(b){page=b.dataset.page;render();window.scrollTo({top:0});return;}
