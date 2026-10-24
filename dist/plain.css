@@ -164,9 +164,29 @@ input[type="range"]::-webkit-slider-thumb, input[type="range"]::-moz-range-thumb
 .threshold-label { color: #333; font-size: 14px; }
 .page-content { max-width: 900px; margin: 0; }
 .page-content h1 { font-size: 28px; font-weight: 600; }
-.method-prose { max-width: 900px; margin: 0; color: #202020; font-size: 17px; line-height: 1.72; }
-.method-prose p { margin: 0 0 19px; color: #202020; font-size: 17px; line-height: 1.72; }
+.method-prose { max-width: 1000px; margin: 0; color: #202020; font-size: 16px; line-height: 1.6; }
+.method-prose > h1 { margin: 0 0 10px; font-size: 30px; }
+.method-prose p { margin: 0 0 14px; color: #202020; font-size: 16px; line-height: 1.6; }
 .method-prose p:last-child { margin-bottom: 0; }
+.method-intro { max-width: 900px; }
+.method-section { margin-top: 26px; padding-top: 16px; border-top: 1px solid var(--rule); }
+.method-section > h2 { margin: 0 0 12px; font-size: 19px; font-weight: 600; }
+.method-table-scroll { max-width: 100%; margin: 10px 0 16px; overflow-x: auto; }
+.method-table { width: 100%; min-width: 620px; margin: 0; border-collapse: collapse; font-size: 15px; line-height: 1.5; }
+.method-table th, .method-table td { min-width: 120px; padding: 9px 12px; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
+.method-table thead th { border-top: 1px solid #888; border-bottom: 1px solid #888; font-weight: 600; }
+.method-table tbody th { font-weight: 600; }
+.method-table th:first-child { padding-left: 0; min-width: 145px; }
+.method-table td:last-child { padding-right: 0; }
+.method-flow { display: grid; grid-template-columns: 1fr 24px 1fr 24px 1fr 24px 1fr; align-items: center; gap: 6px; margin: 18px 0 22px; padding: 13px 0; border-top: 1px solid #888; border-bottom: 1px solid #888; }
+.method-flow > div { display: flex; align-items: baseline; gap: 9px; font-size: 15px; }
+.method-flow > div b { font-size: 13px; font-weight: 400; color: #555; }
+.method-flow > i { color: #555; font-style: normal; text-align: center; }
+.recency-chart { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0 18px; margin: 16px 0; padding: 12px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.recency-chart figcaption { grid-column: 1 / -1; margin-bottom: 10px; font-size: 14px; font-weight: 600; }
+.recency-chart > div { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 7px; font-size: 13px; font-variant-numeric: tabular-nums; }
+.recency-chart > div i { display: block; height: 8px; background: linear-gradient(to right, #555 0 var(--bar), #e5e5e5 var(--bar) 100%); }
+.recency-chart > div b { font-weight: 400; }
 .method-equation { margin: 22px 0; padding: 13px 0; border-top: 1px solid #aaa; border-bottom: 1px solid #aaa; }
 .method-equation > div { display: grid; grid-template-columns: minmax(135px, .32fr) 24px minmax(0, 1fr); gap: 12px; align-items: baseline; padding: 5px 0; font-size: 16px; line-height: 1.5; }
 .method-equation > div > span:first-child { font-weight: 600; }
@@ -260,6 +280,11 @@ dialog h2 { font-size: 19px; font-weight: 600; }
   .table-scroll { max-height: 460px; }
   .method-grid, .source-cards { display: block; }
   .method-prose, .method-prose p { font-size: 16px; line-height: 1.68; }
+  .method-flow { display: flex; flex-wrap: wrap; gap: 10px; }
+  .method-flow > div { flex: 1 1 42%; }
+  .method-flow > i { display: none; }
+  .recency-chart { grid-template-columns: repeat(2, 1fr); gap: 10px 14px; }
+  .method-table { font-size: 14px; }
   .method-equation > div { grid-template-columns: minmax(110px, .38fr) 20px minmax(0, 1fr); gap: 7px; font-size: 15px; }
   .method-equation figcaption { margin-left: 137px; font-size: 13px; }
   footer { padding: 15px 18px 22px; font-size: 12px; }
