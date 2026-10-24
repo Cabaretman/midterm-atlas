@@ -231,6 +231,14 @@ section[aria-label$="map"] .section-head,.distribution-panel .section-head{paddi
 footer{font-size:13px}
 @media(max-width:680px){body{font-size:15px}.office-tab{font-size:14px}.metric-value{font-size:21px}.metric-note{font-size:12px}.race-table,.race-table td,.race-table .race-name{font-size:14px}.race-table th{font-size:12px}.race-table td,.race-table th{padding:10px 7px}.race-name>small{font-size:12px}.coverage,.map-caption,.map-instruction,.legend{font-size:13px}.control label,.control-help,.checkbox-label{font-size:14px}}
 @media(max-width:420px){.metric-value{font-size:20px}.office-tab{font-size:13px}.race-table,.race-table td,.race-table .race-name{font-size:13px}.race-table th{font-size:11px}.race-table td,.race-table th{padding:9px 5px}}
+/* Current editorial direction: stronger site identity, plain prose, readable labels. */
+header.topbar .brand{font-size:20px;font-weight:600;letter-spacing:0}
+header.topbar .navlink{font-size:15px}
+.method-prose{max-width:900px;margin:0;font-size:16px;line-height:1.72;color:#222}
+.method-prose p{margin:0 0 18px;font-size:16px;line-height:1.72;color:#222}
+.method-prose p:last-child{margin-bottom:0}
+.rating.tossup{color:#9a5900!important}
+@media(max-width:680px){header.topbar .brand{font-size:19px}header.topbar .navlink{font-size:14px}.method-prose,.method-prose p{font-size:15px;line-height:1.68}}
 
 /* Unadorned document view. Whitespace is the only section separator. */
 :root{color-scheme:light;--bg:#fff;--panel:#fff;--soft:#fff;--white:#292929;--muted:#747474;--line:transparent;--sans:Arial,Helvetica,sans-serif;--mono:Arial,Helvetica,sans-serif}
@@ -249,3 +257,11 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,[t
 @media(max-width:850px){header.topbar{padding:25px 24px 10px}main{padding:32px 24px 40px}.dashboard{grid-template-columns:minmax(0,1fr) 220px;gap:28px}.brand{font-size:14px}.hero h1{font-size:26px}.workbench{padding:0}nav{gap:20px}footer{padding:16px 24px 25px}}
 @media(max-width:680px){header.topbar{padding:25px 20px 10px;gap:18px}.brand{padding:0}nav{gap:18px}.navlink,.navlink:first-child{font-size:11px;padding:0;margin:0}main{padding:30px 20px 35px}.dashboard{display:flex;flex-direction:column;gap:42px}.hero h1{font-size:25px}.summary{gap:20px;padding:0;margin-bottom:32px}.metric,.metric:first-child{padding:0}.metric-value{font-size:26px}.workbench{padding:0;display:block}.controls,.workbench-section{padding-left:0;padding-right:0}.selection-detail{padding:8px 0;grid-template-columns:1fr;gap:22px}.office-bar{gap:24px}.office-note{display:none}.section-head h2>span{font-size:10px}.race-table th,.race-table td{padding:11px 8px}.race-table th{font-size:9px}.table-scroll{max-height:440px}footer{padding:16px 20px 25px;font-size:9px}}
 @media(max-width:400px){header.topbar{display:block}.brand{margin-bottom:18px}nav{margin:0;gap:24px}.metric-value{font-size:24px}.hero h1{font-size:24px}}
+/* Overrides intentionally live last: keep identity and prose typography above legacy theme rules. */
+header.topbar .brand{font-size:20px!important;font-weight:600;letter-spacing:0}
+header.topbar .navlink{font-size:15px!important}
+.method-prose{max-width:900px;margin:0;font-size:16px;line-height:1.72;color:#222}
+.method-prose p{margin:0 0 18px;font-size:16px;line-height:1.72;color:#222}
+.method-prose p:last-child{margin-bottom:0}
+.rating.tossup{color:#9a5900!important}
+@media(max-width:680px){header.topbar .brand{font-size:19px!important}header.topbar .navlink{font-size:14px!important}.method-prose,.method-prose p{font-size:15px;line-height:1.68}}
