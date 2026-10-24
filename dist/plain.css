@@ -75,6 +75,7 @@ main { max-width: 1440px; margin: 0 auto; padding: 36px 36px 56px; }
 .map-options button.active { background: #eee; color: #111; }
 .map-area { padding: 0; background: none; }
 .us-map path { pointer-events: visiblePainted; }
+.us-map path:focus-visible { outline: none; stroke: #315d88; stroke-width: 3; }
 .map-caption, .map-instruction { color: #333; font-size: 14px; line-height: 1.55; }
 .map-caption { padding: 8px 0; }
 .map-footer { display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 10px 0 14px; border-bottom: 1px solid var(--rule); }
